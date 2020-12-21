@@ -222,7 +222,7 @@
 			x(t) = x_0 \text{cos}(\omega_n t) + \frac{v_0}{\omega_n}\text{sin}(\omega_n t)
 			\end{equation}
 			
-			The same procedure works for calculating the under damped and forced responses, however, in these responses calculating the algebraic solution for $X(s)$ often results in quotients of polynomials in $s$. These Polynomial ratios may not be found in simple Laplace tables and must be solved using the method of partial fractions. An example of this procedure can be found in Appendix B of Inman. 
+			The same procedure can be used to calculate the under damped and forced responses. However, when calculating these responses the algebraic solution for $X(s)$, $s$ often contains quotients of polynomials. These Polynomial ratios may not be found in simple Laplace tables and must be solved using the method of partial fractions. An example of this procedure can be found in Appendix B of Inman. 
 
 % this example may not bee needed. Check and replace with a better one. 
 %			\begin{example}
@@ -258,8 +258,8 @@
 %			\end{example}
 
 \subsubsection{Impulse Response Function}
-A very common source of vibration is the sudden application for a short-duration force called an impulse. An impulse excitation is a force that is applied for a very short, or infinitesimal, length of time and represents one example of a shock loading. An impulse is a nonperiodic force that is represented by the symbol $\delta$. The response of a system to an impulse is identical to the free response of the system to certain initial conditions.This is illustrated in the following, in many useful situations the applied force $F(t)$ is impulsive in nature
-(i.e., acts with large magnitude for a very short period of time).
+
+Shock loads on mechanical systems represent a very common source of vibration. These short-duration forces are also called called an impulse. An impulse excitation is defined as a force that is applied for a very short, or infinitesimal, length of time. An impulse is a nonperiodic force that is represented by the symbol $\delta$. The response of a system to an impulse load is the same as the system's free response provided that the correct initial conditions are applied. This is illustrated in the following where the applied force $F(t)$ is impulsive in nature (i.e., large magnitude over a very short time).
 
 \begin{figure}[H]
 	\centering
@@ -380,8 +380,7 @@ After obtaining equations for the undamped and under damped cases, the responses
 Note that the system will settle out around $F_0/k$ where $F_0  \Phi$ is a scaling factor for the step loading.
 
 \begin{example}
-A load of roosters $m_r$ is dropped on the floor of a truck bed. Assuming the roosters do not move and that the truck bed is modeled as a spring-mass-damper system (of values $k$, $m$, and $c$, respectively).The load is modeled as a force $F(t) = m_r g$ applied to the spring-mass-damper system, as illustrated
-in the following figure. This allows a crude analysis of the response of the truck's suspension. First assume that the trucks damper is broken, how does the maximum dynamic displacement compare to the static displacement. What would happen to the maximum displacement if the damper was repaired on the truck? %Next, using a damping value of $\zeta=0.5$ and $\omega_n=\pi$ what is the maximum displacement. How does this compare to the displacement for the case without the damper?  
+A load of roosters $m_r$ is dumped into the back of a dump truck. Assuming the roosters do not move, the bed of the truck can be modeled as a spring-mass-damper system (of values $k$, $m$, and $c$, respectively). Nest, the load of roosters is modeled as a force $F(t) = m_r g$ that is applied to the spring-mass-damper system, as illustrated in the following figure. The simplification of the system allows for the analysis of the truck bed's vibrations as a simple spring-mass-damper system. First assume that the trucks damper is broken, how does the maximum dynamic displacement compare to the static displacement. What would happen to the maximum displacement if the damper was repaired on the truck? %Next, using a damping value of $\zeta=0.5$ and $\omega_n=\pi$ what is the maximum displacement. How does this compare to the displacement for the case without the damper?  
 
 \begin{figure}[H]
 	\centering
@@ -403,8 +402,8 @@ This can be rearranged for the maximum displacement value $x_\text{max} $ as:
 \begin{equation}
 	x_\text{max} = 2\frac{m_rg}{k}
 \end{equation} 
-This is twice the static displacement (i.e., twice the distance the truck would be deflected if the roosters were placed gently and slowly onto it). Thus, if the truck were designed with springs based only on the static load, with no margins of safety, the springs in the truck
-would potentially break, or permanently deform, when subjected to the same mass applied dynamically (e.g., dropped) into the truck. Hence, it is important to consider the vibration (dynamic) response in designing structures that could experience dynamic loading.
+
+Note that the displacement of the truck bed is twice that of the static displacement. Therefore, if the truck manufacturer designed the truck to only take the static load of rosters (i.e., if the roosters were placed gently into the truck bed), the frame of the truck would be damaged when the roosters were loaded into the truck dynamically. From this, it can be understood that it is important to consider dynamic responses of a system during the design phase.
 
 %\textbf{Example 1 - under damped}
 %For the case where the truck has a damper with a value of $\zeta=0.5$, the displacement $(x)$ can be modeled as:
@@ -553,7 +552,7 @@ Ignoring the initial conditions, and therefore considering only the particular s
 \begin{equation}
 (ms^2 + cs +k)X(s) = \frac{F_0s}{s^2+\omega^2} 
 \end{equation}
-where $s$ is the complex transform variable and $X(s)$ denotes the Laplace transform of the unknown function x(t). Solving algebraically for the $X(s)$ yields: 
+where $X(s)$ denotes the Laplace transform of the unknown function $x(t)$ and $s$ is the complex transform variable. Rearranging the above equation for $X(s)$ yields: 
 \begin{equation}
 X(s) = \frac{F_0s}{(ms^2 + cs +k)(s^2+\omega^2)}
 \end{equation}
@@ -567,7 +566,8 @@ H(s) = \frac{1}{ms^2+cs+k}
 \end{equation}
 This ratio is termed the transfer function of a system and is an important tool in vibration analysis.
 
-Recall that $s$ is a complex number, if the value of $s$ is restricted to lie along the imaginary axis in the complex plane (i.e., if $s = j\omega$), the transfer function becomes:
+Recall that $s$ is a complex number and therefore contains a real and imaginary portion in the complex plane. Restricting $s$ to lie on the imaginary axis (i.e., if $s = j\omega$), the transfer function becomes:
+
 \begin{equation}
 H(j\omega) = \frac{1}{m(j\omega)^2+cj\omega+k} = \frac{1}{-m\omega^2+cj\omega+k} 
 \end{equation}
@@ -695,7 +695,7 @@ This expression leads to an to calculate the root-mean-square (RMS) of the signa
 x_\text{rms} = \sqrt{\bar{x^2}} 
 \end{equation}
 
-Considering a nonstationary signal, a important measure of interests is how fast the value of the variables change. This is important to understand as it address how long it takes to measure enough samples of the variable before a meaningful statistical value can be calculated. One way to quantify how fast the values of signal change is the autocorrelation function: 
+Considering a nonstationary signal, a important measure of interests is how fast the value of the variables change. This is important to understand as it provides context for how long a signal must be sampled to before a meaningful representation of the signal can be calculated in a statistical sense. One way to quantify how fast the values of signal change is the autocorrelation function: 
 \begin{equation}
 R_{xx}(\tau) = \lim\limits_{T \rightarrow \infty} \frac{1}{T} \int_{0}^{T}x(t)x(t+\tau)dt
 \end{equation}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  9 DEC 2019 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  20 DEC 2020 22:48
 entering extended mode
 **./Chapter_4_Transfer_Function.tex
 (Chapter_4_Transfer_Function.tex
@@ -1299,34 +1299,33 @@ Package pdftex.def Info: ../Figures/response_unit_step.png  used on input line
 File: ../Figures/dump_truck_example.png Graphic file (type png)
 <use ../Figures/dump_truck_example.png>
 Package pdftex.def Info: ../Figures/dump_truck_example.png  used on input line 
-388.
+387.
 (pdftex.def)             Requested size: 357.52917pt x 122.70705pt.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 414.
  [10 <../Figures/dump_truck_example.png>]
 <../Figures/Arbitary_excitation_forces.png, id=61, 248.8497pt x 128.1588pt>
 File: ../Figures/Arbitary_excitation_forces.png Graphic file (type png)
 <use ../Figures/Arbitary_excitation_forces.png>
 Package pdftex.def Info: ../Figures/Arbitary_excitation_forces.png  used on inp
-ut line 423.
+ut line 422.
 (pdftex.def)             Requested size: 248.84908pt x 128.15848pt.
 <../Figures/response_double_impact.png, id=62, 433.62pt x 216.81pt>
 File: ../Figures/response_double_impact.png Graphic file (type png)
 <use ../Figures/response_double_impact.png>
 Package pdftex.def Info: ../Figures/response_double_impact.png  used on input l
-ine 482.
+ine 481.
 (pdftex.def)             Requested size: 335.18233pt x 167.59924pt.
  [11 <../Figures/Arbitary_excitation_forces.png>]
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 485.
-
 [12]
 File: ../Figures/transfer_function_system.png Graphic file (type png)
 <use ../Figures/transfer_function_system.png>
 Package pdftex.def Info: ../Figures/transfer_function_system.png  used on input
- line 495.
+ line 494.
 (pdftex.def)             Requested size: 199.60924pt x 48.42076pt.
 
-Overfull \hbox (0.57993pt too wide) detected at line 503
+Overfull \hbox (0.57993pt too wide) detected at line 502
 \OML/ztmcm/m/it/14.4 a[][] \OT1/ztmcm/m/n/14.4 + \OML/ztmcm/m/it/14.4 a[][] \OT
 1/ztmcm/m/n/14.4 + \OML/ztmcm/m/it/14.4 ::: \OT1/ztmcm/m/n/14.4 + \OML/ztmcm/m/
 it/14.4 a[]x\OT1/ztmcm/m/n/14.4 (\OML/ztmcm/m/it/14.4 t\OT1/ztmcm/m/n/14.4 ) = 
@@ -1341,7 +1340,7 @@ it/14.4 b[]f\OT1/ztmcm/m/n/14.4 (\OML/ztmcm/m/it/14.4 t\OT1/ztmcm/m/n/14.4 )
 File: ../Figures/forced_spring_mass_damper_system.png Graphic file (type png)
 <use ../Figures/forced_spring_mass_damper_system.png>
 Package pdftex.def Info: ../Figures/forced_spring_mass_damper_system.png  used 
-on input line 537.
+on input line 536.
 (pdftex.def)             Requested size: 187.89914pt x 78.62927pt.
  [14] [15 <../Figures/forced_spring_mass_damper_system.png>] [16]
 File: ../Figures/forced_spring_mass_damper_system.png Graphic file (type png)
@@ -1440,12 +1439,12 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Chapter_4_Transfer_Function.aux) ) 
 Here is how much of TeX's memory you used:
  26446 strings out of 492450
- 516432 string characters out of 3129740
+ 516524 string characters out of 3129740
  579577 words of memory out of 3000000
  30389 multiletter control sequences out of 15000+200000
  579969 words of font info for 130 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,13n,78p,856b,1105s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 73i,13n,78p,915b,1105s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips
 /base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
@@ -1456,7 +1455,7 @@ MiKTeX/2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Users/adowney2/AppData/Roaming/M
 iKTeX/2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utm
 r8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Chapter_4_Transfer_Function.pdf (26 pages, 1370224 bytes).
+Output written on Chapter_4_Transfer_Function.pdf (26 pages, 1370184 bytes).
 PDF statistics:
  159 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

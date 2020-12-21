@@ -153,9 +153,7 @@ Where the bold text denotes vectors. Therefore, the vectors $\mathbf{u}_1$ and $
 \end{eqnarray}
 The four key components of the solution expressed in equation \ref{eq:2-DOF_solution} are:
 \begin{enumerate}
-\item $\omega_1$ and $\omega_2$ are the natural frequencies of the system. They are not the frequencies of the masses. The formulation of the solution states that each mass in general oscillates at two frequencies. Furthermore, suppose that the initial conditions
-are chosen such that A2 = 0. With such an initial condition, each mass oscillates at only
-one frequency, $\omega_1$.
+\item $\omega_1$ and $\omega_2$ are the natural frequencies of the system. They are not the frequencies of the masses. The solution states that each of the masses oscillates at the two frequencies $\omega_1$ and $\omega_2$. Moreover, consider the special case where the initial conditions are selected to force $A_2 = 0$, in this case, each mas would only oscillates at only one frequency, $\omega_1$.
 \item $A_1$ and $A_2$ are the constants of integration and determine the amplitude of the system.
 \item $\phi_1$ and $\phi_2$ represent the phase shift of the system
 \item $\mathbf{u}_1$ and $\mathbf{u}_2$ are the first and second mode shapes of the system and couple the system together.
@@ -187,7 +185,7 @@ x_1(0) = x_{10} \\
 x_2(0) = x_{20} \nonumber \\ 
 \dot{x}_2(0) = \dot{x}_{20} = v_{20} \nonumber
 \end{eqnarray}
-As before, these initial conditions will be the constants of integration used to solve the two second-order differential equations for the free response of each mass. There is a multitude of ways to solve these two coupled  second-order differential equations, however, here we will just consider a matrix notation solution. This matrix notation solution is used as this formulation is readably solved using computers and is expandable to more than 2 DOF.
+As before, these initial conditions will be the constants of integration used to solve the two second-order differential equations. This solution will provide the free response of each mass in the system. There is a multitude of ways to solve these two coupled  second-order differential equations, however, here we will just consider a matrix notation solution. This matrix notation solution is used as this formulation is readably solved using computers and is expandable to more than 2 DOF.
 
 To initiate the solution, let us first develop the matrix formulation of the two coupled ODEs:
 \begin{eqnarray}
@@ -215,7 +213,7 @@ Beyond these equations we can write the initial conditions as:
 \end{eqnarray}
 This simple connection between vibration analysis and matrix analysis allows computers to be used to solve large and complicated vibration problems quickly.
 
-Recall that the 1-DOF version of the equation of motion was solved by assuming a harmonic solution and calculating the values of the constants in the assumed form. The same approach is used here to solve the equation of motion for the two-DOF system.  A solution is assumed in the form:
+Recall that the 1-DOF version of the equation of motion was solved by calculating the values of the constants in an assumed harmonic solution. The same approach is applied here in order to solve for the displacement of the two-DOF system. This time, the the solution is assumed in the form:
 
 \begin{equation}
 	\mathbf{x}(t) = \mathbf{u}e^{j\omega t}
@@ -243,13 +241,13 @@ As $e^{j\omega t} \neq 0$ for any value of $t$ and not allowing $\mathbf{u}$ to 
 \begin{equation}
 (-\omega^2 M  + K)\mathbf{u} =0, \hspace{1cm} \mathbf{u}\neq0
 \end{equation}
-For this homogeneous set of algebraic equations to have a nonzero solution for the vector $\mathbf{u}$, the inverse of the coefficient matrix $(-\omega^2 M  + K)$ must not exist. To see that this is the case, suppose that the inverse of $(-\omega^2 M  + K)$ does exist. Then multiplying both sides of the equation by $(-\omega^2 M  + K)^{-1}$ yields $\mathbf{u}=0$, a trivial solution, as it implies no motion. Hence the solution of equation depends in some way on the matrix inverse.
+This forms a homogeneous set of algebraic equations. To be useful, these equations have a nonzero solution for the system must exist. For this to be true, the the inverse of the coefficient matrix $(-\omega^2 M  + K)$ must not exist. To expand, assume that the the inverse of $(-\omega^2 M  + K)$ does exist, by multiplying both sides of the equation by $(-\omega^2 M  + K)^{-1}$ yields $\mathbf{u}=0$. This is trivial solution (its not useful) as it no motion in the system is implied. Therefore, the logical connection can be drawn between the  solution of equation and the inverse of the coefficient matrix $(-\omega^2 M  + K)$.
 
-Applying the condition of singularity to the coefficient matrix of equation $(-\omega^2 M  + K)\mathbf{u} =0, \hspace{1ex} \mathbf{u}\neq0$ yields the result that for a nonzero solution of $\mathbf{u}$ to exist the following must be true:
+Applying the singularity condition to the coefficient matrix of equation $(-\omega^2 M  + K)\mathbf{u} =0, \hspace{1ex} \mathbf{u}\neq0$ results a nonzero solution of $\mathbf{u}$. However, for this to exist the following must be true:
 \begin{equation}
 \det(-\omega^2 M  + K) = 0
 \end{equation}
-which yields one algebraic equation in one unknown ($\omega$). Substituting the values of the matrices $M$ and $K$ into this expression yields:
+Solving this expression results in one algebraic equation with one unknown ($\omega$). Expanding the above equation to consider the values for the matrices $M$ and $K$ results in:
 \begin{eqnarray}
 \det\begin{bmatrix} -\omega^2 m_1 + k_1 + k_2 & -k_2  \\  -k_2 & -\omega^2 m_2 + k_2 \end{bmatrix}=0
 \end{eqnarray}
@@ -270,7 +268,7 @@ and
 \begin{equation}
 	(-\omega_2^2 M  + K)\mathbf{u}_2 =0
 \end{equation}
-These expressions can be solved for the direction of the vectors $\mathbf{u}_1$ and $\mathbf{u}_2$, but not for the magnitude. To see that this is true, note that if $\mathbf{u}_1$, satisfies the equation, so does the vector $a\mathbf{u}_1$ where $a$ is any nonzero number. Hence the vectors satisfying the above are of arbitrary magnitude.
+The direction of the vectors $\mathbf{u}_1$ and $\mathbf{u}_2$ can be obtained by solving the above expressions, however, the information regarding the magnitude of is not contained in this expression. To verify this, assume that $\mathbf{u}_1$ satisfies the equation, therefore, the vector $a\mathbf{u}_1$ also satisfies the equation where $a$ is any nonzero number. Hence the vectors satisfying the above are of arbitrary magnitude.
  
 The values obtained for $\mathbf{u}_1$ and $\mathbf{u}_2$ can now be combined with the assumed solution:
 \begin{equation}
@@ -293,14 +291,9 @@ Another way to write this equation is in the form:
 	 \begin{bmatrix} x_1(t) \\  x_2(t) \end{bmatrix} =  \begin{bmatrix} \mathbf{u}_1 & \mathbf{u}_2 \end{bmatrix}
 	 \begin{bmatrix} A_1 \sin (\omega_1 t + \phi_1 )\\ A_2 \sin (\omega_2 t + \phi_2 )\end{bmatrix}, \hspace{1cm} \omega_1 \text{ or } \omega_2 \neq 0
 \end{equation}
+Where the values for $A_1$ and $A_2$ can be obtained by setting applying the boundary conditions and taking the derivatives of the equations as done in the 1-DOF problems. 
 
-Where the values for $A_1$ and $A_2$ can be obtained by setting applying the boundary conditions and taking the derivatives of the equations as done in the 1-DOF problems. The forms of final equations and give physical meaning to the solution. It states that each mass oscillates at the natural frequencies of the system $\omega_1$ and $\omega_2$. Furthermore, suppose that the initial conditions are chosen such that $A_2$ = 0. With such initial conditions each mass oscillates at only one frequency,  $\omega_1$, and the relative positions of the masses at any given instant of
-time are determined by the elements of the vector $\mathbf{u}_1$. Hence $\mathbf{u}_1$, is called the first mode shape of the system. Similarly, if the initial conditions are chosen such that $A_1$ is zero, both coordinates oscillate at frequency $\omega_2$, with relative positions given by the vector $\mathbf{u}_2$, called the second mode shape. The concepts of natural frequencies and mode shapes are extremely important and form one of the major ideas used in vibration studies.
-
-
-
-
-
+The final form of the equation provides a physical insight into the solution of the system. It states that the each mass in the system oscillates at both of the natural frequencies of the system ($\omega_1$ and $\omega_2$). Furthermore, the importance of the  initial conditions can be understood. Assume that initial conditions are chosen that result in $A_2=0$, this cancels out the second natural frequency such that each mass oscillates at only one frequency,  $\omega_1$. Moreover, the positions of the masses can determined by the values of the vector $\mathbf{u}_1$ at any given time. For this reason,  $\mathbf{u}_1$ is termed the first mode shape of the system. Likewise, if the opposite initial conditions are chosen such that  $A_1=0$, then both system coordinates (e.g., masses in the systems we have studied) will oscillate at $\omega_2$ and again, the positions can be obtained from the vector $\mathbf{u}_2$. Where $\mathbf{u}_2$ is termed the second mode shape. The interactions between mode shapes and natural frequencies are very important and form the basis of several area in the field of vibrations.
 
 \begin{example}
 \label{ex:2-DOF}
