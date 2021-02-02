@@ -10,7 +10,7 @@
 \numberwithin{ex}{section} % allows for the use of example numbers that lign up with the section numbers
 \newenvironment{example}{\begin{mdframed}[middlelinewidth=0.5mm]\begin{ex}\normalfont}{\end{ex}\end{mdframed}}
 
-% defines all review enviorment
+% defines all review 
 \usepackage[framemethod=tikz]{mdframed} % added for the box around examples
 \newtheorem{re}{Review}
 \numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
@@ -476,7 +476,7 @@
 			\end{equation}
 			and	
 			\begin{equation}
-				\phi = \text{tan}^-1\bigg(\frac{A_1}{A_2}\bigg)
+				\phi = \text{tan}^{-1}\bigg(\frac{A_1}{A_2}\bigg)
 			\end{equation}		
 			These are obtained from a trigonometric relationship, similar to that used before:
 			\begin{figure}[H]
@@ -539,7 +539,7 @@
 			\end{equation}	
 			where $A$, $\phi$, $A_1$, and $A_2$, are all real-valued constants. Each set of constants can be related to each other by:
 			\begin{align}
-				A = \sqrt{A_1^2+ A_2^2} & \hspace{1.5cm} \phi = \text{tan}^-1\bigg(\frac{A_1}{A_2}\bigg) \\
+				A = \sqrt{A_1^2+ A_2^2} & \hspace{1.5cm} \phi = \text{tan}^{-1}\bigg(\frac{A_1}{A_2}\bigg) \\
 				A_1 = (a_1+a_2) & \hspace{1.5cm} A_2 = (a_1-a_2)j \\
 				a_1 = \frac{A_1-A_2j}{2} & \hspace{1.5cm} a_2 = \frac{A_1+A_2j}{2}
 			\end{align}
@@ -749,9 +749,9 @@
 				\text{cot}(\phi) = \frac{v_0 +\zeta\omega_nx_0}{x_0\omega_d} 
 				\label{eq:underdamped_phi}
 			\end{equation} 	
-			and as the $\text{tan}(\phi) = 1/\text{cot}(\phi)$: 
+			and as $\tan(\phi) = 1/\text{cot}(\phi)$: 
 			\begin{equation}
-				\phi = \text{tan}^-1\Bigg(\frac{x_0\omega_d}{v_0+\zeta\omega_nx_0}\Bigg)
+				\phi = \tan^{-1}\Bigg(\frac{x_0\omega_d}{v_0+\zeta\omega_nx_0}\Bigg)
 			\end{equation} 				
 			Thereafter, we can solve for $A$ considering the fact that we sent $A=x_0/\text{sin}(\phi)$. Using the trigonometric relationship between expressed in equation \ref{eq:underdamped_phi} and visualized in figure \ref{fig:trigonometric_relationship_underdamped}:
 			\begin{figure}[H]
@@ -774,7 +774,7 @@
 			\item Damping ratio: $	\zeta = \frac{c}{c_{\text{cr}}} = \frac{c}{2\sqrt{km}} = \frac{c}{2m\omega_n}$
 			\item Damped natural frequency: $\omega_d = \omega_n\sqrt{1-\zeta^2}$
 			\item Solution for underdamped system: $x(t) = Ae^{-\zeta\omega_nt}\text{sin}(\omega_dt + \phi)$, where: \begin{align*}
-						A = \frac{\sqrt{(v_0+\zeta\omega_nx_0)^2 + (x_0\omega_d)^2}}{\omega_d} & \hspace{1.5cm} \phi = \text{tan}^-1\Bigg(\frac{x_0\omega_d}{v_0+\zeta\omega_nx_0}\Bigg) 
+						A = \frac{\sqrt{(v_0+\zeta\omega_nx_0)^2 + (x_0\omega_d)^2}}{\omega_d} & \hspace{1.5cm} \phi = \text{tan}^{-1}\Bigg(\frac{x_0\omega_d}{v_0+\zeta\omega_nx_0}\Bigg) 
 						\end{align*}
 			\end{itemize}
 
