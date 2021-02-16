@@ -1,32 +1,38 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
+Created on Thu Nov 10 09:30:27 2016
 
-This is a temporary script file.
+@author: downey
 """
 
-# import modules
+#%% import modules and set default fonts and colors
+
 import IPython as IP
 IP.get_ipython().magic('reset -sf')
-
-import warnings     # added to ignore the plotting warings about font types in math mode
-warnings.simplefilter("ignore", UserWarning)
-
-import matplotlib as mpl
-from matplotlib.patches import Rectangle
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-from mpl_toolkits.mplot3d import axes3d
-import os as os
+import matplotlib as mpl
 import numpy as np
+import pandas as PD
 import scipy as sp
-import copy as copy
-from matplotlib import cm
+from scipy import interpolate
+import pickle
 import time
-#import pykrige as pykrige
-import scipy.io as sio
-tt1 = time.time()
+import re
+import json as json
+import pylab
 
+# set default fonts and plot colors
+plt.rcParams.update({'image.cmap': 'viridis'})
+cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
+plt.rcParams.update({'font.serif':['Times New Roman', 'Times', 'DejaVu Serif',
+ 'Bitstream Vera Serif', 'Computer Modern Roman', 'New Century Schoolbook',
+ 'Century Schoolbook L',  'Utopia', 'ITC Bookman', 'Bookman', 
+ 'Nimbus Roman No9 L', 'Palatino', 'Charter', 'serif']})
+plt.rcParams.update({'font.family':'serif'})
+plt.rcParams.update({'font.size': 10})
+plt.rcParams.update({'mathtext.rm': 'serif'})
+plt.rcParams.update({'mathtext.fontset': 'custom'})
 plt.close('all')
 
 
@@ -56,14 +62,14 @@ lns1 = ax1.plot(tt,xx_1*1000,color=cc[0],label='free vibration')
 lns2 = ax1.plot(tt,xx_2*1000,'--',color=cc[1],label='forced vibration')
 ax1.set_xlabel('time (s)')
 # Make the y-axis label, ticks and tick labels match the line color.
-ax1.set_ylabel('amplitude (mm)')
+ax1.set_ylabel('displacement amplitude (mm)')
 #ax1.tick_params('y', co)
 
 
 ax2 = ax1.twinx()
 s2 = np.sin(2 * np.pi * t)
 lns3 = ax2.plot(tt,xx_forcing*1000,':',color=cc[2],label='forcing function',zorder=0)
-ax2.set_ylabel('force', color=cc[2])
+ax2.set_ylabel('applied force (N)', color=cc[2])
 ax2.tick_params('y', colors=cc[2])
 
 

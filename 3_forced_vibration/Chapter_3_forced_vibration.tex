@@ -370,6 +370,7 @@
 			\end{equation}	
 			However, now that we have damping force to consider, our particular solution will have to consider this damping. Therefore:
 			\begin{equation}
+				\label{eq:x_p(t)}
 				x_p(t) = X \text{cos}(\omega t - \phi_p)
 			\end{equation}
 			where $\phi_p$ represents the phase shift. Note: $\phi_p$ is represented in other texts as $\theta$, $\theta_p$, or even just $\phi$ but we will use $\phi_p$ throughout the remainder of this text. Again, the phase shift is expected because of the effect of the damping force. Now, our total equation is:
@@ -536,7 +537,7 @@
 			\begin{equation}
 				\phi_p = \tan^{-1} \bigg(\frac{2\zeta \omega_n \omega}{\omega_n^2 - \omega^2}\bigg)
 			\end{equation}	
-			We want to find a way to plot the responses of the system only in terms of terms of the system's natural and driving frequencies, and its damping. First, we define a frequency ratio as the dimensionless quantity 
+			We want to find a way to plot the responses of the system only in terms of the system's natural and driving frequencies, and its damping. First, we define a frequency ratio as the dimensionless quantity 
 			\begin{equation}
 				r = \frac{\omega}{\omega_n}
 			\end{equation}
@@ -608,7 +609,7 @@
 				\includegraphics[]{../Figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 				\caption{Damped 1-DOF spring-mass system subjected to an external force $F(t)$.}
 			\end{figure}				
-			where $\omega_n = 132$ rad/sec and $\zeta$ = 0.0085. Calculate the displacements of the steady-state response for $\omega$=132 and 125 rad/sec. In both cases, use $f_0$ = 10 N/kg. 
+			\noindent where $\omega_n = 132$ rad/sec and $\zeta$ = 0.0085. Calculate the displacements of the steady-state response for $\omega$=132 and 125 rad/sec. In both cases, use $f_0$ = 10 N/kg. 
 
 			\noindent\textbf{Solution:}	From before, we know the solution for the displacement of the particular solution for $\omega$=132 rad/sec is:
 			\begin{equation}
@@ -631,7 +632,7 @@
 				\includegraphics[]{../Figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 				\caption{Damped 1-DOF spring-mass system subjected to an external force $F(t)$.}
 			\end{figure}	
-			Use $k$ = 2000 N/m, $m$ = 100 kg, $F(t)$ = 20 cos($6.3t$) N. 			
+			\noindent Use $k$ = 2000 N/m, $m$ = 100 kg, $F(t)$ = 20 cos($6.3t$) N. 			
 
 			\noindent\textbf{Solution:} The steady state solution is:
 			\begin{equation}
@@ -720,7 +721,7 @@
 				 x_p(t) = 	x_p^{(1)}(t) + 	x_p^{(2)}(t)  
 				\end{equation}
 				
-				 Recall that the steady state solution for a harmonically excited spring-mass-damper can be expressed as $x_p(t) = X\text{cos}(\omega_b t - \phi_1)$. Therefore, for a base excited problem, the forcing function can be expressed as the sum of particular solutions:
+				 Recall that the steady state solution for a harmonically excited spring-mass-damper can be expressed as $x_p(t) = X\text{cos}(\omega t - \phi_p)$, as denoted in equation~\ref{eq:x_p(t)}. For the base excitation problem, we will convert this expression to $x_p(t) = X\text{cos}(\omega_b t - \phi_1)$. Therefore, for a base excited problem, the forcing function can be expressed as the sum of particular solutions:
 				\begin{equation}
 					C \text{cos}(\omega_b t)  + D \text{sin}(\omega_b t)   = x_p = 	x_p^{(1)} + 	x_p^{(2)} 
 				\end{equation}
@@ -731,7 +732,9 @@
 				\begin{equation}
 					x_p^{(2)} = X^{(2)} \text{sin}(\omega_b t - \phi_1)
 				\end{equation}
-				Note that $x_p^{(1)}$ uses a cos term while $x_p^{(1)}$ uses a sin term. Both solutions use $\phi_1$ as the damping term as the phase angle is independent of the excitation amplitude and the sin and cos terms account for the difference in phase. Now, for $x_p^{(1)}$, we use the method of undetermined coefficients to obtain a solution for $x_p^{(1)} = X^{(1)}\text{cos}(\omega_b t - \phi_1)$. This can be as simple as setting $2 \zeta \omega_n \omega_b Y$ equal to $f_0$ from equation \ref{eq:X_damped} that defines $X$ for underdamped systems. Again, $2 \zeta \omega_n \omega_b Y$  comes from the EOM in standard form as presented in equation 	
+				Note that $x_p^{(1)}$ uses a cos term while $x_p^{(1)}$ uses a sin term. Both solutions use $\phi_1$ as the damping term as the phase angle is independent of the excitation amplitude and the sin and cos terms account for the difference in phase. 
+				
+				For $x_p^{(1)}$, we use the method of undetermined coefficients to obtain a solution for $x_p^{(1)} = X^{(1)}\text{cos}(\omega_b t - \phi_1)$. This can be as simple as setting $2 \zeta \omega_n \omega_b Y$ equal to $f_0$ from equation \ref{eq:X_damped} that defines $X$ for underdamped systems. Again, $2 \zeta \omega_n \omega_b Y$  comes from the EOM in standard form as presented in equation 	
 				\ref{eq:standard_form_base_excitation}. We can do this because both terms can be considered a ``driving force''. This results in the equation:
 				\begin{equation}
 					x_p^{(1)} = \frac{2 \zeta \omega_n \omega_b Y}{\sqrt{(\omega_n^2 - \omega_b^2)^2 +  (2\zeta \omega_n \omega_b)^2}}  \text{cos}(\omega_b t - \phi_1)
@@ -740,7 +743,8 @@
 				where:
 				\begin{equation}
 					\phi_1 = \tan^{-1} \bigg(\frac{2\zeta \omega_n \omega_b}{\omega_n^2 - \omega_b^2}\bigg)
-				\end{equation}	
+				\end{equation}
+				
 				Next, the particular solution associated with $x_p^{(2)} = X^{(2)} \text{sin}(\omega_b t - \phi_1)$ can be obtained using the same method of undetermined coefficients an setting $f_0$ from equation \ref{eq:X_damped} to the driving force for $x_p^{(2)}$ in equation  \ref{eq:standard_form_base_excitation}, $\omega_n^2$. This results in:
 				\begin{equation}
 					x_p^{(2)} = \frac{\omega_n^2 Y}{\sqrt{(\omega_n^2 - \omega_b^2)^2 +  (2\zeta \omega_n \omega_b)^2}}  \text{sin}(\omega_b t - \phi_1)
@@ -758,7 +762,9 @@
 				\begin{equation}
 					\phi_2 = \tan^{-1} \bigg(\frac{\omega_n}{2\zeta \omega_b}\bigg)
 				\end{equation}
-				where $\phi_2$ is added to account for the cos and sin terms being combined. Again, the $(t)$ has been dropped for simplicity. As before, if we want to investigate how a frequency input will affect the response (frequency response) we can substitute substitute 
+				where $\phi_2$ is added to account for the cos and sin terms being combined. Again, the $(t)$ has been dropped for simplicity. 
+				
+				As before, if we want to investigate how a frequency input will affect the response (frequency response) we can substitute substitute 
 				\begin{equation}
 				r=\frac{\omega_b}{\omega_n}
 				\end{equation} 
