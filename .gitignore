@@ -3,3 +3,5 @@
 *.gz
 *.aux
 *.log
+*.blg
+*.bbl
