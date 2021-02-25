@@ -109,11 +109,11 @@
 		\begin{equation}
 				\Laplace{f(t)} = F(s) = \int_{0}^{\infty} f(t)e^{-st}dt
 		\end{equation}
-		where $s$ represents a variable in the complex plane and $f(t)=0$ for all values of $t<0$. Here, the $s$ is a complex value. Lastly, the term $F(s)$ is a generic term that  represents the input to a system. As this class needs the derivative of functions, we will calculate that next:
+		where $s$ represents a variable in the complex plane and $f(t)=0$ for all values of $t<0$. Here, the $s$ is a complex value. Lastly, the term $F(s)$ is a generic term that  represents the input to a system. As this class needs the derivatives of the base function, we will calculate these next:
 		\begin{equation}
 			\Laplace{\dot{f}(t)} = \int_{0}^{\infty} \dot{f}(t)e^{-st}dt = \int_{0}^{\infty} e^{-st}\frac{d[f(t)]}{dt}dt 
 		\end{equation}		
-		integration by parts yields
+		integration by parts yields:
 		\begin{equation}
 			\Laplace{\dot{f}(t)} = e^{-st}f(t)\Big|_0^\infty+s\int_{0}^{\infty}e^{-st}f(t)dt
 		\end{equation}
@@ -122,7 +122,7 @@
 		\begin{equation}
 			\Laplace{\dot{f}(t)} = sF(s)-f(0)
 		\end{equation}
-		Successive iteration yields:
+		Taking the derivative of again yields:
 		\begin{equation}
 			\Laplace{\ddot{f}(t)} = s^2F(s)-sf(0)-\dot{f}(0)
 		\end{equation}
@@ -130,10 +130,10 @@
 		A few key points of the Laplace transforms are:
 				
 		\begin{itemize}
-			\item the domain of the problem from the real number line ($t$) to the complex plane ($s$).
+			\item The domain of the problem changes from the real number line ($t$) to the complex plane ($s$).
 			\item The integration of the Laplace transform changes differentiation into multiplication.
 			\item The transform procedure is linear. Therefore, the transform of the linear combination of two transforms is the same as the linear transformation of these functions. 
-			\item to move from the time domain to the complex number plane we typically use tables of pre-solved integral. 
+			\item To move from the time domain to the complex number plane we typically use tables of pre-solved integral. 
 			\item The function $x(t)$ can be obtained by taking the inverse Laplace transform defined as $x(t) = \Laplace{X(s)}^{-1}$
 		\end{itemize}
 
@@ -145,14 +145,13 @@
 			\end{equation}		
 			\begin{equation}
 				\label{eq:laplace_f'}
-				\Laplace{\dot{f}(t)} = sF(s)-x(0)
+				\Laplace{\dot{f}(t)} = sF(s)-f(0)
 			\end{equation}	
 			\begin{equation}
 				\label{eq:laplace_f''}
-				\Laplace{\ddot{f}(t)} = s^2F(s)-sx(0) - \dot{x}(0)
+				\Laplace{\ddot{f}(t)} = s^2F(s)-sf(0) - \dot{f}(0)
 			\end{equation}	
-			here, $f(0)$ and $\dot{f}(0)$ are the initial values of the function $f(t)$. 				
-			and for system outputs:
+			here, $f(0)$ and $\dot{f}(0)$ are the initial values of the function $f(t)$.  Furthermore, the for system outputs are:
 			\begin{equation}
 				\label{eq:laplace_x}
 				\Laplace{x(t)} = X(s)
@@ -201,7 +200,7 @@
 			\begin{equation}
 			X(s) = \frac{sx_0 + v_0}{s^2 + \omega_n^2}
 			\end{equation}
-			The full derivation of the above step is presented in appendix [X]. We can expand this form of $X(s)$ to obtain equations listed in our Laplace Transform table:
+			We can expand this form of $X(s)$ to obtain equations listed in our Laplace Transform table:
 			\begin{equation}
 			X(s) = \frac{sx_0}{s^2 + \omega_n^2} + \frac{v_0}{s^2 + \omega_n^2}\cdot \frac{\omega_n}{\omega_n}
 			\end{equation}
@@ -415,7 +414,7 @@ Note that the displacement of the truck bed is twice that of the static displace
 
 \subsubsection{Arbitrary Inputs to a System}
 \label{sec:impulse_inputs}
-The time domain response of a system to an arbitrary input force in time can be calculated using a series of impulses as shown in figure \ref{fig:Arbitary_excitation_forces}. This method allows the practitioner to easily calculate the response of an arbitrary input to a system using a single expression executed in a ''for loop''. This type of analysis is often more efficient in terms of programing than more direct methods such as the transfer functions sown in this text. 
+The time domain response of a system to an arbitrary input force in time can be calculated using a series of impulses as shown in figure \ref{fig:Arbitary_excitation_forces}. This method allows the practitioner to easily calculate the response of an arbitrary input to a system using a single expression executed in a ``for loop''. This type of analysis is often more efficient in terms of programing than more direct methods such as the transfer functions sown in this text. 
 
 \begin{figure}[H]
 	\centering
