@@ -14,7 +14,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   sodipodi:docname="1-DOF-spring_mass_horizontal_contact.svg"
+   sodipodi:docname="1-DOF-spring_dashpot_mass_horizontal_contact.svg"
    inkscape:export-filename="/home/austin/Documents/Dropbox/Teaching/EMCH-330/Class_notes/class_10/figures/impulse_time_history.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
@@ -10347,9 +10347,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.423501"
-     inkscape:cx="322.1763"
-     inkscape:cy="478.35085"
+     inkscape:zoom="1.713674"
+     inkscape:cx="286.83593"
+     inkscape:cy="444.89199"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -10531,78 +10531,123 @@
          x="95.273064"
          y="210.18832"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">m</tspan></text>
-    <g
-       id="g5060-7"
-       transform="rotate(180,103.9341,190.16398)"
+    <path
+       inkscape:connector-curvature="0"
+       id="path4556-1"
+       d="M 108.83844,218.45445 H 83.04156"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc"
        inkscape:export-filename="1-DOF-spring_dashpot_mass_horizontal_contact.png"
        inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4556-1"
-         d="M 99.029761,161.87351 H 124.82664"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-11"
-         d="m 124.71559,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-6-20"
-         d="m 122.44114,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-7-9"
-         d="m 120.16669,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-5-2"
-         d="m 117.89226,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-3-9"
-         d="m 115.6178,161.89329 -2.53907,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-56-66"
-         d="m 113.34334,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-2-8"
-         d="m 111.06889,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-9-4"
-         d="m 106.51999,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-1-8"
-         d="m 104.24555,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-27-6"
-         d="m 101.9711,161.89329 -2.539056,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-0-9"
-         d="m 99.696656,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-93-9"
-         d="m 108.79444,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    </g>
+       inkscape:export-ydpi="300" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4558-11"
+       d="m 83.15261,218.43467 -2.22344,3.14042"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="1-DOF-spring_dashpot_mass_horizontal_contact.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4558-6-20"
+       d="m 85.42706,218.43467 -2.22344,3.14042"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="1-DOF-spring_dashpot_mass_horizontal_contact.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4558-7-9"
+       d="m 87.70151,218.43467 -2.22344,3.14042"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="1-DOF-spring_dashpot_mass_horizontal_contact.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4558-5-2"
+       d="m 89.97594,218.43467 -2.22344,3.14042"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="1-DOF-spring_dashpot_mass_horizontal_contact.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4558-3-9"
+       d="m 92.2504,218.43467 -2.22343,3.14042"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="1-DOF-spring_dashpot_mass_horizontal_contact.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4558-56-66"
+       d="m 94.52486,218.43467 -2.22344,3.14042"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="1-DOF-spring_dashpot_mass_horizontal_contact.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4558-2-8"
+       d="m 96.79931,218.43467 -2.22344,3.14042"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="1-DOF-spring_dashpot_mass_horizontal_contact.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4558-9-4"
+       d="m 101.34821,218.43467 -2.22344,3.14042"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="1-DOF-spring_dashpot_mass_horizontal_contact.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4558-1-8"
+       d="m 103.62265,218.43467 -2.22344,3.14042"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="1-DOF-spring_dashpot_mass_horizontal_contact.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4558-27-6"
+       d="m 105.8971,218.43467 -2.22344,3.14042"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="1-DOF-spring_dashpot_mass_horizontal_contact.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4558-0-9"
+       d="m 108.17154,218.43467 -2.22344,3.14042"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="1-DOF-spring_dashpot_mass_horizontal_contact.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4558-93-9"
+       d="m 99.07376,218.43467 -2.22344,3.14042"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="1-DOF-spring_dashpot_mass_horizontal_contact.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <g
        transform="matrix(0,-1.0087068,1.0087068,0,-195.63861,308.42255)"
        id="g4991-5-6"
