@@ -87,14 +87,18 @@
 			\item arbitrary periodic input
 		\end{itemize}
 
-		\subsection{Transfer Function Method (Generic)}
 
+		\subsection{Transfer Function Method (Generic)}
 			Consider the following system
+
 			\begin{figure}[H]
 				\centering
-				\includegraphics[]{../Figures/transfer_function_system.png}
+				\includegraphics[]{../Figures/control_system.png}
+				\caption{Generic system $H$ subjected to an input $F$ and its corresponding output $X$.}
+				\label{fig:control_system}
 			\end{figure}
-			\noindent where $F(s)$ is the input, $H(s)$ is the system, and $X(s)$ is the output from the system. This formulation is called the transfer-function approach and is commonly used for the formulation and solution of dynamic problems in the control literature. It can also be used for solving the various forced-vibration problems including those from complex or stochastic inputs. 
+
+			\noindent where $F$ is the input, $H$ is the system, and $X$ is the output from the system. This formulation is called the transfer-function approach and is commonly used for the formulation and solution of dynamic problems in the control literature. It can also be used for solving the various forced-vibration problems including those from complex or stochastic inputs. 
 
 
 \begin{review}
@@ -109,7 +113,7 @@
 		\begin{equation}
 				\Laplace{f(t)} = F(s) = \int_{0}^{\infty} f(t)e^{-st}dt
 		\end{equation}
-		where $s$ represents a variable in the complex plane and $f(t)=0$ for all values of $t<0$. Here, the $s$ is a complex value. Lastly, the term $F(s)$ is a generic term that  represents the input to a system. As this class needs the derivatives of the base function, we will calculate these next:
+		where $s$ represents a variable in the complex plane (also called the $s$-plane) and $f(t)=0$ for all values of $t<0$. Here, the $s$ is a complex value. Lastly, the term $F(s)$ is a generic term that  represents the input to a system. As this class needs the derivatives of the base function, we will calculate these next:
 		\begin{equation}
 			\Laplace{\dot{f}(t)} = \int_{0}^{\infty} \dot{f}(t)e^{-st}dt = \int_{0}^{\infty} e^{-st}\frac{d[f(t)]}{dt}dt 
 		\end{equation}		
@@ -130,7 +134,7 @@
 		A few key points of the Laplace transforms are:
 				
 		\begin{itemize}
-			\item The domain of the problem changes from the real number line ($t$) to the complex plane ($s$).
+			\item The domain of the problem changes from the real number line ($t$) to the complex plane ($s$-plane).
 			\item The integration of the Laplace transform changes differentiation into multiplication.
 			\item The transform procedure is linear. Therefore, the transform of the linear combination of two transforms is the same as the linear transformation of these functions. 
 			\item To move from the time domain to the complex number plane we typically use tables of pre-solved integral. 
@@ -188,7 +192,7 @@
 			\begin{equation}
 				m\ddot{x}(t) + kx(t) = 0 
 			\end{equation}
-			Here we will leave the ``$(t)$'' for clarity to differentiate the time domain solution from Laplace solution ``$(s)$'' in the complex plane, as discussed in review \ref{sec:Laplace_review}. The EOM can be rewritten in standard form as:
+			Here we will leave the ``$(t)$'' for clarity to differentiate the time domain solution from Laplace solution ``$(s)$'' in the $s$-plane, as discussed in review \ref{sec:Laplace_review}. The EOM can be rewritten in standard form as:
 			\begin{equation}
 				\ddot{x}(t) + \omega_n^2x(t) = 0 
 			\end{equation}
@@ -206,7 +210,7 @@
 			\end{equation}
 			This becomes:
 			\begin{equation}
-			X(s) = x_0\frac{s}{s^2 + \omega_n^2} + \bigg(\frac{v_0}{\omega_n}\bigg) \cdot \frac{\omega_n}{s^2 + \omega_n^2}\cdot 
+			X(s) = x_0\frac{s}{s^2 + \omega_n^2} + \bigg(\frac{v_0}{\omega_n}\bigg) \cdot \frac{\omega_n}{s^2 + \omega_n^2}
 			\end{equation}
 			
 			Next, using the inverse Laplace transform $x(t) = \Laplace{X(s)}^{-1}]$ and the two following Laplace transforms (\#5 and \#6):
@@ -304,7 +308,7 @@ Below is a typical response for both a undamped and underdamped 1-DOF system sub
 
 
 \subsubsection{Unit step function}
-Now consider a unit step function $\Phi$: 
+Now consider a unit step function, denoted with a capital Greek Phi  $\Phi$: 
 
 \begin{figure}[H]
 	\centering
@@ -319,7 +323,7 @@ The Laplace transform of the function, for a unit step function $\Phi$, is:
 \begin{equation*}
 \Laplace{\Phi(t)} = \int_{0}^{\infty} e^{-st}dt = -\frac{e^{-\infty}}{s} +\frac{e^{-0}}{s} =\frac{1}{s}
 \end{equation*}
-This also lines up with Laplace Transform \# 3 from the attached table. This would be expected as $\Phi$ is used to represent the unit step function (i.e. a step function with a displacement of 1). As we consider linear systems in this class, we can scale the magnitude of the response by the magnitude of the impulse after the transform is performed. 
+This also lines up with Laplace Transform \#3 from the Laplace table. This would be expected as $\Phi$ is used to represent the unit step function (i.e. a step function with a displacement of 1). As we consider linear systems in this class, we can scale the magnitude of the response by the magnitude of the impulse after the transform is performed. 
 
 \subsubsection{Undamped spring-mass system}
 
@@ -339,7 +343,7 @@ This can be rearranged as:
 \begin{equation}
 	X(s) = \frac{1}{m} \cdot \frac{1}{s(s^2+\omega_n^2)}
 \end{equation}
-where $\frac{1}{m}$ will pass through the Laplace function. Therefore, taking the inverse Laplace transform yields:
+where $\frac{1}{m}$ will pass through the Laplace function. Therefore, taking the inverse Laplace transform using \#9 of the provided Laplace transforms yields:
 \begin{equation}
 	x(t) = \frac{1}{m} \cdot \frac{1}{\omega_n^2}\big(1-\text{cos}(\omega_n t)\big) = \frac{1}{k}\big(1-\text{cos}(\omega_n t)\big)
 \end{equation}
@@ -348,11 +352,11 @@ where $\frac{1}{m}$ will pass through the Laplace function. Therefore, taking th
 
 For a spring-mass-damper system subjected to a unit step, assuming both initial conditions are zero, the solution can be obtained using the transform method. First, the EOM is:
 \begin{equation}
-m\ddot{x}(t) + c\dot{x} + kx(t) = \Phi(t)
+m\ddot{x}(t) + c\dot{x}(t) + kx(t) = \Phi(t)
 \end{equation}
 Converting to the standard form results in:
 \begin{equation}
-\ddot{x}(t) + 2  \zeta \omega_n\dot{x} + \omega_n^2x(t) = \frac{1}{m} \cdot \Phi(t)
+\ddot{x}(t) + 2  \zeta \omega_n\dot{x}(t) + \omega_n^2x(t) = \frac{1}{m} \cdot \Phi(t)
 \end{equation}
 taking the Laplace transform of both sides and assuming zero initial conditions yields:
 \begin{equation}
@@ -366,7 +370,7 @@ multiplying the right-hand-side of this equation by  $\frac{\omega_n^2}{\omega_n
 \begin{equation}
 	X(s) = \frac{1}{m \omega_n^2} \cdot \frac{\omega_n^2}{s(s^2+2\zeta\omega_n s+\omega_n^2)}
 \end{equation}
-Again, the $\frac{1}{m\omega_n^2}$ will pass through the Laplace function. Therefore, taking the inverse Laplace transform yields:
+Again, the $\frac{1}{m\omega_n^2}$ will pass through the Laplace function. Therefore, taking the inverse Laplace transform using \#11 on the Laplace transform sheet yields:
 \begin{equation}
 	x(t) = \frac{1}{m \omega_n^2} \cdot \Big(1 - \frac{\omega_n}{\omega_d}e^{-\zeta \omega_n t}\text{sin}(\omega_dt + \phi)\Big)\text{, where } \phi = \text{cos}^{-1}(\zeta)\text{, where } \zeta<1
 \end{equation}
@@ -379,7 +383,7 @@ After obtaining equations for the undamped and under damped cases, the responses
 Note that the system will settle out around $F_0/k$ where $F_0  \Phi$ is a scaling factor for the step loading.
 
 \begin{example}
-A load of roosters $m_r$ is dumped into the back of a dump truck. Assuming the roosters do not move, the bed of the truck can be modeled as a spring-mass-damper system (of values $k$, $m$, and $c$, respectively). Nest, the load of roosters is modeled as a force $F(t) = m_r g$ that is applied to the spring-mass-damper system, as illustrated in the following figure. The simplification of the system allows for the analysis of the truck bed's vibrations as a simple spring-mass-damper system. First assume that the trucks damper is broken, how does the maximum dynamic displacement compare to the static displacement. What would happen to the maximum displacement if the damper was repaired on the truck? %Next, using a damping value of $\zeta=0.5$ and $\omega_n=\pi$ what is the maximum displacement. How does this compare to the displacement for the case without the damper?  
+A load of roosters $m_r$ is dumped into the back of a dump truck. Assuming the roosters do not move, the bed of the truck can be modeled as a spring-mass-damper system (of values $k$, $m$, and $c$, respectively). Next, the load of roosters is modeled as a force $F(t) = m_r g$ that is applied to the spring-mass-damper system, as illustrated in the following figure. The simplification of the system allows for the analysis of the truck bed's vibrations as a simple spring-mass-damper system. First assume that the trucks damper is broken, how does the maximum dynamic displacement compare to the static displacement. What would happen to the maximum displacement if the damper was repaired on the truck? %Next, using a damping value of $\zeta=0.5$ and $\omega_n=\pi$ what is the maximum displacement. How does this compare to the displacement for the case without the damper?  
 
 \begin{figure}[H]
 	\centering
@@ -389,7 +393,7 @@ A load of roosters $m_r$ is dumped into the back of a dump truck. Assuming the r
 
 \noindent\textbf{Solution:} First, setting the load applied to the truck as 1 unit, it can be seen that this is a unit step loading condition and a broken damper represents an undamped case. To obtain a rough idea about the nature of static and dynamic displacement, the undamped displacement is
 
-\begin{equation}d
+\begin{equation}
 	x(t) = \frac{1}{k}\big(1-\text{cos}(\omega_n t)\big) = \frac{m_rg}{k}\big(1-\text{cos}(\omega_n t)\big)
 \end{equation}
  
@@ -402,7 +406,7 @@ This can be rearranged for the maximum displacement value $x_\text{max} $ as:
 	x_\text{max} = 2\frac{m_rg}{k}
 \end{equation} 
 
-Note that the displacement of the truck bed is twice that of the static displacement. Therefore, if the truck manufacturer designed the truck to only take the static load of rosters (i.e., if the roosters were placed gently into the truck bed), the frame of the truck would be damaged when the roosters were loaded into the truck dynamically. From this, it can be understood that it is important to consider dynamic responses of a system during the design phase.
+Note that the dynamic displacement of the truck bed is twice that of the static displacement. Therefore, if the truck manufacturer designed the truck to only take the static load of rosters (i.e., if the roosters were placed gently into the truck bed), the frame of the truck would be damaged when the roosters were loaded into the truck dynamically. From this, it can be understood that it is important to consider dynamic responses of a system during the design phase.
 
 %\textbf{Example 1 - under damped}
 %For the case where the truck has a damper with a value of $\zeta=0.5$, the displacement $(x)$ can be modeled as:
@@ -438,7 +442,7 @@ In testing, an hammer is used to excite a 1-DOF system with an impact (i.e. impu
 where $\tau$ is the offset between the first and second impacts. Next, considering that the unit impulse has a magnitude of 1 we can obtain solutions for the first impact by first writing it's EOM:
 
 \begin{equation}
-m\ddot{x} +c\dot{x} +kx =0.2 \delta(t)
+m\ddot{x}(t) +c\dot{x}(t) +kx(t) =0.2 \delta(t)
 \end{equation}
 Taking the Laplace transform of both sides of the equation yields 
 \begin{equation}
@@ -483,16 +487,20 @@ For the mass, damping, and stiffness values given above this can be plotted as:
 \end{example}
 
 
-\subsection{Transform function for response to random inputs}
+\subsection{Transform Function for Response to Random Inputs}
+
+			Consider the following system
+			\begin{figure}[H]
+				\centering
+				\includegraphics[]{../Figures/transfer_function_system.png}
+				\caption{Generic block diagram of a system $H(s)$ subjected to an input $F(s)$ and its corresponding output $X(s)$ where the $(s)$ denotes that the considered system is in the $s$-plane.}
+				\label{fig:transfer_function_system}
+			\end{figure}
+			\noindent where $F(s)$ is the input, $H(s)$ is the system, and $X(s)$ is the output from the system. This formulation is called the transfer-function approach and is commonly used for the formulation and solution of dynamic problems in the control literature. It can also be used for solving the various forced-vibration problems including those from complex or stochastic inputs. 
 	
 \subsubsection{Defining the transfer function $\mathbf{H(s)}$}
 
-Again, consider the following system
-\begin{figure}[H]
-	\centering
-	\includegraphics[]{../Figures/transfer_function_system.png}
-\end{figure}
-For this system representation, F(s) is the Laplace of the transform of the driving force and H(s) is the Laplace transform of the response of the system h(t). 
+Again, consider the genertic system represented in figure~\ref{fig:transfer_function_system}. For this system representation, F(s) is the Laplace of the transform of the driving force and H(s) is the Laplace transform of the response of the system h(t). 
 
 We need to define transfer function $H(s)$ for a generic system. To do this let us show the reasoning behind the transfer function. Here we will show that the output of any system ($x(t)$) can be related to the input of the system ($f(t)$) through a series of polynomial coefficients ($a$ and $b$). Consider the general $n^{th}$-order linear, time-invariant differential equation that governs the behavior of the dynamic system.
 
@@ -537,7 +545,7 @@ Considering the forced system:
 \end{figure}
 \noindent that can be expressed as the equation of motion
 \begin{equation}
-	m\ddot{x} + c\dot{x} +kx = F_0 \cos(\omega t)
+	m\ddot{x}(t) + c\dot{x}(t) +kx(t) = F_0 \cos(\omega t)
 \end{equation}
 Here $F_0 \cos(\omega t)$, is used at the input but any input will develope the same transfer function as the transfer function is bounded to the system and not the input. From the \#6 in the table for Laplace Transforms, we know that
 \begin{equation}
@@ -587,7 +595,7 @@ multiplying $H(j\omega)$ by its complex conjugate yields:
 \begin{multline}
 	 H(j\omega) = \bigg( \frac{1}{k-m\omega^2+c\omega j} \bigg) \bigg( \frac{k-m\omega^2-c\omega j}{k-m\omega^2-c\omega j}\bigg) \\ =  \bigg( \frac{k-m\omega^2}{(k-m\omega^2)^2(c\omega)^2} \bigg) \bigg( \frac{-c\omega}{(k-m\omega^2)^2(c\omega)^2}j\bigg) 
 \end{multline}  
-therefore, $R = \frac{k-m\omega^2}{(k-m\omega^2)^2(c\omega)^2} $ and $I = \frac{-c\omega}{(k-m\omega^2)^2(c\omega)^2}$. Now, calculating the amplitude of $H(j\omega)$ we get:
+therefore, $\text{R} = \frac{k-m\omega^2}{(k-m\omega^2)^2(c\omega)^2} $ and $\text{I} = \frac{-c\omega}{(k-m\omega^2)^2(c\omega)^2}$. Now, calculating the amplitude of $H(j\omega)$ we get:
 \begin{multline}
 H(\omega) = |H(j\omega)| = \sqrt{\text{R}^2+\text{I}^2} =  \sqrt{\frac{(k-m\omega)^2+(-c\omega)^2}{\big((k-m\omega^2)^2+(c\omega)^2)\big)^2}} \\ 
 = \sqrt{\frac{1}{(k-m\omega^2)^2+c^2\omega^2}} = \frac{1}{\sqrt{(k-m\omega^2)^2+c^2\omega^2}}
