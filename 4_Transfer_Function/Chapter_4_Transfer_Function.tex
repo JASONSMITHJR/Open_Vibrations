@@ -227,7 +227,7 @@
 			
 			The same procedure can be used to calculate the under damped and forced responses. However, when calculating these responses the algebraic solution for $X(s)$, $s$ often contains quotients of polynomials. These Polynomial ratios may not be found in simple Laplace tables and must be solved using the method of partial fractions. An example of this procedure can be found in Appendix B of Inman. 
 
-% this example may not bee needed. Check and replace with a better one. 
+% this example may not be needed. Check and replace with a better one. 
 %			\begin{example}
 %				Solve the following system using the transfer function approach:
 %				\begin{figure}[H]
@@ -573,7 +573,7 @@ H(s) = \frac{1}{ms^2+cs+k}
 \end{equation}
 This ratio is termed the transfer function of a system and is an important tool in vibration analysis.
 
-Recall that $s$ is a complex number and therefore contains a real and imaginary portion in the complex plane. Restricting $s$ to lie on the imaginary axis (i.e., if $s = j\omega$), the transfer function becomes:
+Sometimes, how the system responds to a inputs with certain frequency components is important in understanding they system in general, therefore, we want to solve for the frequency response function of the system. The frequency response function is denoted as $H(j\omega)$ where the complex number $s$ is replaced by the frequency component of the system while considering the imaginary portion in the complex plane (i.e., $s = j\omega$). Therefor, the frequency response function of the system becomes:
 
 \begin{equation}
 H(j\omega) = \frac{1}{m(j\omega)^2+cj\omega+k} = \frac{1}{-m\omega^2+cj\omega+k} 
@@ -583,7 +583,7 @@ rearranging into a standard form yields:
 H(j\omega) = \frac{1}{k-m\omega^2+c\omega j}
 \label{eq:frequency_response_function}
 \end{eqnarray}
-recall that $j^2=-1$. This is the frequency response function of the system. Therefore, it can bee seen that the frequency response function of the system is the transfer function of the system evaluated along the imaginary axis $s=j\omega$. However, this expression contains imaginary values (that help to account for the phase in the system) and therefore can be challenging to work with. As the amplitude $|H(j\omega)|$ of the response (the real portion of the equation) is useful to the practitioner, it is prudent to consider the special case of amplitude response while neglecting the phase response. Consider that:
+recall that $j^2=-1$. This is the frequency response function of the system. Therefore, it can be seen that the frequency response function of the system is the transfer function of the system evaluated along the imaginary axis $s=j\omega$. However, this expression contains imaginary values (that help to account for the phase in the system) and therefore can be challenging to work with. As the amplitude $|H(j\omega)|$ of the response (the real portion of the equation) is useful to the practitioner, it is prudent to consider the special case of amplitude response while neglecting the phase response. Consider that:
 \begin{equation}
 	H(j\omega) = \text{R}+\text{I}j
 \end{equation}  
@@ -591,7 +591,7 @@ so
 \begin{equation}
 	 |H(j\omega)|=\sqrt{\text{R}^2+\text{I}^2}
 \end{equation}  
-multiplying $H(j\omega)$ by its complex conjugate yields:
+multiplying $H(j\omega)$ by 1 that is represented by the its unit complex conjugate yields:
 \begin{multline}
 	 H(j\omega) = \bigg( \frac{1}{k-m\omega^2+c\omega j} \bigg) \bigg( \frac{k-m\omega^2-c\omega j}{k-m\omega^2-c\omega j}\bigg) \\ =  \bigg( \frac{k-m\omega^2}{(k-m\omega^2)^2(c\omega)^2} \bigg) \bigg( \frac{-c\omega}{(k-m\omega^2)^2(c\omega)^2}j\bigg) 
 \end{multline}  
@@ -697,7 +697,7 @@ and provides a measure of the magnitude of the fluctuations in the signal $x(t)$
 \begin{equation}
 E[x^2] = \bar{x^2} = \lim\limits_{T \rightarrow \infty} \frac{1}{T} \int_{0}^{T}x^2(t)dt
 \end{equation}
-This expression leads to an to calculate the root-mean-square (RMS) of the signal as:
+This expression leads to the calculation of the root-mean-square (RMS) of the signal:
 \begin{equation}
 x_\text{rms} = \sqrt{\bar{x^2}} 
 \end{equation}
