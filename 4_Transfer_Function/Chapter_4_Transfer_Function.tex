@@ -675,7 +675,7 @@ First, let us consider two inputs, a deterministic input (typical sin wave), and
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{../Figures/Response_to_random_input_inputs.png}
-	\caption{Two arbitrary inputs: (a) a sinusoidal; and (b) uniform random noise.}
+	\caption{Two arbitrary inputs: (a) sinusoidal; and (b) uniform random noise.}
 	\label{fig:Response_to_random_input_inputs}
 \end{figure}
 
@@ -695,18 +695,18 @@ E[(x-\bar{x})^2] = \lim\limits_{T \rightarrow \infty} \frac{1}{T} \int_{0}^{T}(x
 \end{equation}
 and provides a measure of the magnitude of the fluctuations in the signal $x(t)$. If the signal has an expected value of zero, or $E[x]=0$, this simplifies to. 
 \begin{equation}
-E[x^2] = \bar{x^2} = \lim\limits_{T \rightarrow \infty} \frac{1}{T} \int_{0}^{T}x^2(t)dt
+E[x^2] = \overline{x^2} = \lim\limits_{T \rightarrow \infty} \frac{1}{T} \int_{0}^{T}x^2(t)dt
 \end{equation}
 This expression leads to the calculation of the root-mean-square (RMS) of the signal:
 \begin{equation}
-x_\text{rms} = \sqrt{\bar{x^2}} 
+x_\text{rms} = \sqrt{\overline{x^2}} 
 \end{equation}
 
 Considering a nonstationary signal, a important measure of interests is how fast the value of the variables change. This is important to understand as it provides context for how long a signal must be sampled to before a meaningful representation of the signal can be calculated in a statistical sense. One way to quantify how fast the values of signal change is the autocorrelation function: 
 \begin{equation}
 R_{xx}(\tau) = \lim\limits_{T \rightarrow \infty} \frac{1}{T} \int_{0}^{T}x(t)x(t+\tau)dt
 \end{equation}
-The subscript $xx$ denotes that this is a measure of the response for the variable $xx$, $\tau$ is the time difference between the values at which the signal $x(t)$ is sampled. The auto collation for the two inputs considered above are expressed in figure \ref{fig:Response_to_random_input_autocorrelation}
+The subscript $xx$ denotes that this is a measure of the response for the variable $xx$, $\tau$ is the time difference between the values at which the signal $x(t)$ is sampled. The auto collation for the two inputs considered above are expressed in figure~\ref{fig:Response_to_random_input_autocorrelation}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{../Figures/Response_to_random_input_autocorrelation.png}
@@ -719,7 +719,7 @@ Next, if we take the Fourier transform of the autocorrelation function we obtain
 \begin{equation}
 S_{xx}(\omega) =\frac{1}{2 \pi} \int_{-\infty}^{\infty} R_{xx}(\tau) e^{-j \omega \tau}d \tau
 \end{equation}
-where the integral of $R_{xx}(\tau)$ changes the real number $\tau$ into the frequency-domain value $\omega$. The frequency spectrum (hence the $S$ in $S_{xx}(\omega)$) for the two input cases considered are plotted in figure \ref{fig:Response_to_random_input_PSD}.
+where the integral of $R_{xx}(\tau)$ changes the real number $\tau$ into the frequency-domain value $\omega$. The frequency spectrum is denoted with $S$ and the subscript of the considered variable $(\text{e.g., }S_{xx}(\omega))$.  The frequency spectrum for the two input cases considered are plotted in figure~\ref{fig:Response_to_random_input_PSD}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{../Figures/Response_to_random_input_PSD.png}
@@ -750,7 +750,7 @@ where $R_{ff}$ denotes the autocorrelation function of $F(t)$ and $S_{ff}$ denot
 	
 	\noindent\textbf{Solution:} From the system we know that the EOM is 
 	\begin{equation}
-	m\ddot{x} +c\dot{x} + kx = F(t)
+	m\ddot{x}(t) +c\dot{x}(t) + kx(t) = F(t)
 	\end{equation} 
 	The frequency response function for this system is 
 	\begin{eqnarray}
@@ -776,20 +776,21 @@ where $R_{ff}$ denotes the autocorrelation function of $F(t)$ and $S_{ff}$ denot
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\textwidth]{../Figures/response_to_white_noise_with_annotation.png}
+		\caption{Response for considered 1-DOF systems subjected to a white noise input.}
 	\end{figure}
 \end{example}  
 
 Another useful quantity to consider is the expected output, in terms of its mean and variance, for a given input. Working within the constraint that the system will oscillate about zero, $E[x]=0$, the mean-square value can be directly related to the PSD function as:
 \begin{equation}
-E[x^2] = \bar{x^2} =   \int_{-\infty}^{\infty} |H(j\omega)|^2 S_{ff}(\omega) d\omega
+E[x^2] = \overline{x^2} =   \int_{-\infty}^{\infty} |H(j\omega)|^2 S_{ff}(\omega) d\omega
 \end{equation}
 For a constant input $S_0$, as diagrammed in figure \ref{fig:Response_to_random_input_PSD}(b), the mean-square value can be expressed as:
 \begin{equation}
-E[x^2] = \bar{x^2} =   S_{0} \int_{-\infty}^{\infty} |H(j\omega)|^2 d\omega
+E[x^2] = \overline{x^2} =   S_{0} \int_{-\infty}^{\infty} |H(j\omega)|^2 d\omega
 \label{eq:variance_for_S_O}
 \end{equation}
 
-After inspecting the above equation, it becomes clear that to obtain the square of the expected value, a solution for  $\int_{-\infty}^{\infty} |H(j\omega)|^2$ must be obtained. For cases where $S_{ff}(\omega) = S_0$ and as such $S_{ff}(\omega)$ can be pulled out of the integral, these integrals have been solved [Random Vibrations, Spectral \& Wavelet Analysis, Newland (1993)]. For example, given $\int_{-\infty}^{\infty} |H(j\omega)|^2 d\omega$:
+After inspecting the above equation, it becomes clear that to obtain the square of the expected value, a solution for  $\int_{-\infty}^{\infty} |H(j\omega)|^2 d\omega$ must be obtained. For cases where $S_{ff}(\omega) = S_0$ and as such $S_{ff}(\omega)$ can be pulled out of the integral, these integrals have been solved [Random Vibrations, Spectral \& Wavelet Analysis, Newland (1993)]. For example, given $\int_{-\infty}^{\infty} |H(j\omega)|^2 d\omega$:
 \begin{equation}
 \int_{-\infty}^{\infty} \bigg|\frac{B_0}{A_0+j \omega A_1} \bigg|^2 d\omega = \frac{\pi B_0^2}{A_0 A_1}
 \end{equation} 
@@ -808,7 +809,7 @@ When combined with equation \ref{eq:variance_for_S_O}, these integrals allow for
 	\end{figure}
 	\noindent\textbf{Solution:} Again, as the forcing function $S_{ff}(\omega)$ is constant across the frequency spectrum $S_{ff}(\omega)=S_0$ the mean-square response can be calculated as:
 	\begin{equation}
-		E[x^2] = \bar{x^2} =   S_{0} \int_{-\infty}^{\infty} |H(j\omega)|^2 d\omega
+		E[x^2] = \overline{x^2} =   S_{0} \int_{-\infty}^{\infty} |H(j\omega)|^2 d\omega
 	\end{equation}
 	Using the already tabulated response:
 	\begin{equation}
