@@ -4,7 +4,7 @@
 \usepackage[latin1]{inputenc}
 \usepackage{amsmath}
 
-\usepackage{todonotes}
+\usepackage[textsize=tiny]{todonotes}
 
 % defines all example enviorment
 \usepackage[framemethod=tikz]{mdframed} % added for the box around examples
@@ -36,6 +36,13 @@
 %\usepackage[colorlinks=true]{hyperref}
 \usepackage{textcomp} 
 \usepackage{multicol} 
+
+\usepackage{color} % color added for editing
+\newcommand{\bl}[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand{\gr}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\rd}[1]{\textcolor[rgb]{0.75,0.00,0.00}{#1}}
+\newcommand{\tl}[1]{\textcolor[rgb]{0,0.6,0.60}{#1}}
+
 
 
 %%%%%%%		define the symbols for positive directions		%%%%%%
@@ -79,7 +86,7 @@
 
 
 \setcounter{section}{4}	
-\section{Multiple degree-of-freedom systems}
+\section{Two degree-of-freedom systems}
 
 Until now we have only considered and modeled systems that can require one coordinate system to describe their motion. In this chapter we will develop the mathematical tools required to model multiple-degree-of-freedom system that require multiple independent coordinates to describe their motion. As before, the equations that describe the motion of rigid bodies in space are developed from Newton's second law of motion. However, unlike before, there exists an independent equation for each body in motion. These equations are therefore coupled by the system and are often expressed in matrix notation such that the mass, damping, and stiffness matrices are easily defined. 
 
@@ -127,6 +134,17 @@ Matrices that do not have an inverse are called a singular matrix.
 
 \subsection{General Discussion on Mode Shapes}
 
+Mode shapes are the the displacement of a system, rather the describe the configurations into which a structure will naturally displace at a given frequency. For example, consider the 4-DOF system shown in figure~\ref{fig:general_mode_shapes} that represents a pole (i.e. cantilever beam). Assuming that the system experience a linear response and using the mode-superposition method we can see that the displaced shape $\textbf{X}$ is a function of all of the mode shapes $\phi_n$ and their corresponding \rd{}participation factors $Y_n$. Note that the mode shapes associated with the lower frequencies tend to provide the greatest contribution to structural response. As the frequencies that excite the modes increase, the mode shapes contribute less, are predicted less reliably, and are harder to measure. Therefore, the analysis of the system is often truncated after the first few modes and rarely exceeds the 10$^{\text{th}}$ mode. 
+
+Figure~\ref{fig:general_mode_shapes} shows a structure with $N$ degrees of freedom that therefore had $N$ corresponding mode shapes. Each mode shape is independent and normalized such that the maximum displacements are the same. The summation of the mode shapes multiplied by their corresponding participation factors ($Y_n$) yields the deflection of the structure. \todo{Still need to update the variables used here and check the math on participation factors. Should this be $\phi$ be eigenvalue? }
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[]{../Figures/general_mode_shapes.png}
+	\caption{Deflection of a vertical cantilever is a function of the considered mode shapes $\phi_n$ and their corresponding \rd{participation factors $Y_n$.} }
+	\label{fig:general_mode_shapes}
+\end{figure}
 
 \subsection{Modeling Undamped Two Degree of Freedom Systems}
 
@@ -742,11 +760,10 @@ P = [ \textbf{v}_1 \; \; \textbf{v}_2 \; \; \textbf{v}_3 \cdots \textbf{v}_n]
 \end{eqnarray}
 
 
+\section{Damping}
+5.11 in Gao
 
-
-\subsection{Modal Analysis}
-
-Modal analysis is the study of a system's dynamic properties and is done in the frequency domain. The matri
+\section{Laplace Solutions}
 
 
 
