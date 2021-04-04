@@ -31,8 +31,10 @@ plt.rcParams.update({'font.serif':['Times New Roman', 'Times', 'DejaVu Serif',
  'Nimbus Roman No9 L', 'Palatino', 'Charter', 'serif']})
 plt.rcParams.update({'font.family':'serif'})
 plt.rcParams.update({'font.size': 10})
-plt.rcParams.update({'mathtext.rm': 'serif'})
 plt.rcParams.update({'mathtext.fontset': 'custom'})
+plt.rcParams.update({'mathtext.rm': 'serif'})
+plt.rcParams.update({'mathtext.it': 'serif:italic'})
+plt.rcParams.update({'mathtext.bf': 'serif:bold'})
 plt.close('all')
 
 #%% for a forced response for a underdamped system with the forcing function being cos. 
