@@ -539,9 +539,9 @@
 			\end{equation}	
 			We want to find a way to plot the responses of the system only in terms of the system's natural and driving frequencies, and its damping. First, we define a frequency ratio as the dimensionless quantity 
 			\begin{equation}
-				r = \frac{\omega}{\omega_n}
+				\beta = \frac{\omega}{\omega_n}
 			\end{equation}
-			Another common way to express $r$ is $\beta$. Next, Recall that:
+			Another common way to express $\beta$ is $r$. Next, Recall that:
 			\begin{equation}
 				X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}}  = \frac{\frac{F_0}{m}}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}} 
 			\end{equation}				
@@ -553,16 +553,16 @@
 			\begin{equation}
 				\frac{Xk}{F_0} = \frac{X \omega_n^2}{f_0} = \frac{1}{\sqrt{(1-r^2)^2+(2\zeta r)^2}}
 			\end{equation}				
-			in a similar fashion, if we manipulate the equation for $\phi_p$ we can get $\phi_p$ in term of $r$:
+			in a similar fashion, if we manipulate the equation for $\phi_p$ we can get $\phi_p$ in term of $\beta$:
 			\begin{equation}
 				\phi_p = \tan^{-1} \bigg(\frac{2 \zeta r}{1-r^2}\bigg)
 			\end{equation}	
-			If we solve for a few key values of $r$ we can get the following data points. On the board, we can solve for a few different frequency responses for a few different damping coefficients. 
+			If we solve for a few key values of $\beta$ we can get the following data points. On the board, we can solve for a few different frequency responses for a few different damping coefficients. 
 			\begin{table}[H]
 				\centering
 				\begin{tabular}{@{}lccccccccc@{}}
 				\toprule
-				 & & \multicolumn{8}{c}{frequency ratio ($r$)} \\ 
+				 & & \multicolumn{8}{c}{frequency ratio ($\beta$)} \\ 
 				 & 0 & 0.25& 0.5& 0.75& 1& 1.25& 1.5& 1.75& 2.0 \\ \midrule
 				$\zeta=0.1$	&	1.00&	1.07&	1.32&	2.16&	5.00&	1.62&	0.78&	0.48 & 0.33 \\ 
 				$\zeta=0.25$	&	1.00&	1.06&	1.27&	1.74&	2.00&	1.19&	0.69&	0.45 & 0.32 \\ 
@@ -570,17 +570,17 @@
 				$\zeta=0.7$	&	1.00&  1.00	&   0.97&	0.88&	0.71&	0.54&	0.41&	0.31 & 0.24\\\bottomrule
 				\end{tabular}
 			\end{table}
-			If we plot the values of the normalize amplitude vs $r$ we obtain:
+			If we plot the values of the normalize amplitude vs $\beta$ we obtain:
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../Figures/underdamped_frequency_response_amplitude.png}
-				\caption{Normalized amplitude response for frequency ratio ($r$) from 0 to 2 for a variety of critical damping ratios.}
+				\caption{Normalized amplitude response for frequency ratio ($\beta$) from 0 to 2 for a variety of critical damping ratios.}
 			\end{figure}			
-			\noindent And again, if we plot the values of the phase vs $r$ ($\omega/\omega_n$) we obtain:
+			\noindent And again, if we plot the values of the phase vs $\beta$ ($\omega/\omega_n$) we obtain:
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../Figures/underdamped_frequency_response_phase.png}
-				\caption{Phase response for frequency ratio ($r$) from 0 to 2 for a variety of critical damping ratios.}
+				\caption{Phase response for frequency ratio ($\beta$) from 0 to 2 for a variety of critical damping ratios.}
 			\end{figure}				
 			\noindent note that the dashed black line is there because the phase values after $\pi/2$ need to be adjusted to obtain a continuous plot. An astute observer would notice that the maximum amplitude is not at $\omega = \omega_n$. While resonance is defined as $\omega = \omega_n$, this does not define the point of maximum displacement of the steady state response. Let us solve for the frequency ratio with the maximum displacement. This will happen when
 			\begin{equation}
@@ -588,15 +588,15 @@
 			\end{equation}				
 			We can show that:
 			\begin{equation}
-			\Bigg(\frac{1}{\sqrt{(1-r^2)^2+(2\zeta r)^2}}\Bigg)	\frac{d}{dr} =0
+			\Bigg(\frac{1}{\sqrt{(1-\beta^2)^2+(2\zeta \beta)^2}}\Bigg)	\frac{d}{dr} =0
 			\end{equation}	
 			when 
 			\begin{equation}
-			r_{\text{peak}} = \sqrt{1-2 \zeta^2}= \frac{\omega_p}{\omega_n}, \hspace{1cm} \zeta<1/\sqrt{2} 
+			\beta_{\text{peak}} = \sqrt{1-2 \zeta^2}= \frac{\omega_p}{\omega_n}, \hspace{1cm} \zeta<1/\sqrt{2} 
 			\end{equation}				
 			however, this is only true for under damped system in which $\zeta<1/\sqrt{2}$. If $\zeta>1/\sqrt{2}$ than the value in imaginary and the peak value is at $r=0$. In these cases, the maximum displacement is a function of only $\omega_n$. $\omega_p$ represents the driving frequency that correspond to the maximum amplitude ($\frac{Xk}{F_0}$) and is called the \textbf{peak frequency}, and can be calculated as:
 			\begin{equation}
-			\omega_p = \omega_n r_{\text{peak}} = \omega_n \sqrt{1-2 \zeta^2}, \hspace{1cm} \zeta<1/\sqrt{2} 
+			\omega_p = \omega_n \beta_{\text{peak}} = \omega_n \sqrt{1-2 \zeta^2}, \hspace{1cm} \zeta<1/\sqrt{2} 
 			\end{equation}				
 			
 			
@@ -766,15 +766,15 @@
 				
 				As before, if we want to investigate how a frequency input will affect the response (frequency response) we can substitute substitute 
 				\begin{equation}
-				r=\frac{\omega_b}{\omega_n}
+				\beta=\frac{\omega_b}{\omega_n}
 				\end{equation} 
 				into the temporal response to obtain:
 				\begin{equation}
-				X = Y \sqrt{\frac{1+(2 \zeta r)^2}{(1-r^2)^2 + (2 \zeta r )^2}} 
+				X = Y \sqrt{\frac{1+(2 \zeta \beta)^2}{(1-\beta^2)^2 + (2 \zeta \beta )^2}} 
 				\end{equation} 
 				Next, if we divide by $Y$ we can obtain a normalized expression for the displacement:
 				\begin{equation}
-				\frac{X}{Y} = \sqrt{\frac{1+(2 \zeta r)^2}{(1-r^2)^2 + (2 \zeta r )^2}} 
+				\frac{X}{Y} = \sqrt{\frac{1+(2 \zeta \beta)^2}{(1-\beta^2)^2 + (2 \zeta \beta )^2}} 
 				\end{equation} 
 				Plotting this for several critical damping ratios:
 				\begin{figure}[H]
@@ -782,7 +782,7 @@
 					\includegraphics[]{../Figures/base_excitation_displacement_transmissibility.png}
 					\caption{Displacement transmissibility for an underdamped 1-DOF system.}
 				\end{figure}
-				Around resonance, the maximum amount of displacement is transmitted to the mass. Additionally,  the above plot shows that at $r=\sqrt{2}$ the displacement transmissibility $X/Y$ is 1. Note the ``flip'' where overdamped systems have a greater response to excitations after $r=\sqrt{2}$ than do underdamped systems.
+				Around resonance, the maximum amount of displacement is transmitted to the mass. Additionally,  the above plot shows that at $\beta=\sqrt{2}$ the displacement transmissibility $X/Y$ is 1. Note the ``flip'' where overdamped systems have a greater response to excitations after $\beta=\sqrt{2}$ than do underdamped systems.
 
 				\begin{example}
 	
@@ -848,7 +848,7 @@
 				\end{equation} 
 				where the negative sign $F(t) = -m\ddot{x}(t)$ as the force transmitted to the mass is both positive and negative and we are solving for the amplitude of the transmitted force. Again applying:
 				\begin{equation}
-					r=\frac{\omega_b}{\omega_n}
+					\beta=\frac{\omega_b}{\omega_n}
 				\end{equation} 
 				this becomes:
 				\begin{equation}
@@ -856,11 +856,11 @@
 				\end{equation} 
 				where $F_T$ is the magnitude of the transmitted force and is 
 				\begin{equation}
-					F_\text{T} = kYr^2 \sqrt{\frac{1+(2 \zeta r)^2}{(1-r^2)^2 + (2 \zeta r )^2}} 
+					F_\text{T} = kYr^2 \sqrt{\frac{1+(2 \zeta \beta)^2}{(1-\beta^2)^2 + (2 \zeta \beta )^2}} 
 				\end{equation}
 				Again, this can be converted to a force transmissibility to provide a normalized response such that:
 				\begin{equation}
-					\frac{F_\text{T}}{kY} = r^2 \sqrt{\frac{1+(2 \zeta r)^2}{(1-r^2)^2 + (2 \zeta r )^2}} 
+					\frac{F_\text{T}}{kY} = \beta^2 \sqrt{\frac{1+(2 \zeta \beta)^2}{(1-r^2)^2 + (2 \zeta \beta )^2}} 
 				\end{equation}
 				Plotting this for several critical damping ratios:
 				\begin{figure}[H]
@@ -868,7 +868,7 @@
 					\includegraphics[]{../Figures/base_excitation_force_transmissibility.png}
 					\caption{Force transmissibility for an underdamped 1-DOF system.}
 				\end{figure}
-				Again, note the key location $r=\sqrt{2}$. At $r=\sqrt{2}$ the force transmitted to the system is 2 $\frac{F_\text{T}}{kY}$. However, also note that the normalized force does not necessarily fall off for $r$ values greater than $r=\sqrt{2}$.  
+				Again, note the key location $\beta=\sqrt{2}$. At $\beta=\sqrt{2}$ the force transmitted to the system is 2 $\frac{F_\text{T}}{kY}$. However, also note that the normalized force does not necessarily fall off for $\beta$ values greater than $\beta=\sqrt{2}$.  
 	
 				\begin{example}
 					

@@ -593,6 +593,9 @@ The process of calculating the mode shapes presented in section \ref{sec:two_deg
 	\end{figure}
 
 
+	\rd{Need to add a discussion on generalized eigenvalues, normal, orthogonal, and orthonormal matrices.}	
+
+
 	A matrix is positive definite if the scalar $\textbf{x}^{\text{T}}A\textbf{x}$ is positive for any non-zero vector $x$ comprised of real numbers:
 	\begin{equation}
 	\textbf{x}^{\text{T}}A\textbf{x} > 0
@@ -728,7 +731,7 @@ where $KM^{-1/2}$ is computed first to maintain symmetry. This results in:
 \end{equation}
 and:
 \begin{equation}
-	  \widetilde{K}=M^{-1/2}KM^{-1/2} =  \begin{bmatrix} \frac{1}{3} & 0 \\    0  & 1 \end{bmatrix} \begin{bmatrix} 9 & -3 \\    -1  & 3 \end{bmatrix}  =  \begin{bmatrix} 3 & -1\\  -1  & 3 \end{bmatrix} 
+	  \widetilde{K}=M^{-1/2}KM^{-1/2} =  \begin{bmatrix} \frac{1}{3} & 0 \\    0  & 1 \end{bmatrix} \begin{bmatrix} 9 & -3 \\    -1  & 3 \end{bmatrix} \begin{bmatrix} \frac{1}{3} & 0 \\    0  & 1 \end{bmatrix} =  \begin{bmatrix} 3 & -1\\  -1  & 3 \end{bmatrix} 
 \end{equation}
 Now a solution must be obtained for the eigenvalue problem:
 \begin{equation}
@@ -785,9 +788,6 @@ and:
 Therefore, the first mode shape is $[1 \hspace{1ex} 1]$ while the second mode shape is $[\frac{1}{3} \hspace{1ex} -\frac{1}{3}]$. Again, this is using our prior definition of mode shapes to set $[1 \hspace{1ex} 1]$ as the first mode shape. Note that these are the same mode shape vectors as computed in example \ref{ex:2-DOF}.
 \end{example}
 
-
-\todo{need test on P and more Eigen value stuff}
-
 Expanding on equation \ref{eq:modeshape_to_eigenvector}, the one can go from the eigenvector to the mode shapes through:
 \begin{equation}
 \textbf{u}_1 = M^{-1/2}\textbf{v}_1 \; \text{ and } \; \textbf{v}_1 = M^{1/2}\textbf{u}_1
@@ -795,9 +795,7 @@ Expanding on equation \ref{eq:modeshape_to_eigenvector}, the one can go from the
 therefore, it can be seen that the eigenvectors and mode shapes are related through the term $\textbf{v}_1$. 
 
 
-\begin{eqnarray}
-P = [ \textbf{v}_1 \; \; \textbf{v}_2 \; \; \textbf{v}_3 \cdots \textbf{v}_n]
-\end{eqnarray}
+
 
 
 %\section{forced vibration analysis}
@@ -960,7 +958,7 @@ Determine the natural frequencies and mode shapes of the system shown in figure~
   \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x_1} \\  \ddot{x_2} \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \end{bmatrix}
 \end{eqnarray}
 Using the eigenvalue method, the problem can be solved for as:
-\lstinputlisting[caption = {Sample code from Matlab}]{matlab_eigenvalue_problem.m}
+\lstinputlisting[caption = {Sample code from Matlab}]{code/matlab_eigenvalue_problem.m}
 where $\omega_1$=1.41 rad/sec and  $\omega_2$=2 rad/sec while $\textbf{u}_1 = [-0.2357$ $-0.7071]$ and $\textbf{u}_2 = [-0.2357$ $0.7071]$.
 
 \end{example}
@@ -968,19 +966,342 @@ where $\omega_1$=1.41 rad/sec and  $\omega_2$=2 rad/sec while $\textbf{u}_1 = [-
 
 \begin{example}
 \textbf{Roots of Quadratic Equation}
-\lstinputlisting[caption = {Sample code from Matlab}]{matlab_roots_of_quartic_equation.m}
+\lstinputlisting[caption = {Sample code from Matlab}]{code/matlab_roots_of_quartic_equation.m}
 \end{example}
 
 
 \begin{example}
 \textbf{Roots of Quadratic Equation}
-\lstinputlisting[caption = {Function for Matlab code}]{matlab_function_dfunc.m}
-\lstinputlisting[caption = {Sample code from Matlab}]{matlab_temporal_response.m}
+\lstinputlisting[caption = {Function for Matlab code}]{code/matlab_function_dfunc.m}
+\lstinputlisting[caption = {Sample code from Matlab}]{code/matlab_temporal_response.m}
 \end{example}
 
 
 
 \subsubsection{Python}
+
+
+
+
+\subsection{Multiple Degrees of Freedom}
+
+This chapter introduces methodologies for the solving of systems with more than 2-DOF. As shown in Chapter 5, 2-DOF systems can be solved analytically using 2 EOM coupled through their mode shapes. However, these methods become tedious when extended to systems with damping or even beyond beyond 2-DOF system.
+
+
+
+\begin{example}
+\textbf{Multiple Mode Shapes}
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{../Figures/mode_shape_aiplane_example.png}
+	\caption{A Beechcraft Baron in flight along with the Free-Free 3-DOF model simplified as a mass-spring model. Image sourced from the San Diego Air \& Space Museum Archives, Public Domain.}
+	\label{fig:mode_shape_aiplane_example}
+\end{figure}
+
+Modeling the vibrations of a dual engine airplane as a three-degree-of-freedom system can be done as shown in figure~\ref{fig:mode_shape_aiplane_example} where the fuselage is a center mass, and the engines are point masses suspended by cantilevers from the center mass. The stiffness of the wing corresponds to the modulus of the wing $E$ and its moment of inertia $I$. assuming that $m_1=m_3=1m$, $m_2=4m$, and $k=\frac{3EI}{l}$, the EOM can be written as:
+
+\begin{equation}
+	  m\begin{bmatrix} 1 & 0 & 0 \\    0  & 2 & 0 \\ 0  & 0 & 1 \end{bmatrix} \begin{bmatrix} \ddot{x}_1 \\    \ddot{x}_2 \\    \ddot{x}_3  \end{bmatrix} + \frac{3EI}{l} \begin{bmatrix} 3 & -3 & 0 \\  -3  & 6 & -3 \\  0  & -3 & 3 \end{bmatrix} \begin{bmatrix} x_1 \\    x_2 \\    x_3 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \\ 0 \end{bmatrix} 
+\end{equation}
+calculate the natural frequencies and mode shapes of the system and plot the mode-shapes in relation to the considered Beechcraft Baron.
+
+\vspace{2ex}
+\noindent \textbf{Solution using the mass normalized stiffness matrix $\tilde{K}$.}
+\vspace{1ex}
+
+Solving for the modes shapes using the  mass normalized stiffness matrix $\tilde{K}$ requires solving for $M^{-1/2}$ and $\tilde{K}$ such that:
+\begin{equation}
+	  M^{-1/2} = \frac{1}{\sqrt{m}} \begin{bmatrix} 1 & 0 & 0 \\    0  & 0.5 & 0 \\ 0  & 0 & 1 \end{bmatrix}
+\end{equation}
+\begin{equation}
+	   \tilde{K} = M^{-1/2} K M^{-1/2} = \frac{3EI}{l} \begin{bmatrix} 3 & -1.5 & 0 \\  -1.5  & 1.5 & -1.5 \\  0  & -1.5 & 3 \end{bmatrix} 
+\end{equation}
+Than, the eigenvalue problem, formulated as:
+\begin{equation}
+\tilde{K} \textbf{v} = \lambda \textbf{v}
+\end{equation}
+is solved for the eigenvalues and eigenvectors, resulting in:
+\begin{equation}
+\lambda_1 = 0, \; \; \lambda_2 = 3, \; \; \lambda_3 = 4.5
+\end{equation}
+\begin{equation}
+v_1 = \begin{bmatrix} 0.408248 \\    0.816497 \\    0.408248  \end{bmatrix}, \; \; v_2 = \begin{bmatrix} -0.707107 \\    0.0 \\    -0.707107 \end{bmatrix}, \; \; v_3 = \begin{bmatrix} 0.57735 \\    -0.57735 \\    0.57735  \end{bmatrix}
+\end{equation}
+When the eigenvalue problem is solved using the mass normalized stiffness matrix $\tilde{K}$ the natural frequencies are $\omega_i = \sqrt{\lambda_i}$ while the mode shapes are derived from the eigenvectors as $\textbf{u}=M^{-1/2}\textbf{v}$. This results in:
+\begin{equation}
+\omega_1 = 0  \text{ rad/sec}, \; \; \omega_2 = 1.732 \text{ rad/sec}, \; \; \omega_3 = 2.121  \text{ rad/sec}
+\end{equation}
+\begin{equation}
+u_1 = \begin{bmatrix} 0.408248 \\    0.408248 \\    0.408248  \end{bmatrix}, \; \; u_2 = \begin{bmatrix} -0.707107 \\    0.0 \\    -0.707107 \end{bmatrix}, \; \; u_3 = \begin{bmatrix} 0.57735 \\    -0.288675 \\    0.57735  \end{bmatrix}
+\end{equation}
+Next, normalizing the mode shapes by the norm of the vector as $u_i = \frac{u_i}{|u_i|}$ results in:
+\begin{equation}
+u_1 = \begin{bmatrix} 0.57735 \\    0.57735 \\    0.57735  \end{bmatrix}, \; \; u_2 = \begin{bmatrix} -0.707107 \\    0.0 \\    0.707107 \end{bmatrix}, \; \; u_3 = \begin{bmatrix} 0.666667 \\    -0.333333 \\    0.666667  \end{bmatrix}
+\end{equation}
+these mode-shapes can than be plotted as:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{../Figures/mode_shape_aiplane_example_normalized_stiffness.png}
+	\caption{The unit vector normalized displacement of the mode shapes solved for using the mass normalized stiffness matrix $\tilde{K}$.}
+	\label{fig:mode_shape_aiplane_example_normalized_stiffness}
+\end{figure}
+
+
+
+\vspace{2ex}
+\noindent \textbf{Solution using the generalized eigenvalue approach.}
+\vspace{1ex}
+
+The mode shapes can also be solved for using the generalized eigenvalue approach where the eigenvalue problem is written as:
+\begin{equation}
+\lambda M \textbf{v} = K \textbf{v}
+\end{equation}
+solving for the eigenvalues and eigenvectors yields:
+\begin{equation}
+\lambda_1 = 0, \; \; \lambda_2 = 3, \; \; \lambda_3 = 4.5
+\end{equation}
+\begin{equation}
+v_1 = \begin{bmatrix} -0.57735 \\    -0.57735 \\   -0.57735  \end{bmatrix}, \; \; v_2 = \begin{bmatrix} 0.707107 \\    0.0 \\    -0.707107 \end{bmatrix}, \; \; v_3 = \begin{bmatrix} 0.666667 \\    -0.333333 \\    0.666667  \end{bmatrix}
+\end{equation}
+Note that the eigenvalues are the same as those solved for using the normalized stiffness matrix approach while the eigenvectors appear to be different. This is because for generalized eigenvalue approach $u_i=v_i \alpha$ where $\alpha$ is a scaling value. Note that here $\alpha=1$ as the mode shapes are already normalized. Note, that some software tools may not return normalized modes and the nodes should be normalized by the norm of the vector ($u_i = \frac{u_i}{|u_i|}$) to achieve the same mode shapes as before. Moreover, recall that the information stored in the eigenvectors are just the direction of the transform. Therefore, the mode shapes are correct but some amplitudes are reversed but as the mode shapes only report the shape these are corrected.  Plotting the mode shapes results in:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{../Figures/mode_shape_aiplane_example_generalized_eigenvalue.png}
+	\caption{The unit vector normalized displacement of the mode shapes solved for using the generalized eigenvalue approach.}
+	\label{fig:mode_shape_aiplane_example_generalized_eigenvalue}
+\end{figure}
+
+
+
+\end{example}
+
+
+
+
+\subsection{Modal Analysis}
+
+Modal analysis is the study of a system's dynamic properties and is done in the frequency domain. Consider a system with $n$ degrees of motion, modal analysis allows for the uncoupling of the EOM into $n$ single-degree-of-freedom system (represented as 2$^{\text{nd}}$-order DOF systems) where the displacements of the masses are expressed as the linear summations of the normal modes of the system. If every mode shape is considered, the solution is equivalent to the solution obtained from the original $n^{\text{th}}$-degree-of-freedom system. 
+
+Consider the generic multidegree-of-freedom system under external forces, expressed as:
+
+
+\begin{equation}
+M \ddot{\vec{x}} + K\vec{x} = \vec{F}
+\end{equation}
+
+
+\noindent where damping is not considered and the vector $\vec{F}$ is a set of deterministic inputs. To expand this equation by modal analysis, the eigenvalue problem must first be solved. The generalized eigenvalue problem is written at: 
+
+\begin{equation}
+\lambda M \textbf{v} = K \textbf{v}
+\end{equation}
+
+For the $n^{\text{th}}$-degree-of-freedom, the generalized eigenvalue problem can be simplified to: 
+\begin{equation}
+\omega_n^2 M \vec{v}_n = K  \vec{v}_n
+\end{equation}
+Considering that the total displacement of the system, expressed as $\vec{x}(t)$ , is the summation of the of the displacement of each of the noncontributing modes; assuming a linear system, the temporal response of the system can be written as:
+\begin{eqnarray}
+\vec{x}(t) = q_1(t) \vec{v}_1 + q_2(t) \vec{v}_2 + q_3(t) \vec{v}_3 + \cdots + q_n(t) \vec{v}_n
+\label{eq:combination_of_modes}
+\end{eqnarray}
+\noindent where the time-dependent generalized scalars $q_1(t), q_1(t), \cdots, q_1(t)$ are the modal participation coefficients (also called principal coordinates). Defining the modal matrix $P$ as:
+\begin{equation}
+P = [ \vec{v}_1 \; \; \vec{v}_2 \; \; \vec{v}_3 \cdots \vec{v}_n]
+\end{equation}
+Therefore, the linear combination of the normal modes (equation~\ref{eq:combination_of_modes}) can be more concisely written as:
+\begin{equation}
+\vec{x}(t) = P\vec{q}(t)
+\end{equation}
+where $\vec{q}(t) = [q_1 \; \; q_2 \; \; q_3 \cdots q_n]^{\text{T}}$. Next, the relationship that relates the physical space to the modal space for the acceleration component is written as:
+\begin{equation}
+\ddot{\vec{x}}(t) = P\ddot{\vec{q}}(t)
+\end{equation}
+combining these two terms results in the EOM that can be written as:
+\begin{equation}
+M P\ddot{\vec{q}}(t) + KP\vec{q}(t) = \vec{F}
+\end{equation}
+To convert the EOM into the standard form, first the $P^{\text{T}}$ is multiplied through the equation as:
+\begin{equation}
+P^{\text{T}} M P\ddot{\vec{q}}(t) + P^{\text{T}} K P\vec{q}(t) = P^{\text{T}} \vec{F}
+\end{equation}
+If the modes are normalized, the following is true:
+\begin{equation}
+P^{\text{T}} M P = I
+\label{eq:modes_normalized}
+\end{equation}
+where $I$ is the identity matrix and 
+\begin{equation}
+P^{\text{T}} K P = \begin{bmatrix} \nwarrow & 0 & 0 \\  0  & \omega^2 & 0 \\  0  & 0 & \searrow \end{bmatrix}
+\end{equation}
+Moreover, defining $\vec{Q}(t) = P^{\text{T}} \vec{F}$ results in a EOM expressed as:
+\begin{equation}
+\ddot{\vec{q}}(t) +  \begin{bmatrix} \nwarrow & 0 & 0 \\  0  & \omega^2 & 0 \\  0  & 0 & \searrow \end{bmatrix} \vec{q}(t) = \vec{Q}(t)
+\end{equation}
+For a system with $n$ degrees of freedom, this equation can be broken down into:
+\begin{equation}
+\ddot{\vec{q}}_i(t) + \omega_i^2 \vec{q}_i (t) =  \vec{Q}(t), \; \; i=1,2, \cdots, n
+\end{equation}
+This expression is the same ODE that we have solved multiple times in this text. Therefore, we know the solution to be:
+\begin{equation}
+q_i(t) = q_{i0} \cos(\omega_i t) +  \frac{\dot{q}_{i0}}{\omega_i} \sin( \omega_i t)
+\end{equation}
+Lastly, to solve for a solution in the modal space, the initial conditions that were given in the physical space must be converted to the modal space. This can be done by generalizing the velocities in terms of the modal matrix:
+\begin{equation}
+\vec{q}(0) = P^\text{T} M \vec{x}(0)
+\end{equation}
+\begin{equation}
+\dot{\vec{q}}(0) = P^\text{T} M \vec{v}(0)
+\end{equation}
+
+
+
+
+\begin{example}
+\textbf{Free vibration response}
+
+Solve for the free vibration response of the 2-DOF presented in figure~\ref{fig:2-DOF-spring_mass_horizontal_double_wall} using modal analysis. Show the temporal response for the entire system for its first 20 seconds using the full modal reconstruction and the reconstruction truncated to just include the first mode. Also, plot the variations in the modal participation coefficients though time. Apply the parameters, $f_1 = 0$ kg, $f_2 = 0$ N, $m_1 = 10$ kg, $m_2 = 1$ kg, $k_1 = 30$ N/m, $k_2 = 5$ N/m, $k_3 = 1$ N/m, $x_1(0) = 1$ m, $x_2(0) = 0$ mm, $v_1(0) = 0$ mm, and $v_2(0) = 0$ mm.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[]{../Figures/2-DOF-spring_mass_horizontal_double_wall.png}
+	\caption{Forced 2-DOF damped system showing: (a) system, and (b) FBD.}
+	\label{fig:2-DOF-spring_mass_horizontal_double_wall}
+\end{figure}
+
+
+The equations of motion that couple the system are:
+\begin{eqnarray}
+m_1\ddot{x}_1 + (k_1+k_2)x_1 - k_2x_2 = 0 \\
+m_2\ddot{x}_2 + (k_2+k_3)x_2 - k_2x_1 = 0 \nonumber
+\end{eqnarray}
+In matrix form, these become:
+
+\begin{equation}
+	  \begin{bmatrix} m_1 & 0 \\    0  & m_2 \end{bmatrix} \begin{bmatrix} \ddot{x}_1 \\    \ddot{x}_2  \end{bmatrix} + \begin{bmatrix} k_1 + k_2 & -k_2 \\  -k_2  & k_2 + k_3 \end{bmatrix} \begin{bmatrix} x_1 \\    x_2  \end{bmatrix} = \begin{bmatrix} 0 \\  0  \end{bmatrix} 
+\end{equation}
+\begin{equation}
+	  \vec{x}(0) = \begin{bmatrix} 1 \\  0 \end{bmatrix},\; \; \vec{v}(0) = \begin{bmatrix} 0 \\  0 \end{bmatrix} \nonumber
+\end{equation}
+The natural frequencies and mode shapes can than be obtained by solving the eigenvalue problem. Setting up the generalized eigenvalue problem: \rd{these are symmetric M and K matrices so I don't know why $\tilde{K}$ does not work in a normal eigenvalue problem. Maybe norms of vectors? It is not simple scaling. This example is based off or Rao 6.16 6ed} \rd{I think it has to do with solving the generalized eigenvalue matrix vs the mass normalized one and when you apply the second M$^{-1/2}$ as you need it all the time. }
+\begin{equation}
+K \textbf{v} = \lambda M \textbf{v}
+\end{equation}
+and solving yields:
+\begin{equation}
+\lambda_1 = 2.734 \text{, } \vec{v}_1 = \begin{bmatrix} 0.546819 \\  0.837251 \end{bmatrix} 
+\end{equation}
+\begin{equation}
+\lambda_2 = 6.765 \text{, } \vec{v}_2 = \begin{bmatrix} -0.151349 \\  0.988480 \end{bmatrix}  \nonumber
+\end{equation}
+this is than related to the natural frequency and mode shapes as:
+\begin{equation}
+\omega_1 = \sqrt{\lambda_1} = 1.65 \text{ rad/s, } \vec{v}_1 = \vec{v}_1 \alpha_1 = \begin{bmatrix} 0.546819 \\  0.837251 \end{bmatrix} \alpha_1
+\end{equation}
+\begin{equation}
+\omega_2 = \sqrt{\lambda_2} = 2.60 \text{ rad/s, } \vec{v}_2 = \vec{v}_2 \alpha_2 = \begin{bmatrix} -0.151349 \\  0.988480 \end{bmatrix} \alpha_2 
+\end{equation}
+recall that the eigenvalues only contain information about the direction of the linear transform, and therefore, there magnitudes are arbitrary.Therefore, they must be scaled proportionally to each other. For this reason, the scalars $\alpha_1$ and $\alpha_2$ are added. My orthogonalizing the modal vectors with respect to the mass matrix, the values of $\alpha_1$ and $\alpha_2$ are found as:
+\begin{equation}
+1 = \vec{v}_1^\text{T} M \vec{v}_1 
+\end{equation}
+\begin{equation}
+1 = \alpha_1^2 \begin{bmatrix} 0.546819 &  0.837251 \end{bmatrix} \begin{bmatrix} 10 & 0 \\    0  & 1 \end{bmatrix}  \begin{bmatrix} 0.546819 \\  0.837251 \end{bmatrix}
+\end{equation}
+and:
+\begin{equation}
+1 = \vec{v}_2^\text{T} M \vec{v}_2 
+\end{equation}
+\begin{equation}
+1 = \alpha_2^2 \begin{bmatrix} -0.151349 &  0.98848 \end{bmatrix} \begin{bmatrix} 10 & 0 \\    0  & 1 \end{bmatrix}  \begin{bmatrix} -0.151349 \\  0.98848 \end{bmatrix}
+\end{equation}
+therefore, $\alpha_1=0.520$ and $\alpha_2=0.910$. Now, applying the proper scaling values to the modal vector, the modal matrix becomes:
+\begin{equation}
+P = [ \vec{v}_1 \; \; \vec{v}_2 ] = \begin{bmatrix} 0.284 & -0.137 \\    0.435  & 0.900 \end{bmatrix}
+\end{equation}
+Next, check that the normal modes in the modal matrix ($P$) are normalized, per equation~\ref{eq:modes_normalized}. This yields,
+\begin{equation}
+P^{\text{T}} M P = \begin{bmatrix} 1 & -2.775e-16 \\   -2.775e-16 & 1 \end{bmatrix} \approx I
+\end{equation}
+which is close enough to I. Considering that $\vec{x}(t) = P\vec{q}(t)$, the EOM for the system can be expressed as:
+\begin{equation}
+\ddot{\vec{q}}(t) + \begin{bmatrix} \omega_1^2 & 0 \\    0  & \omega_2^2 \end{bmatrix} \vec{q} (t) = \vec{Q} = \begin{bmatrix} 0 \\  0  \end{bmatrix} 
+\end{equation}
+rewriting this in scalar form for each modal coefficient yields:
+\begin{equation}
+\ddot{q}_i(t) + \omega_i^2 q_i (t) = 0, \; \; i=1,2
+\end{equation}
+where the solution for this ODE is:
+\begin{equation}
+q_i(t) = q_{i0} \cos(\omega_i t) +  \frac{\dot{q}_{i0}}{\omega_i} \sin( \omega_i t)
+\end{equation}
+where $q_{i0}$ and $\dot{q}_{i0}$ are the initial conditions in modal space. Therefore, the given initial conditions must be transferred into modal space as:
+\begin{equation}
+\vec{q}(0) = P^\text{T} M \vec{x}(0) = \begin{bmatrix} 0.284 &  0.435 \\  -0.137    & 0.900 \end{bmatrix} \begin{bmatrix} 10 & 0 \\  0  & 1 \end{bmatrix}  \begin{bmatrix} 1 \\  0 \end{bmatrix} =  \begin{bmatrix}  2.846 \\  -1.378 \end{bmatrix}
+\end{equation}
+\begin{equation}
+\dot{\vec{q}}(0) = P^\text{T} M \vec{v}(0) = \begin{bmatrix} 0.284 &  0.435 \\  -0.137    & 0.900 \end{bmatrix} \begin{bmatrix} 10 & 0 \\  0  & 1 \end{bmatrix}  \begin{bmatrix} 0 \\  0 \end{bmatrix} =  \begin{bmatrix}  0 \\  0 \end{bmatrix}
+\end{equation}
+therefore, 
+\begin{eqnarray}
+q_1(t) = 2.846 \cdot \cos (1.65 t) \\ 
+q_2(t) = -1.378 \cdot \cos (2.6 t)  \nonumber
+\label{eq:participation}
+\end{eqnarray}
+converting back into the time domain is done knowing $\vec{x}(t) = P\vec{q}(t)$, therefore, 
+\begin{equation}
+\vec{x}(t) = P\vec{q}(t) = \begin{bmatrix} 0.284 & -0.137 \\    0.435  & 0.900 \end{bmatrix}  \begin{bmatrix} 2.846 \cdot \cos (1.65 t) \\  -1.378 \cdot \cos (2.6 t) \end{bmatrix}
+\end{equation}
+This further simplified into:
+\begin{eqnarray}
+x_1(t) = 0.808 \cdot \cos (1.65 t) + 0.189 \cdot \cos (2.6 t) \\ 
+x_2(t) = 1.238 \cdot \cos (1.65 t) - 1.240 \cdot \cos (2.6 t)  \nonumber
+\end{eqnarray}
+These results are plotted in figure~\ref{fig:modal_analysis_free_vibration}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{../Figures/modal_analysis_free_vibration.png}
+	\caption{Temporal response for the 2-DOF reconstructed using just all the modal coordinates.}
+	\label{fig:modal_analysis_free_vibration}
+\end{figure}
+
+Next, the truncated response can be computed by only considering the first mode response for the system (i.e. $\vec{x}(t) = q_1(t) \vec{v}_1$). This is obtain as:
+
+\begin{equation}
+\vec{x}(t) = P\vec{q}_\text{truncated}(t) = \begin{bmatrix} 0.284 & -0.137 \\    0.435  & 0.900 \end{bmatrix}  \begin{bmatrix} 2.846 \cdot \cos (1.65 t) \end{bmatrix}
+\end{equation}
+This further simplified into:
+\begin{eqnarray}
+x_1(t) = 0.808 \cdot \cos (1.65 t) \\ 
+x_2(t) = 1.238 \cdot \cos (1.65 t) \nonumber
+\end{eqnarray}
+These results are plotted in figure~\ref{fig:modal_analysis_free_vibration_truncated}. Note that this only considers the response of the system that is a function of the first mode. Note that this captures some of the ``general'' idea of the system while missing out on the finer points that the 2$^{\text{nd}}$ mode contributes. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{../Figures/modal_analysis_free_vibration_truncated.png}
+	\caption{Truncated temporal response for the 2-DOF reconstructed using just the first modal coordinates.}
+	\label{fig:modal_analysis_free_vibration_truncated}
+\end{figure}
+
+Lastly, the participation of the two modes can be plotted from the time series response of equation~\ref{eq:participation}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{../Figures/modal_analysis_free_participation_factors.png}
+	\caption{Modal participation coefficients.}
+	\label{fig:modal_analysis_free_participation_factors}
+\end{figure}
+
+
+
+\end{example}
+
+
 
 \end{document}
 
