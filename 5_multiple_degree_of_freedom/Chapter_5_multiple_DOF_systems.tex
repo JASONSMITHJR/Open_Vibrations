@@ -100,9 +100,9 @@
 
 
 \setcounter{section}{4}	
-\section{Two degree-of-freedom systems}
+\section{Multiple degree-of-freedom systems}
 
-Until now we have only considered and modeled systems that can require one coordinate system to describe their motion. In this chapter we will develop the mathematical tools required to model multiple-degree-of-freedom system that require multiple independent coordinates to describe their motion. As before, the equations that describe the motion of rigid bodies in space are developed from Newton's second law of motion. However, unlike before, there exists an independent equation for each body in motion. These equations are therefore coupled by the system and are often expressed in matrix notation such that the mass, damping, and stiffness matrices are easily defined. 
+Until now we have only considered and modeled systems that can require one coordinate system to describe their motion. In this chapter we will develop the mathematical tools required to model multiple degree-of-freedom system that require multiple independent coordinates to describe their motion. As before, the equations that describe the motion of rigid bodies in space are developed from Newton's second law of motion. However, unlike before, there exists an independent equation for each body in motion. These equations are therefore coupled by the system and are often expressed in matrix notation such that the mass, damping, and stiffness matrices are easily defined. 
 
 
 
@@ -1102,7 +1102,7 @@ M \ddot{\vec{x}} + K\vec{x} = \vec{F}
 
 For the $n^{\text{th}}$-degree-of-freedom, the generalized eigenvalue problem can be simplified to: 
 \begin{equation}
-\omega_n^2 M \vec{v}_n = K  \vec{v}_n
+\omega_i^2 M \vec{v}_i = K  \vec{v}_i
 \end{equation}
 Considering that the total displacement of the system, expressed as $\vec{x}(t)$ , is the summation of the of the displacement of each of the noncontributing modes; assuming a linear system, the temporal response of the system can be written as:
 \begin{eqnarray}
