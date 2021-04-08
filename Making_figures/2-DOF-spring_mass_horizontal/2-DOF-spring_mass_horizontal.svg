@@ -20,6 +20,12 @@
    inkscape:export-ydpi="300">
   <defs
      id="defs2">
+    <rect
+       x="24.857655"
+       y="186.51244"
+       width="8.6461408"
+       height="7.7197686"
+       id="rect5558" />
     <marker
        inkscape:stockid="Arrow1Mstart"
        orient="auto"
@@ -9991,16 +9997,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.856837"
-     inkscape:cx="244.396"
-     inkscape:cy="754.32672"
+     inkscape:zoom="1.713674"
+     inkscape:cx="263.72011"
+     inkscape:cy="670.00939"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="2992"
-     inkscape:window-y="657"
+     inkscape:window-x="1072"
+     inkscape:window-y="524"
      inkscape:window-maximized="1"
      inkscape:snap-global="false"
      units="in"
@@ -18632,7 +18638,7 @@
          x="68.504784"
          y="205.78262"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">m<tspan
-   style="font-size:65%;baseline-shift:sub"
+   style="font-size:65%;baseline-shift:sub;font-style:normal"
    id="tspan18026">1</tspan></tspan></text>
     <g
        transform="matrix(0,-1.0087068,1.0087068,0,-221.97655,309.50732)"
@@ -18720,7 +18726,7 @@
          x="47.374405"
          y="201.55048"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">k<tspan
-   style="font-size:65%;baseline-shift:sub"
+   style="font-size:65%;baseline-shift:sub;font-style:normal"
    id="tspan18020">1</tspan></tspan></text>
     <circle
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:0.52999997, 0.26499998;stroke-dashoffset:0;stroke-opacity:1"
@@ -18816,7 +18822,7 @@
          x="70.729088"
          y="195.13541"
          style="font-style:italic;font-size:4.93889px;stroke-width:0.264583">x<tspan
-   style="font-size:65%;baseline-shift:sub"
+   style="font-size:65%;baseline-shift:sub;font-style:normal"
    id="tspan18022">1</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -18852,7 +18858,7 @@
          x="112.96931"
          y="205.78497"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">m<tspan
-   style="font-size:65%;baseline-shift:sub"
+   style="font-size:65%;baseline-shift:sub;font-style:normal"
    id="tspan18016">2</tspan></tspan></text>
     <text
        xml:space="preserve"
@@ -18868,7 +18874,7 @@
          x="91.838951"
          y="201.55283"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">k<tspan
-   style="font-size:65%;baseline-shift:sub"
+   style="font-size:65%;baseline-shift:sub;font-style:normal"
    id="tspan18024">2</tspan></tspan></text>
     <circle
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:0.52999997, 0.26499998;stroke-dashoffset:0;stroke-opacity:1"
@@ -18964,7 +18970,7 @@
          x="115.19363"
          y="195.13776"
          style="font-style:italic;font-size:4.93889px;stroke-width:0.264583">x<tspan
-   style="font-size:65%;baseline-shift:sub"
+   style="font-size:65%;baseline-shift:sub;font-style:normal"
    id="tspan18018">2</tspan></tspan></text>
     <flowRoot
        xml:space="preserve"
@@ -19002,7 +19008,7 @@
          x="49.401382"
          y="260.35004"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">m<tspan
-   style="font-size:65%;baseline-shift:sub"
+   style="font-size:65%;baseline-shift:sub;font-style:normal"
    id="tspan19883">1</tspan>g</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -19035,7 +19041,7 @@
          x="53.383255"
          y="251.26196"
          style="font-style:italic;font-size:4.93889px;stroke-width:0.264583">x<tspan
-   style="font-size:3.21028px;baseline-shift:sub;stroke-width:0.264583"
+   style="font-size:3.21028px;baseline-shift:sub;stroke-width:0.264583;font-style:normal"
    id="tspan18022-3">1</tspan></tspan></text>
     <rect
        id="rect3745-0-4-7-6-70-2-7"
@@ -19079,7 +19085,7 @@
          x="115.75484"
          y="251.26434"
          style="font-style:italic;font-size:4.93889px;stroke-width:0.264583">x<tspan
-   style="font-size:3.21028px;baseline-shift:sub;stroke-width:0.264583"
+   style="font-size:3.21028px;baseline-shift:sub;stroke-width:0.264583;font-style:normal"
    id="tspan18018-2">2</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker3141-96-79)"
@@ -19143,7 +19149,7 @@
          x="112.25314"
          y="260.64209"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">m<tspan
-   style="font-size:65%;baseline-shift:sub"
+   style="font-size:65%;baseline-shift:sub;font-style:normal"
    id="tspan19906">2</tspan>g</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker3141-1-48-3-3)"
@@ -19222,15 +19228,15 @@
          y="257.435"
          style="stroke-width:0.264583"><tspan
    style="font-style:italic"
-   id="tspan22445">k<tspan
-   style="font-size:65%;baseline-shift:sub"
-   id="tspan22459">2</tspan></tspan>(<tspan
+   id="tspan22445">k</tspan><tspan
+   id="tspan5552"
+   style="font-size:65%;baseline-shift:sub;font-style:normal">2</tspan>(<tspan
    style="font-style:italic"
    id="tspan22447">x<tspan
-   style="font-size:65%;baseline-shift:sub"
-   id="tspan22449">2</tspan>-x<tspan
-   style="font-size:65%;baseline-shift:sub"
-   id="tspan22455">1</tspan></tspan>)</tspan></text>
+   style="font-size:65%;baseline-shift:sub;font-style:normal"
+   id="tspan22449">2</tspan>-x</tspan><tspan
+   id="tspan5546"
+   style="font-size:65%;baseline-shift:sub;font-style:normal">1</tspan>)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -19246,15 +19252,15 @@
          y="257.435"
          style="stroke-width:0.264583"><tspan
    style="font-style:italic;stroke-width:0.264583"
-   id="tspan22445-0">k<tspan
-   style="font-size:2.29306px;baseline-shift:sub;stroke-width:0.264583"
-   id="tspan22459-6">2</tspan></tspan>(<tspan
+   id="tspan22445-0">k</tspan><tspan
+   id="tspan5542"
+   style="font-size:2.29306px;baseline-shift:sub;stroke-width:0.264583;font-style:normal">2</tspan>(<tspan
    style="font-style:italic;stroke-width:0.264583"
    id="tspan22447-8">x<tspan
-   style="font-size:2.29306px;baseline-shift:sub;stroke-width:0.264583"
-   id="tspan22449-7">2</tspan>-x<tspan
-   style="font-size:2.29306px;baseline-shift:sub;stroke-width:0.264583"
-   id="tspan22455-0">1</tspan></tspan>)</tspan></text>
+   style="font-size:2.29306px;baseline-shift:sub;stroke-width:0.264583;font-style:normal"
+   id="tspan22449-7">2</tspan>-x</tspan><tspan
+   id="tspan5536"
+   style="font-size:2.29306px;baseline-shift:sub;stroke-width:0.264583;font-style:normal">1</tspan>)</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 874.73429,469.36481 h -7.79576 l -0.61775,1.44694 -0.61776,-1.44694 -0.61775,-1.44694 -0.61776,1.44694 -0.61775,1.44694 -0.61776,-1.44694 -0.61775,-1.44694 -0.61775,1.44694 -0.61776,1.44694 -0.61775,-1.44694 -0.61776,-1.44694 -0.61775,1.44694 -0.61776,1.44694 -0.61775,-1.44694 -0.61776,-1.44694 -0.61775,1.44694 -0.61775,1.44694 -0.61776,-1.44694 -0.61775,-1.44694 -0.61776,1.44694 h -8.52809"
@@ -22447,6 +22453,10 @@
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          sodipodi:nodetypes="cc" />
     </g>
+    <text
+       xml:space="preserve"
+       id="text5556"
+       style="font-family:'Times New Roman';font-size:3.52777778px;line-height:100%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:'Times New Roman, Normal';writing-mode:lr;white-space:pre;shape-inside:url(#rect5558);" />
   </g>
   <style
      id="style5799">text.intmath,text.intmathItalic{stroke:none;fill:#000;font-weight:400}@font-face{font-family:MathJax_Math-italic;src:url(/includes/cssjs/katex/fonts/MathJax_Math-Italic.woff2) format('woff2'),url(/includes/cssjs/katex/fonts/MathJax_Math-Italic.woff) format('woff')}@font-face{font-family:MathJax_Main;src:url(/includes/cssjs/katex/fonts/MathJax_Main-Regular.woff2) format('woff2'),url(/includes/cssjs/katex/fonts/MathJax_Main-Regular.woff) format('woff')}path.grids{shape-rendering:crispEdges}text.intmath{font-size:14.4px;font-family:MathJax_Main,'Times New Roman',Times,serif}text.intmathItalic{font-size:16px;font-style:normal;font-family:MathJax_Math-italic,'Times New Roman',Times,serif}</style>
