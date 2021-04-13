@@ -23,8 +23,8 @@ import json as json
 import pylab
 
 # set default fonts and plot colors
+plt.rcParams.update({'text.usetex': True})
 plt.rcParams.update({'image.cmap': 'viridis'})
-cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
 plt.rcParams.update({'font.serif':['Times New Roman', 'Times', 'DejaVu Serif',
  'Bitstream Vera Serif', 'Computer Modern Roman', 'New Century Schoolbook',
  'Century Schoolbook L',  'Utopia', 'ITC Bookman', 'Bookman', 
@@ -32,7 +32,12 @@ plt.rcParams.update({'font.serif':['Times New Roman', 'Times', 'DejaVu Serif',
 plt.rcParams.update({'font.family':'serif'})
 plt.rcParams.update({'font.size': 10})
 plt.rcParams.update({'mathtext.rm': 'serif'})
-plt.rcParams.update({'mathtext.fontset': 'custom'})
+plt.rcParams.update({'mathtext.fontset': 'custom'}) # I don't think I need this as its set to 'stixsans' above.
+
+cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
+
+
+
 plt.close('all')
 
 #%% for a forced response for a underdamped system with the forcing function being cos. 
@@ -81,8 +86,8 @@ plt.legend(framealpha=1)
 plt.grid('on')
 plt.ylim([-0.5,5.5])
 plt.xlim([0,2.5])
-plt.xlabel('frequency ratio ($r$)')
-plt.ylabel('displacement ratio ($X/Y$)')
+plt.xlabel(r'frequency ratio ($\beta$)')
+plt.ylabel(r'displacement ratio ($X/Y$)')
 plt.tight_layout()
 plt.savefig('python.pdf')
 

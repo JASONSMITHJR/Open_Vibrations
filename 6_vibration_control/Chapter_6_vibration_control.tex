@@ -133,7 +133,7 @@ It can be seen that both of these expressions are linear. Moreover, for a consta
 \begin{figure}[H]
     \centering
     \includegraphics[width=5in]{../Figures/Vibration_nomograph.png}
-    \caption{Vibration nomograph showing the acceptable limits of vibration for various applications. Adopted from \cite{Rao2017Mechanicalvibrations} and \cite{Macinante1984Seismicmountingsvibration}.}
+    \caption{Vibration nomograph showing the acceptable limits of vibration for various applications.}
     \label{fig:Vibration_nomograph}
 \end{figure}
 
@@ -143,6 +143,82 @@ It can be seen that both of these expressions are linear. Moreover, for a consta
 
 
 \subsection{Vibration Absorption}
+
+Vibration absorbers, also termed dynamic vibration absorber, are a class of mechanical devices that seek to reduce unwanted vibrations in a system. In contrast to a traditional dash-pot style damper, these systems seek to ``redirect'' the vibrations from the system to another mass connected to the system. In this way the main system is protected form the bandwidth of vibrations that the vibration absorbers is tuned for. As the vibration absorbers must be tuned for the system, it is generally limited to devices that operate at a fixed frequency like industrial equipment or cables suspended in the air and subjected to wind loading. Figure~\ref{fig:vibration_absorbers} presents a Stockbridge and a Dogbone damper designed to remove certain bandwidths of excitation form wind-excited cables.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6.5in]{../Figures/vibration_absorbers.png}
+    \caption{Vibration absorbers deployed on wind excited cables showing: (a) a Stockbridge damper on a high-power transmission line\protect\footnotemark[1], and; (b) a dogbone damper on a suspender cable of a suspension bridge\protect\footnotemark[2].}
+    \label{fig:vibration_absorbers}
+\end{figure}
+\footnotetext[1]{``Stockbridge dampers installed on high voltage power lines'' by Badics CC BY-SA 3.0}  
+\footnotetext[2]{``Dogbone dampers on the road-support cables of the Severn Bridge'' by Bassaar  CC BY-SA 4.0}  
+
+Vibration absorbers are most often designed to shift the resonance frequency of the first mode of the system away from the expected excitation frequency. This is done by adding an additional degree-of-freedom in the form of a mass (the vibration absorber) connected to system with a spring to alter the natural frequency of the combined system away from the original excitation frequency. Dashpots may also be added in parallel to the spring element if additional energy dissipation in needed beyond that provided by the original system. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[]{../Figures/vibration_absorber_spring_mass.png}
+    \caption{A vibration absorber ($m_2$) for mitigating unwanted dynamics in a device ($m_1$).}
+    \label{fig:vibration_absorber_spring_mass}
+\end{figure}
+
+The tuning of a 2-DOF system can be done by setting the displacement of the mass to be controlled to zero and solving for the mass and stiffness of vibration absorber. Consider the system presented in figure~\ref{fig:vibration_absorber_spring_mass}, here $m_1$ and $k_1$ are the mass and stiffness of the system while $m_2$ and $k_2$ are the mass and stiffness of the vibration absorber. A good assumption to make when designing a vibration absorber is that the mass of the absorber should be between 1\% and 5\% of the mass of the system to be damped. Therefore, for this case let $m_1$ = 20 kg, $m_2$ = 1 kg, and $k_1$ = 20 kN. Assuming a sinusoidal input where $F_0 = 1$ kN, the equations of motion are:
+\begin{equation}
+m_1\ddot{x_1} + k_1 x_1 + k_2(x_1-x_2)  = F_0 \sin (\omega t)
+\end{equation}
+\begin{equation}
+m_2\ddot{x_2} + k_2(x_2-x_1) = 0
+\end{equation}
+Assuming the temporal solution is of a harmonic form, the following is true:
+\begin{equation}
+x_i(t) = X_i \sin (\omega t ), \; \; i=1,2
+\end{equation}
+using the transfer function approach and assuming no initial conditions, the following steady state solution can be obtained for $m_1$ and $m_2$:
+\begin{equation}
+X_1 = \frac{(k_2 - m_2 \omega^2)F_0}{(k_1+k_2-m_1 \omega^2)(k_2-m_2 \omega^2) -k_2^2}
+\label{eq:X1_displacement}
+\end{equation}
+\begin{equation}
+X_2 = \frac{k_2 F_0}{(k_1+k_2-m_1 \omega^2)(k_2-m_2 \omega^2) -k_2^2}
+\label{eq:X2_displacement}
+\end{equation}
+Next, the natural frequency of $m_1$ ($\omega_1$) can be solved for as $\omega_1=\sqrt{k_1 / m_1}$. In order to eliminate movement for $m_1$ at a given driving frequency $\omega$, the numerator of equation~\ref{eq:X1_displacement} should be set to zero. Note that setting $F_0$ is a trivial solution and provides no real benefit to the system. Therefore:
+\begin{equation}
+k_2 = m_2 \omega^2
+\end{equation}
+note that this will force the frequency of the tuned vibration absorber to match that of the system, therefore $\omega_1 = \omega_1=\sqrt{k_2 / m_3}$. Next, normalizing the input force $F_0$ by the stiffness of the main system $k_1$ yields:
+\begin{equation}
+\delta_{\text{st}} = \frac{F_0}{k_1}
+\end{equation}
+using this term, equations~\ref{eq:X1_displacement} and \ref{eq:X2_displacement} can be rearranged as:
+\begin{equation}
+\frac{X_1}{\delta_{\text{st}}} = \frac{1 - \big(\frac{\omega}{\omega_2} \big)^2 }{\Big[1 + \frac{k_2}{k_1} - \big(\frac{\omega}{\omega_1} \big)^2 \Big] \Big[ 1- \big(\frac{\omega}{\omega_2} \big)^2 \Big] -\frac{k_2}{k_1}}
+\label{eq:X1_norm_displacement}
+\end{equation}
+\begin{equation}
+\frac{X_2}{\delta_{\text{st}}} = \frac{1}{\Big[1 + \frac{k_2}{k_1} - \big(\frac{\omega}{\omega_1} \big)^2 \Big] \Big[ 1- \big(\frac{\omega}{\omega_2} \big)^2 \Big] -\frac{k_2}{k_1}}
+\label{eq:X2_norm_displacement}
+\end{equation}
+Figure~\ref{fig:vibration_absorber_undamped_results} reports the normalized displacement of the system over a frequency range for system with and without a vibration absorber. Note that at $\omega=1$ the original system is in resonance while the system with the vibration absorber has no displacement. However, no system is without compromise. From equation~\ref{eq:X2_norm_displacement} it can be seen that at $\omega = \omega_1 = \omega_2$ the second mass needs a displacement equal to:
+\begin{equation}
+X_2 = -\frac{k_1}{k_2}\delta_{\text{st}} = -\frac{F_0}{k_2}
+\end{equation}
+or 1 m using the given parameters. Therefore, the mass and stiffness values of the vibration absorber should be selected based the the allowable travel of the absorber (i.e. $X_2$), among other factors. Moreover, from this equation it can be seen the force exerted by the second mass operates in the direction opposite the original force ($-F_0 - k_2 X_2$), thereby canceling it. Lastly, note that the addition of the vibration absorber creates two resonate frequencies of the system, termed $\Omega_1$ and $\Omega_2$. These  resonate frequencies represent roots of the system and care should be taken to limit the time the system spends at these frequencies (i.e. on startup). The locations of these roots can be solved for analytically by setting the denominators of equation \ref{eq:X1_norm_displacement} to zero.
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6.5in]{../Figures/vibration_absorber_undamped_results.png}
+    \caption{Frequency response of the undamped system with and without the vibration absorber.}
+    \label{fig:vibration_absorber_undamped_results}
+\end{figure}
+
+
+
+
 
 
 
