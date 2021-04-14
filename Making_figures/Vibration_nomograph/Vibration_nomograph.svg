@@ -166,9 +166,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.60587524"
-     inkscape:cx="181.18088"
-     inkscape:cy="675.92071"
+     inkscape:zoom="2.423501"
+     inkscape:cx="455.50821"
+     inkscape:cy="507.01603"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -304,7 +304,7 @@
        preserveAspectRatio="none"
        height="213.55975"
        width="193.14583"
-       transform="matrix(0.91161844,0.0086657,-0.0086657,0.91161844,196.24919,-6.6258111)"
+       transform="matrix(0.91161844,0.0086657,-0.0086657,0.91161844,187.91184,-1.0675776)"
        clip-path="url(#clipPath3743)"
        inkscape:export-filename="Vibration_nomograph.png"
        inkscape:export-xdpi="300"
@@ -868,13 +868,13 @@
     <text
        xml:space="preserve"
        style="font-size:33.8753px;line-height:100%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:2.54065"
-       x="242.47453"
-       y="231.51833"
+       x="417.80801"
+       y="226.05963"
        id="text1755"><tspan
          sodipodi:role="line"
          id="tspan1753"
-         x="242.47453"
-         y="231.51833"
+         x="417.80801"
+         y="226.05963"
          style="stroke-width:2.54065">}</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.193151px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -970,25 +970,25 @@
        x="131.95851"
        y="245.91187"
        id="text1837"
-       transform="rotate(-90,136.1737,229.90024)"
+       transform="rotate(-90,190.21528,39.348523)"
        inkscape:export-filename="Vibration_nomograph.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"><tspan
          sodipodi:role="line"
          id="tspan1840"
-         x="131.95851"
-         y="248.60222"><tspan
+         x="0"
+         y="2.690351"><tspan
            id="tspan1835"
            x="131.95851"
            y="245.91187"
            style="stroke-width:0.264583" /></tspan><tspan
          sodipodi:role="line"
          id="tspan1842"
-         x="131.95851"
-         y="252.12999">ISO 10816 Vibration Severity</tspan><tspan
+         x="0"
+         y="6.2181211">ISO 10816 Vibration Severity</tspan><tspan
          sodipodi:role="line"
-         x="131.95851"
-         y="255.65776"
+         x="0"
+         y="9.7458906"
          id="tspan1844">Standards for Class I Small machines</tspan></text>
     <text
        xml:space="preserve"
@@ -2060,6 +2060,14 @@
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-8-1-1-7-5)"
        d="m 127.32526,253.02891 -27.816919,19.4479"
        id="path2091-4-9-6-9-1"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="Vibration_nomograph.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#d5d5d5;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 134.00434,231.90468 h 31.20954"
+       id="path3368-6-3"
        sodipodi:nodetypes="cc"
        inkscape:export-filename="Vibration_nomograph.png"
        inkscape:export-xdpi="300"
