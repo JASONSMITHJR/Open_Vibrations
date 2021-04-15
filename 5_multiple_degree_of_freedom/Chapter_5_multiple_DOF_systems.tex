@@ -153,17 +153,21 @@ Matrices that do not have an inverse are called a singular matrix.  \rd{add note
 Studying and characterizing the natural frequencies of a system allows for the detailed investigation of the system response. Modern vibration analysis relies heavily on the concepts of mode shapes for various engineering tasks. 
 
 
-Mode shapes are not the displacement of a system, rather the describe the configurations into which a structure will naturally displace at a given frequency. For example, consider the 4-DOF system shown in figure~\ref{fig:general_mode_shapes} that represents a pole (i.e. cantilever beam). Assuming that the system experience a linear response and using the mode-superposition method we can see that the displaced shape $\textbf{X}$ is a function of all of the mode shapes $\phi_n$ and their corresponding \rd{}participation factors $Y_n$. Note that the mode shapes associated with the lower frequencies tend to provide the greatest contribution to structural response. As the frequencies that excite the modes increase, the mode shapes contribute less, are predicted less reliably, and are harder to measure. Therefore, the analysis of the system is often truncated after the first few modes and rarely exceeds the 10$^{\text{th}}$ mode. 
+Mode shapes are not the displacement of a system, rather the describe the configurations into which a structure will naturally displace at a given frequency. For example, consider the 4-DOF system shown in figure~\ref{fig:general_mode_shapes} that represents a pole (i.e. cantilever beam). Assuming that the system experience a linear response and using the mode-superposition method we can see that the displaced shape $\vec{x}$ is a function of all of the mode shapes $u_i$ and their corresponding participation factors $q_i$. Note that the mode shapes associated with the lower frequencies tend to provide the greatest contribution to structural response. As the frequencies that excite the modes increase, the mode shapes contribute less, are predicted less reliably, and are harder to measure. Therefore, the analysis of the system is often truncated after the first few modes and rarely exceeds the 10$^{\text{th}}$ mode. 
 
-Figure~\ref{fig:general_mode_shapes} shows a structure with $N$ degrees of freedom that therefore had $N$ corresponding mode shapes. Each mode shape is independent and normalized such that the maximum displacements are the same. The summation of the mode shapes multiplied by their corresponding participation factors ($Y_n$) yields the deflection of the structure. \todo{Still need to update the variables used here and check the math on participation factors. Should this be $\phi$ be eigenvalue? }
+Figure~\ref{fig:general_mode_shapes} shows a structure with $N$ degrees of freedom that therefore had $N$ corresponding mode shapes. Each mode shape is independent and normalized such that the maximum displacements are the same. The summation of the mode shapes multiplied by their corresponding participation factors ($q_i$) yields the deflection of the structure. 
 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[]{../Figures/general_mode_shapes.png}
-	\caption{Deflection of a vertical cantilever is a function of the considered mode shapes $\phi_n$ and their corresponding \rd{participation factors $Y_n$. should be q? $\phi_n$ should be $u$, need vector notation.} }
+	\caption{Deflection of a vertical cantilever, $\vec{x}$, is a function of the considered mode shapes $u_i$ and their corresponding participation factors $q_i$.}
 	\label{fig:general_mode_shapes}
 \end{figure}
+
+
+
+
 
 \subsection{Modeling Undamped Two Degree of Freedom Systems}
 \label{sec:two_degree_of_freedom}
