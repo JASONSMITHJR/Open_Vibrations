@@ -166,9 +166,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.60587525"
-     inkscape:cx="-175.94888"
-     inkscape:cy="767.13859"
+     inkscape:zoom="0.856837"
+     inkscape:cx="380.98446"
+     inkscape:cy="648.78444"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -699,9 +699,9 @@
    id="tspan1634">2</tspan>)</tspan></text>
     <path
        style="fill:none;stroke:#0002ff;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 71.306046,283.13019 10.262353,-10.41791 h 16.94104 v 10.41791"
+       d="m 71.306046,283.13019 10.262353,-10.41791 h 16.94104"
        id="path1638"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="ccc"
        inkscape:export-filename="Vibration_nomograph.png"
        inkscape:export-xdpi="500"
        inkscape:export-ydpi="500" />
@@ -1961,8 +1961,8 @@
        id="rect3224-78-8-1-6"
        width="15.743594"
        height="3.0767806"
-       x="86.875252"
-       y="270.49332"
+       x="86.624298"
+       y="270.4903"
        transform="matrix(0.99992745,-0.01204566,-0.01543417,0.99988089,0,0)"
        inkscape:export-filename="Vibration_nomograph.png"
        inkscape:export-xdpi="500"
@@ -2058,7 +2058,7 @@
          style="stroke-width:0.264583">adequate for the most demanding of sensitive systems including long path, laser-based, small target systems, E-Beam lithography systems working at nanometer scales, and other systems requiring extraordinary dynamic stability.</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-8-1-1-7-5)"
-       d="m 127.32526,253.02891 -27.816919,19.4479"
+       d="M 127.32526,253.02891 99.34458,272.05376"
        id="path2091-4-9-6-9-1"
        sodipodi:nodetypes="cc"
        inkscape:export-filename="Vibration_nomograph.png"

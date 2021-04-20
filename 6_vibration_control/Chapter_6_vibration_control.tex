@@ -4,6 +4,8 @@
 \usepackage[latin1]{inputenc}
 \usepackage{amsmath}
 
+\usepackage[textsize=tiny]{todonotes}
+
 % defines all example enviorment
 \usepackage[framemethod=tikz]{mdframed} % added for the box around examples
 \newtheorem{ex}{Example}
@@ -120,19 +122,24 @@ Thereafter, the maximum values for velocity $v_\text{max}$ and acceleration $a_\
 \end{equation}
 by taking the natural log of both side of equation \ref{eq:v_max} we obtain: 
 \begin{equation}
-    \ln v_\text{max} = \ln 2 \pi f + \ln A
+    \ln v_\text{max} = \ln(2\pi f) + \ln A
     \label{eq:ln_v_max} 
 \end{equation}
-doing the same for equation \ref{eq:a_max} and rearranging in terms of $v_\text{max}$ leads to:
+doing the same for equation \ref{eq:a_max} leads to:
 \begin{equation}
-    \ln v_\text{max} = - \ln a_\text{max} - \ln 2\pi f  
+     \ln a_\text{max} = - \ln(2\pi f) - \ln v_\text{max}
     \label{eq:ln_v_max_2} 
 \end{equation}
-It can be seen that both of these expressions are linear. Moreover, for a constant amplitude of displacement, $A$, equation \ref{eq:ln_v_max} tells us that $\ln v_\text{max}$ varies with $\ln (2 \pi f)$. As the $x-$axis in a nomograph is frequency, measured in Hz, $\ln (2 \pi f)$ is a straight line with a positive slope of 1. Therefore, a line on the nomograph that represents a constant displacement is at a 45$^\circ$ angle from the $x$-axis. Similarly, equation \ref{eq:ln_v_max_2} shows that for a constant value of acceleration ($a_\text{max}$) the $\ln v_\text{max}$ is represented by a straight line that varies with $- \ln(2\pi f)$, therefore,  $\ln v_\text{max}$ is a straight line with the slope of -1. This is also represented by a line of constant acceleration set at a -45$^\circ$ angle from the $x$-axis. These equations are expressed in the vibration nomograph plot of figure \ref{fig:Vibration_nomograph} where each point on the plot represents a specific sinusoidal (harmonic) vibration for a 1-DOF system.  
+It can be seen that both of these expressions are linear. 
+
+The nomograph sets the $x-$axis as frequency in Hz and the $x-$axis as velocity in mm/s. Equation \ref{eq:ln_v_max} tells us that For a constant amplitude of displacement ($A$), $\ln v_\text{max}$ is linearly proportional to $\ln (2 \pi f)$, at a rate of $2 \pi$. As the $x-$axis in a nomograph is frequency, measured in Hz and thereby accounting for the $2 \pi$, $\ln (2 \pi f)$ is a straight line with a positive slope of 1 with respect the frequency axis (i.e. $x-$axis). Therefore, a line on the nomograph that represents a constant displacement is at a 45$^\circ$ angle from the $x$-axis. 
+
+
+For a constant value of velocity, ($v_\text{max}$), equation \ref{eq:ln_v_max_2} shows that acceleration ($\ln a_\text{max}$) is linearly proportional to $-\ln (2 \pi f)$, at a rate of $2 \pi$. Again, as the $x-$axis in a nomograph is frequency, measured in Hz, acceleration is represented by a straight line that varies with $- \ln(2\pi f)$, therefore, $\ln a_\text{max}$ is a straight line with the slope of -1. This is also represented by a line of constant acceleration set at a -45$^\circ$ angle from the $x$-axis. These equations are expressed in the vibration nomograph plot of figure \ref{fig:Vibration_nomograph} where each point on the plot represents a specific sinusoidal (harmonic) vibration for a 1-DOF system.  
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=5in]{../Figures/Vibration_nomograph.png}
+    \includegraphics[width=4.5in]{../Figures/Vibration_nomograph.png}
     \caption{Vibration nomograph showing the acceptable limits of vibration for various applications.}
     \label{fig:Vibration_nomograph}
 \end{figure}
@@ -188,7 +195,7 @@ Next, the natural frequency of $m_1$ ($\omega_1$) can be solved for as $\omega_1
 \begin{equation}
 k_2 = m_2 \omega^2
 \end{equation}
-note that this will force the frequency of the tuned vibration absorber to match that of the system, therefore $\omega_1 = \omega_1=\sqrt{k_2 / m_3}$. Next, normalizing the input force $F_0$ by the stiffness of the main system $k_1$ yields:
+note that this will force the frequency of the tuned vibration absorber to match that of the system, therefore $\omega_1 = \omega_2 = \sqrt{k_2 / m_2}$. Next, normalizing the input force $F_0$ by the stiffness of the main system $k_1$ yields:
 \begin{equation}
 \delta_{\text{st}} = \frac{F_0}{k_1}
 \end{equation}
