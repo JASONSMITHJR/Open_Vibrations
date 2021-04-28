@@ -240,11 +240,12 @@ Active vibration control add energy to the system in order to mitigate the vibra
     \label{fig:active_vibration_control_FBD}
 \end{figure}
 
+
 Adding the control force to the EOM for the 1-DOF system presented in figure \ref{fig:active_vibration_control_FBD} results in:
 \begin{equation}
 m \ddot{x} + c \dot{x} + kx = F(t) = f + f_u
 \end{equation}
-A common method for providing control for vibration suppression is called position derivative control or PD-control. PD-control measures the position and velocity of the mass and uses these to compute the control force needed to mitigate the vibration to an acceptable level. A simple way to code a PD-controller is to provide a control force proportional to the displacement velocity (derivative of displacement) of the mass such that:
+A common method for providing control for vibration suppression is called position and derivative control or PD-control. A PD-controller is a state-variable feedback controller as it uses velocity and displacement obtained from the measured acceleration, assuming that the acceleration is properly integrated. PD-control measures the position and velocity of the mass and uses these to compute the control force needed to mitigate the vibration to an acceptable level. A simple way to code a PD-controller is to provide a control force proportional to the displacement velocity (derivative of displacement) of the mass such that:
 \begin{equation}
 f_u = -g_1x - g_2 \ddot{x}
 \end{equation}
