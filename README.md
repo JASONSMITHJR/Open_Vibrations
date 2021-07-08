@@ -10,7 +10,7 @@ An open-source textbook intended to cover the basics of mechanical vibrations. T
 
 
 
-A current PDF version of the text can be found in the releases tab of the GitHub page. 
+A current PDF version of the text can be found in the releases tab of the GitHub page or by clicking <a href="https://github.com/ARTS-Laboratory/Open_Vibrations/releases">here</a>.
 
 Cite as  
 @Misc{Downey2021OpenVibrations,  
