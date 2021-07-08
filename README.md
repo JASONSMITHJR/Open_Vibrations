@@ -3,7 +3,7 @@ An open-source textbook intended to cover the basics of mechanical vibrations. T
 
 
 <p align="center">
-<img src="figures/base_excitation_force_transmissibility.png" alt="drawing" width="700"/>
+<img src="Figures/base_excitation_force_transmissibility.png" alt="drawing" width="700"/>
 </p>
 <p align="center">
 </p>
