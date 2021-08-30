@@ -66,7 +66,7 @@ xx_underdamped = xx_h + xx_p
 
 plt.figure(figsize=(6,3))
 plt.plot(tt,xx_h*1000,':',lw=1.5,label='homogeneous solution')
-plt.plot(tt,xx_p*1000,'--',lw=1.5,label='partial solution')
+plt.plot(tt,xx_p*1000,'--',lw=1.5,label='particular solution')
 plt.plot(tt,xx_underdamped*1000,'-',lw=1,label='total solution')
 plt.xlim(0,12)
 plt.grid('on')
@@ -74,7 +74,7 @@ plt.ylabel('amplitude (mm)')
 plt.xlabel('time (s)')
 plt.tight_layout()
 plt.legend(loc=1,ncol=3,framealpha=1,bbox_to_anchor=[0,0,1,1.09])
-plt.savefig('homogeneous_and_partial_solutions.png',dpi=300)
+plt.savefig('homogeneous_and_particular_solutions.png',dpi=300)
 
 
 
