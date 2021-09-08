@@ -93,12 +93,12 @@
 			\label{fig:oscillatorymotion}
 		\end{figure}
 
-		Given the nature of simple harmonic motion, constant amplitude and frequency, the wave starting at the origin $O$ can be modeled at a point on the end of a vector with length $A$ rotating rotating at a constant angular velocity $\omega_n$ where the angle from the origin of the vector is $\phi$, defined as $\phi = \omega t$. Where $\omega$ is the lowercase Greek letter Omega and $\phi$ is the lowercase Coptic letter phi. This is similar to a Greek phi ($\varphi$) and either can be used in this context. The subscript $n$ on $\omega$ denotes that this frequency relates to the natural frequency of the system, the only frequency in simple harmonic motion. A visualization of the harmonic motion obtained from projecting the point on the edge of a vector onto the $\omega_n t$ space is presented in figure \ref{fig:Harmonic_Motion}. 
+		Given the nature of simple harmonic motion, constant amplitude and frequency, the wave starting at the origin $O$ can be modeled at a point on the end of a vector with length $A$ rotating rotating at a constant angular velocity $\omega_\text{n}$ where the angle from the origin of the vector is $\phi$, defined as $\phi = \omega t$. Where $\omega$ is the lowercase Greek letter Omega and $\phi$ is the lowercase Coptic letter phi. This is similar to a Greek phi ($\varphi$) and either can be used in this context. The subscript $n$ on $\omega$ denotes that this frequency relates to the natural frequency of the system, the only frequency in simple harmonic motion. A visualization of the harmonic motion obtained from projecting the point on the edge of a vector onto the $\omega_\text{n} t$ space is presented in figure \ref{fig:Harmonic_Motion}. 
 
 		\begin{figure}[H]
 			\centering
 			\includegraphics[]{../figures/harmonic_motion.png}
-			\caption{Harmonic motion represented at the projection of a point on the end of a vector moving on a circle. Note the axis $\omega_n t$.}
+			\caption{Harmonic motion represented at the projection of a point on the end of a vector moving on a circle. Note the axis $\omega_\text{n} t$.}
 			\label{fig:Harmonic_Motion}
 		\end{figure}
 
@@ -129,47 +129,47 @@
 
 		A mathematical expression can now be formulated to represent the observed simple harmonic motion. This expression can be based on the projection of a point on a vector (transposed into the time domain) or assembled from constituent parts as done in what follows. Solving for a location $x$, at a time $t$; $x(t)$, the various characteristics of the expression can be identified:
 
-		\subsubsection{Solve for the Natural Frequency ($\omega_n$) of the System }
+		\subsubsection{Solve for the Natural Frequency ($\omega_\text{n}$) of the System }
 				
 			\begin{itemize}
 				\item System oscillates $\rightarrow$ a sin function models this 
-				\item System oscillates at different speed $\rightarrow$ use a parameter to adjust $\omega_n$ in rad/s. 
+				\item System oscillates at different speed $\rightarrow$ use a parameter to adjust $\omega_\text{n}$ in rad/s. 
 				\item Systems have different amplitudes $\rightarrow$ use a parameter to adjust $A$ in meters.
 				\item System has different starting points $\rightarrow$ use a parameter to adjust $\phi$ in rad. 
 			\end{itemize}
 
 			\noindent Using these four constituent components, an equation can be proposed: 
 			\begin{equation}
-				{x}(t) = A\text{sin}(\omega_n t + \phi)
+				{x}(t) = A\text{sin}(\omega_\text{n} t + \phi)
 			\end{equation}
 			Take the derivative to get velocity:
 			\begin{equation}
-				\dot{x}(t) = A\omega_n\text{cos}(\omega_n t + \phi)
+				\dot{x}(t) = A\omega_\text{n}\text{cos}(\omega_\text{n} t + \phi)
 			\end{equation}
 			Take the derivative again to get acceleration:
 			\begin{equation}
-			\ddot{x}(t) = -A\omega_n^2\text{sin}(\omega_n t + \phi)
+			\ddot{x}(t) = -A\omega_\text{n}^2\text{sin}(\omega_\text{n} t + \phi)
 			\end{equation}
 			Substituting $x$ and $\ddot{x}$ into the EOM for the considered 1-DOF system ($m\ddot{x}(t) + kx(t) = 0$) yields:
 			\begin{equation}
-				m\big(-A\omega_n^2\text{sin}(\omega_n t + \phi)\big) + k\big(A\text{sin}(\omega_n t + \phi)\big) = 0
+				m\big(-A\omega_\text{n}^2\text{sin}(\omega_\text{n} t + \phi)\big) + k\big(A\text{sin}(\omega_\text{n} t + \phi)\big) = 0
 			\end{equation}
-			Thereafter, dividing both sides by $A\text{sin}(\omega_n t + \phi)$ results in the expression:
+			Thereafter, dividing both sides by $A\text{sin}(\omega_\text{n} t + \phi)$ results in the expression:
 			\begin{equation}
-				-m\omega_n^2+k = 0
+				-m\omega_\text{n}^2+k = 0
 			\end{equation}
 			This expression can be rearranged into the more useful standard form:
 			\begin{equation}
-				\omega_n= \sqrt{\frac{k}{m}}
+				\omega_\text{n}= \sqrt{\frac{k}{m}}
 				\label{eq:natural_frequency}
 			\end{equation}
 			Equation \ref{eq:natural_frequency} represents a solution to the EOM  presented in equation \ref{eq:EOM}. This solution is not in the form of an ODE  so, therefore, we can experientially prove that this is the correct solution. For example, we could build a systems with known mass and stiffness and measure the natural frequency of the system. Equation \ref{eq:natural_frequency} equation leads to:
 			\begin{equation}
-				T= \frac{2 \pi}{\omega_n}
+				T= \frac{2 \pi}{\omega_\text{n}}
 			\end{equation}
 			where $T$ is the period of oscillations and 
 			\begin{equation}
-				f_n= \frac{\omega_n}{2 \pi}
+				f_n= \frac{\omega_\text{n}}{2 \pi}
 			\end{equation}
 			where $f_n$ is the frequency of the oscillations. 
 					
@@ -183,11 +183,11 @@
 			\end{equation}			
 			Setting the equation to its initial state $t=0$, the equations for displacement and velocity can be simplified to: 
 			\begin{equation}
-				{x}(0) = x_0 = A\text{sin}(\omega_n 0 + \phi) = A\text{sin}(\phi)
+				{x}(0) = x_0 = A\text{sin}(\omega_\text{n} 0 + \phi) = A\text{sin}(\phi)
 				\label{eq:x_0=Asintheta} 
 			\end{equation}
 			\begin{equation}
-				\dot{x}(0) = v_0 = A\omega_n\text{cos}(\omega_n0 + \phi) = A\omega_n\text{cos}(\phi)
+				\dot{x}(0) = v_0 = A\omega_\text{n}\text{cos}(\omega_\text{n}0 + \phi) = A\omega_\text{n}\text{cos}(\phi)
 				\label{eq:v_0=Aomegacosphi} 
 			\end{equation}
 			Thereafter, mathematical meanings for $\phi$ and $A$ can be derived. To do this, $\phi$  can be solved for by rearranging equations \ref{eq:x_0=Asintheta} and \ref{eq:v_0=Aomegacosphi} for $A$:
@@ -196,19 +196,19 @@
 			\end{equation}
 			and:
 			\begin{equation}
-				A = \frac{v_0}{\omega_n\text{cos}(\phi)}
+				A = \frac{v_0}{\omega_\text{n}\text{cos}(\phi)}
 			\end{equation}
 			Setting these two equations equal to each other cancels out A and creates:
 			\begin{equation}
-				\frac{x_0 \omega_n}{\text{sin}(\phi)} = \frac{v_0}{\text{cos}(\phi)} 
+				\frac{x_0 \omega_\text{n}}{\text{sin}(\phi)} = \frac{v_0}{\text{cos}(\phi)} 
 			\end{equation}
 			therefore:
 			\begin{equation}
-				\frac{x_0\omega_n}{v_0} = \frac{\text{sin}(\phi)}{\text{cos}(\phi)}
+				\frac{x_0\omega_\text{n}}{v_0} = \frac{\text{sin}(\phi)}{\text{cos}(\phi)}
 			\end{equation}
 			finally:
 			\begin{equation}
-				\phi = \text{tan}^{-1}\bigg(\frac{x_0\omega_n}{v_0}\bigg)
+				\phi = \text{tan}^{-1}\bigg(\frac{x_0\omega_\text{n}}{v_0}\bigg)
 			\end{equation}
 			
 		\subsubsection{Solve for Amplitude ($A$) of the System }
@@ -219,35 +219,35 @@
 			\end{equation}
 			and:
 			\begin{equation}
-				\text{cos}(\phi) = \frac{v_0}{\omega_nA}
+				\text{cos}(\phi) = \frac{v_0}{\omega_\text{n}A}
 			\end{equation}
 			From these equations a value for $\phi$ can be obtained knowing that $\text{sin}(\phi)^2+\text{cos}(\phi)^2=1$. Therefore:
 			\begin{equation}
-				\bigg(\frac{x_0}{A}\bigg)^2  + \bigg(\frac{v_0}{\omega_nA}\bigg)^2 = 1
+				\bigg(\frac{x_0}{A}\bigg)^2  + \bigg(\frac{v_0}{\omega_\text{n}A}\bigg)^2 = 1
 			\end{equation}
-			multiplying each expression by 1 (also expressed as $\frac{\omega_n}{\omega_n}$), gives the equation:
+			multiplying each expression by 1 (also expressed as $\frac{\omega_\text{n}}{\omega_\text{n}}$), gives the equation:
 			\begin{equation}
-				\bigg(\frac{\omega_n}{\omega_n}\bigg)^2\bigg(\frac{x_0}{A}\bigg)^2  + 1 \bigg(\frac{v_0}{\omega_nA}\bigg)^2  = 1 \times 1
+				\bigg(\frac{\omega_\text{n}}{\omega_\text{n}}\bigg)^2\bigg(\frac{x_0}{A}\bigg)^2  + 1 \bigg(\frac{v_0}{\omega_\text{n}A}\bigg)^2  = 1 \times 1
 			\end{equation}
 			which becomes:
 			\begin{equation}
-				\bigg(\frac{\omega_n x_0}{\omega_n A}\bigg)^2  + \bigg(\frac{v_0}{\omega_nA}\bigg)^2 = 1
+				\bigg(\frac{\omega_\text{n} x_0}{\omega_\text{n} A}\bigg)^2  + \bigg(\frac{v_0}{\omega_\text{n}A}\bigg)^2 = 1
 			\end{equation}
-			Further simplification is obtained by multiplying each side by $(\omega_n A)^2$ to obtain:
+			Further simplification is obtained by multiplying each side by $(\omega_\text{n} A)^2$ to obtain:
 			\begin{equation}
-				\omega_n^2x_0^2+v_0^2=A^2\omega_n^2 
+				\omega_\text{n}^2x_0^2+v_0^2=A^2\omega_\text{n}^2 
 			\end{equation}
 			Solving for $A$, this expression rearranges to:
 			\begin{equation}
-				A = \frac{\sqrt{\omega_n^2x_0^2+v_0^2}}{\omega_n} = \sqrt{x_0^2+\bigg(\frac{v_0}{\omega_n}\bigg)^2}
+				A = \frac{\sqrt{\omega_\text{n}^2x_0^2+v_0^2}}{\omega_\text{n}} = \sqrt{x_0^2+\bigg(\frac{v_0}{\omega_\text{n}}\bigg)^2}
 			\end{equation}
 		
 		\subsubsection{Response for Simple Harmonic Motion}
 			
-			The time-varying displacement of a 1-DOF vibrating system under free response is expressed by the equation ${x}(t) = A\text{sin}(\omega_n t + \phi)$. Substituting in the expressions for $A$ and $\phi$ results in:
+			The time-varying displacement of a 1-DOF vibrating system under free response is expressed by the equation ${x}(t) = A\text{sin}(\omega_\text{n} t + \phi)$. Substituting in the expressions for $A$ and $\phi$ results in:
 			
 			\begin{equation}
-				{x}(t) = \frac{\sqrt{\omega_n^2x_0^2+v_0^2}}{\omega_n}\text{sin}\Bigg(\omega_n t + \bigg( \text{tan}^{-1}\bigg(\frac{x_0\omega_n}{v_0}\bigg)\bigg)\Bigg)
+				{x}(t) = \frac{\sqrt{\omega_\text{n}^2x_0^2+v_0^2}}{\omega_\text{n}}\text{sin}\Bigg(\omega_\text{n} t + \bigg( \text{tan}^{-1}\bigg(\frac{x_0\omega_\text{n}}{v_0}\bigg)\bigg)\Bigg)
 				\label{eq:response_simple_harmonic_motion}
 			\end{equation}
 			
@@ -262,10 +262,10 @@
 
 		\subsubsection{Special Considerations for No Initial Velocity ($v_0=0$)}
 		
-			Upon close inspection of the temporal solution in equation \ref{eq:response_simple_harmonic_motion}, it becomes evident that any system without initial velocity (i.e. $v_0=0$) results in an undefined number for $(x_0\omega_n)/v_0$. A solution to this challenge lies in the fact that limit of tan$^{-1}(x)$ approaches $-\pi/2$ at $-\infty$ and  $\pi/2$ at $\infty$, as depicted in figure \ref{fig:arctan_plot}. Therefore, the solution at $-\infty$ and $\infty$ is undefined, resulting in the expression:
+			Upon close inspection of the temporal solution in equation \ref{eq:response_simple_harmonic_motion}, it becomes evident that any system without initial velocity (i.e. $v_0=0$) results in an undefined number for $(x_0\omega_\text{n})/v_0$. A solution to this challenge lies in the fact that limit of tan$^{-1}(x)$ approaches $-\pi/2$ at $-\infty$ and  $\pi/2$ at $\infty$, as depicted in figure \ref{fig:arctan_plot}. Therefore, the solution at $-\infty$ and $\infty$ is undefined, resulting in the expression:
 			
 			\begin{equation}
-				\bigg(\frac{x_0\omega_n}{v_0}\bigg) = \pm \frac{\pi}{2}, \text{ when } v_0=0
+				\bigg(\frac{x_0\omega_\text{n}}{v_0}\bigg) = \pm \frac{\pi}{2}, \text{ when } v_0=0
 			\end{equation}			
 			
 			This step is applied in IEEE floating point arithmetic (IEEE 754) and results in either $\pi/2$ or $\pm \pi/2$ depending on the rounding format used. From the practitioner's side, it becomes important to recognize the situation $v_0=0$ and correct this value as needed. 
@@ -292,9 +292,9 @@
 				\noindent\textbf{Solution:} 
 				Considering:
 				\begin{equation}
-					\omega_n = \sqrt{\frac{k}{m}}
+					\omega_\text{n} = \sqrt{\frac{k}{m}}
 				\end{equation}
-				therefore, $k=m\omega_n^2=(300$ $\text{kg})(10$ $\text{rad/s})^2=30$ KN/m. Note: radians are a dimensionless quantity and as such the units of  $m\omega_n^2$ become  $\frac{\rm{kg}}{\rm{s}^2}\cdot\frac{\rm{m}}{\rm{m}}$ where the unit value $\frac{\rm{m}}{\rm{m}}$ is added such that the stiffness of the spring can be expressed as $\frac{\rm{kg}\cdot \rm{m}}{\rm{s}^2}\cdot\frac{1}{\rm{m}}$ = $\frac{\rm{N}}{\rm{m}}$.
+				therefore, $k=m\omega_\text{n}^2=(300$ $\text{kg})(10$ $\text{rad/s})^2=30$ KN/m. Note: radians are a dimensionless quantity and as such the units of  $m\omega_\text{n}^2$ become  $\frac{\rm{kg}}{\rm{s}^2}\cdot\frac{\rm{m}}{\rm{m}}$ where the unit value $\frac{\rm{m}}{\rm{m}}$ is added such that the stiffness of the spring can be expressed as $\frac{\rm{kg}\cdot \rm{m}}{\rm{s}^2}\cdot\frac{1}{\rm{m}}$ = $\frac{\rm{N}}{\rm{m}}$.
 			\end{example}
 			
 			\begin{example}		
@@ -307,21 +307,21 @@
 	
 				\noindent\textbf{Solution:} 
 				\begin{equation}
-					\omega_n = \sqrt{\frac{k}{m}}= \sqrt{\frac{857.8}{49.2\times10^{-3}}} = 132 \hspace{1ex}\text{rad/sec}
+					\omega_\text{n} = \sqrt{\frac{k}{m}}= \sqrt{\frac{857.8}{49.2\times10^{-3}}} = 132 \hspace{1ex}\text{rad/sec}
 				\end{equation}	
 				In Hz, this is:
 				\begin{equation}
-					f_n = \frac{\omega_n}{2\pi} = 21 \hspace{1ex}\text{Hz}
+					f_n = \frac{\omega_\text{n}}{2\pi} = 21 \hspace{1ex}\text{Hz}
 				\end{equation}						
 				The period is:
 				\begin{equation}
-					T = \frac{2\pi}{\omega_n} = 0.0476 \hspace{1ex}\text{s}
+					T = \frac{2\pi}{\omega_\text{n}} = 0.0476 \hspace{1ex}\text{s}
 				\end{equation}					
-				The maximum displacement will happen when sin($\omega_nt+\phi$)$=0$, therefore, the value of $A$ is the maximum displacement. For an undamped system, $	A = \frac{\sqrt{\omega_n^2x_0^2+v_0^2}}{\omega_n}$,  
+				The maximum displacement will happen when sin($\omega_\text{n}t+\phi$)$=0$, therefore, the value of $A$ is the maximum displacement. For an undamped system, $	A = \frac{\sqrt{\omega_\text{n}^2x_0^2+v_0^2}}{\omega_\text{n}}$,  
 	
 	
 				\begin{equation}
-					A = \frac{\sqrt{\omega_n^2x_0^2+v_0^2}}{\omega_n} = \frac{\sqrt{132^2 0.01 ^2+0^2}}{132}=0.01 \hspace{1ex}\text{m}
+					A = \frac{\sqrt{\omega_\text{n}^2x_0^2+v_0^2}}{\omega_\text{n}} = \frac{\sqrt{132^2 0.01 ^2+0^2}}{132}=0.01 \hspace{1ex}\text{m}
 				\end{equation}
 	
 			\end{example}
@@ -402,61 +402,61 @@
 			\end{equation}
 			This can be done because $ae^{\lambda t}$ is never zero, therefore, the expressions is never divide by zero. The quadratic formula gives us:
 			\begin{equation}
-				\lambda = \pm \sqrt{-\frac{k}{m}} = \pm \sqrt{\frac{k}{m}}j = \pm \omega_n j
+				\lambda = \pm \sqrt{-\frac{k}{m}} = \pm \sqrt{\frac{k}{m}}j = \pm \omega_\text{n} j
 			\end{equation} 
-			remember that $\omega_n = \sqrt{\frac{k}{m}}$. Notice that the $\pm$ tells us there are two solutions to this problem. So, putting $\lambda$ back into the assumed solution results in two solutions (one positive, one negative):   
+			remember that $\omega_\text{n} = \sqrt{\frac{k}{m}}$. Notice that the $\pm$ tells us there are two solutions to this problem. So, putting $\lambda$ back into the assumed solution results in two solutions (one positive, one negative):   
 			\begin{equation}
-				x(t) = a_1e^{+\omega_n j t}
+				x(t) = a_1e^{+\omega_\text{n} j t}
 			\end{equation}
 			and 
 			\begin{equation}
-				x(t) = a_2e^{-\omega_n j t}
+				x(t) = a_2e^{-\omega_\text{n} j t}
 			\end{equation}
 			As these solutions only consider, and are only valid for, linear systems, the sum of the solutions is also a solution. This simplification results in:
 			\begin{equation}
-				x(t) = a_1e^{+\omega_n j t} + a_2e^{-\omega_n j t}
+				x(t) = a_1e^{+\omega_\text{n} j t} + a_2e^{-\omega_\text{n} j t}
 			\end{equation}
 			where $a_1$ and $a_2$ are complex valued constants of integration.
 			
 			\begin{example}
-				Show that $	x(t) = a_1e^{+\omega_n j t} + a_2e^{-\omega_n j t}$ is equal to $A\text{sin}(\omega_n t +\phi)$. \\
+				Show that $	x(t) = a_1e^{+\omega_\text{n} j t} + a_2e^{-\omega_\text{n} j t}$ is equal to $A\text{sin}(\omega_\text{n} t +\phi)$. \\
 				
 				\noindent\textbf{Solution:} 
-				This equation was derived using Euler's formula and it can be shown that this equation is equivalent to the $A\text{sin}(\omega_n+\phi)$. To recover the previously assumed solution, the knowledge that $a_1$ and $a_2$ are complex congregate pairs and as such the magnitude can be expressed as $a_1=a_2$ is leveraged. Using Euler's polar notation, $a_1$ and $a_2$ can be expressed as 
+				This equation was derived using Euler's formula and it can be shown that this equation is equivalent to the $A\text{sin}(\omega_\text{n}+\phi)$. To recover the previously assumed solution, the knowledge that $a_1$ and $a_2$ are complex congregate pairs and as such the magnitude can be expressed as $a_1=a_2$ is leveraged. Using Euler's polar notation, $a_1$ and $a_2$ can be expressed as 
 				\begin{equation}
 					a_1 = a_2 = ae^{j\psi}
 				\end{equation}	
 				where $a$ and $\psi$ are real numbers, the equation becomes:		
 				\begin{equation}
-					x(t) = ae^{j(\omega_n t+\psi)} + ae^{-j(\omega_n t+\psi)}
+					x(t) = ae^{j(\omega_\text{n} t+\psi)} + ae^{-j(\omega_\text{n} t+\psi)}
 				\end{equation}			
 				this becomes:
 				\begin{equation}
-					x(t) = a(e^{j(\omega_n t+\psi)} + e^{-j(\omega_n t+\psi)})
+					x(t) = a(e^{j(\omega_\text{n} t+\psi)} + e^{-j(\omega_\text{n} t+\psi)})
 				\end{equation}				
 				Remembering Euler's equations from before, this becomes:
 				\begin{equation}
-					x(t) = a\big(\text{cos}(\omega_n t+\psi) + j \text{sin}(\omega_n t+\psi) + \text{cos}(\omega_n t+\psi) - j \text{sin}(\omega_n t+\psi)\big)
+					x(t) = a\big(\text{cos}(\omega_\text{n} t+\psi) + j \text{sin}(\omega_\text{n} t+\psi) + \text{cos}(\omega_\text{n} t+\psi) - j \text{sin}(\omega_\text{n} t+\psi)\big)
 				\end{equation}				
 				combining the ``cos'' terms and canceling out the ``sin'' terms this becomes:
 				\begin{equation}
-					x(t) = 2a \cdot \text{cos}(\omega_n t+\psi)
+					x(t) = 2a \cdot \text{cos}(\omega_\text{n} t+\psi)
 				\end{equation}						
-				This is equivalent to $	{x}(t) = A\text{sin}(\omega_n t + \phi)$ considering that $A=2a$ and knowing sin($\phi$) = cos($\phi + \psi$). To expand, this is because the sin and cos are only differentiated by a phase shift. 			
+				This is equivalent to $	{x}(t) = A\text{sin}(\omega_\text{n} t + \phi)$ considering that $A=2a$ and knowing sin($\phi$) = cos($\phi + \psi$). To expand, this is because the sin and cos are only differentiated by a phase shift. 			
 			\end{example}
 
 			
 			Next, a general solution for the EOM is obtained. Using the previous solution:
 			\begin{equation}
-				x(t) = a_1e^{+\omega_n j t} + a_2e^{-\omega_n j t}
+				x(t) = a_1e^{+\omega_\text{n} j t} + a_2e^{-\omega_\text{n} j t}
 			\end{equation}			
 			we can expand this into the form: 
 			\begin{equation}
-				x(t) = a_1\big(\text{cos}(\omega_n t) + j \text{sin}(\omega_n t)\big) + a_2\big(\text{cos}(\omega_n t) - j \text{sin}(\omega_n t)\big)
+				x(t) = a_1\big(\text{cos}(\omega_\text{n} t) + j \text{sin}(\omega_\text{n} t)\big) + a_2\big(\text{cos}(\omega_\text{n} t) - j \text{sin}(\omega_\text{n} t)\big)
 			\end{equation}
 			using trigonometric functions. This equates to:
 			\begin{equation}
-				x(t) = (a_1+a_2) \cdot \text{cos}(\omega_n t) + (a_1-a_2)j \cdot \text{sin}(\omega_n t)
+				x(t) = (a_1+a_2) \cdot \text{cos}(\omega_\text{n} t) + (a_1-a_2)j \cdot \text{sin}(\omega_\text{n} t)
 			\end{equation}			
 			As $x(t)$ is always real, $A_1$ and $A_2$ can be defined as:
 			\begin{equation}
@@ -468,7 +468,7 @@
 			\end{equation}	
 			Lastly, as the general solution is written as:
 			\begin{equation}
-				x(t) = A_1\text{cos}(\omega_n t) + A_2\text{sin}(\omega_n t)
+				x(t) = A_1\text{cos}(\omega_\text{n} t) + A_2\text{sin}(\omega_\text{n} t)
 			\end{equation}	
 			This is the general solution for the EOM ($m\ddot{x}+kx=0$) of the considered oscillating system where $A_1$ and $A_2$ are defined as:
 			\begin{equation}
@@ -486,56 +486,56 @@
 			\end{figure}
 			\noindent again, $A$ and $\phi$ are:
 			\begin{equation}
-				A = \frac{\sqrt{\omega_n^2x_0^2+v_0^2}}{\omega_n} = \sqrt{x_0^2+\Bigg(\frac{v_0}{\omega_n}\Bigg)^2}
+				A = \frac{\sqrt{\omega_\text{n}^2x_0^2+v_0^2}}{\omega_\text{n}} = \sqrt{x_0^2+\Bigg(\frac{v_0}{\omega_\text{n}}\Bigg)^2}
 			\end{equation}
 			\begin{equation}
-				\phi = \text{tan}^{-1}\bigg(\frac{x_0\omega_n}{v_0}\bigg)
+				\phi = \text{tan}^{-1}\bigg(\frac{x_0\omega_\text{n}}{v_0}\bigg)
 			\end{equation}		
 
 
 			\begin{example}			
 				Using the general solution: 
 				\begin{equation}
-					x(t) = A_1\text{cos}(\omega_n t) + A_2\text{sin}(\omega_n t)
+					x(t) = A_1\text{cos}(\omega_\text{n} t) + A_2\text{sin}(\omega_\text{n} t)
 				\end{equation}			
 				Calculate the values of $A_1$ and $A_2$ in terms of their initial conditions $x_0$ and $v_0$.
 				
 				\noindent\textbf{Solution:} Knowing the following for $x$ and $\dot{x}$:
 				\begin{equation}
-					x(t) = A_1\text{cos}(\omega_n t) + A_2\text{sin}(\omega_n t)
+					x(t) = A_1\text{cos}(\omega_\text{n} t) + A_2\text{sin}(\omega_\text{n} t)
 				\end{equation}	
 				\begin{equation}
-					\dot{x}(t) = -A_1\omega_n\text{sin}(\omega_n t) + A_2\omega_n\text{cos}(\omega_n t)
+					\dot{x}(t) = -A_1\omega_\text{n}\text{sin}(\omega_\text{n} t) + A_2\omega_\text{n}\text{cos}(\omega_\text{n} t)
 				\end{equation}	
 				Now apply the initial conditions, $x(0)=0$ and $v(0)=0$, this yields:
 				\begin{equation}
 					x(0) = x_0 = A_1
 				\end{equation}	
 				\begin{equation}
-					\dot{x}(0)= v_0  =  A_2\omega_n
+					\dot{x}(0)= v_0  =  A_2\omega_\text{n}
 				\end{equation}
 				Solving for $A_1$ and $A_2$ shows us:
 				\begin{equation}
-					A_1 = x_0 \text{, and } A_2 = \frac{v_0}{\omega_n}
+					A_1 = x_0 \text{, and } A_2 = \frac{v_0}{\omega_\text{n}}
 				\end{equation}
 				thus:
 				\begin{equation}
-					x(t) = x_0\text{cos}(\omega_n t) + \frac{v_0}{\omega_n}\text{sin}(\omega_n t)
+					x(t) = x_0\text{cos}(\omega_\text{n} t) + \frac{v_0}{\omega_\text{n}}\text{sin}(\omega_\text{n} t)
 				\end{equation}				
 			\end{example}
 
 		\subsubsection{Solution of 1-DOF System in Three Forms}
 			Form one, for $m\ddot{x} + kx =0$ subject to nonzero initial conditions can be written as:  		
 			\begin{equation}
-				x(t) = a_1e^{+\omega_n j t} + a_2e^{-\omega_n j t}
+				x(t) = a_1e^{+\omega_\text{n} j t} + a_2e^{-\omega_\text{n} j t}
 			\end{equation}	
 			where $a_1$ and $a_2$ are complex terms. Form two is:
 			\begin{equation}
-				{x}(t) = A\text{sin}(\omega_n t + \phi)
+				{x}(t) = A\text{sin}(\omega_\text{n} t + \phi)
 			\end{equation}
 			while form three is:
 			\begin{equation}
-				x(t) = A_1\text{cos}(\omega_n t) + A_2\text{sin}(\omega_n t)
+				x(t) = A_1\text{cos}(\omega_\text{n} t) + A_2\text{sin}(\omega_\text{n} t)
 			\end{equation}	
 			where $A$, $\phi$, $A_1$, and $A_2$, are all real-valued constants. Each set of constants can be related to each other by:
 			\begin{align}
@@ -648,15 +648,15 @@
 			\end{equation}		
 			next we can derive the function:
 			\begin{equation}
-				c_{\text{cr}} = 2\sqrt{km} = 2\bigg(\frac{\sqrt{m}}{\sqrt{m}}\bigg)\sqrt{km} = 2m\omega_n
+				c_{\text{cr}} = 2\sqrt{km} = 2\bigg(\frac{\sqrt{m}}{\sqrt{m}}\bigg)\sqrt{km} = 2m\omega_\text{n}
 			\end{equation}			
-			remember that $\omega_n = \sqrt{\frac{k}{m}}$ for an undamped system. Next, we generate a non-dimensional number ($\zeta$), pounced `zeta' that will allow us to distinguish between different types of damping. $\zeta$ is called the \textbf{critical damping ratio}.
+			remember that $\omega_\text{n} = \sqrt{\frac{k}{m}}$ for an undamped system. Next, we generate a non-dimensional number ($\zeta$), pounced `zeta' that will allow us to distinguish between different types of damping. $\zeta$ is called the \textbf{critical damping ratio}.
 			\begin{equation}
-				\zeta = \frac{c}{c_{\text{cr}}} = \frac{c}{2\sqrt{km}} = \frac{c}{2m\omega_n}
+				\zeta = \frac{c}{c_{\text{cr}}} = \frac{c}{2\sqrt{km}} = \frac{c}{2m\omega_\text{n}}
 			\end{equation}				
 			Now if we put the $\zeta$ back into the characteristic equation and resolve using the quadratic equation we get: 
 			\begin{equation}
-				\lambda_{1,2} = -\zeta\omega_n \pm \omega_n \sqrt{\zeta^2-1}
+				\lambda_{1,2} = -\zeta\omega_\text{n} \pm \omega_\text{n} \sqrt{\zeta^2-1}
 			\end{equation}
 			From this equation it become clear that $\zeta$ determines whether the roots are complex or real, this in turn determines the nature of the response of the structure. Listing our possible responses we get:
 			\begin{table}[h!]
@@ -675,11 +675,11 @@
 		
  			In the case that $0<\zeta<1$, a complex conjugate pair of roots are the solutions to the characteristic equation after pulling out a $\sqrt{-1}$:
 			\begin{equation}
-				\lambda_{1} = -\zeta\omega_n + \omega_n \sqrt{1-\zeta^2}j
+				\lambda_{1} = -\zeta\omega_\text{n} + \omega_\text{n} \sqrt{1-\zeta^2}j
 			\end{equation} 			
 			and:
 			\begin{equation}
-				\lambda_{2} = -\zeta\omega_n - \omega_n \sqrt{1-\zeta^2}j
+				\lambda_{2} = -\zeta\omega_\text{n} - \omega_\text{n} \sqrt{1-\zeta^2}j
 			\end{equation} 
 			Where the $j$ is pulled out because:
 			\begin{equation}
@@ -687,23 +687,23 @@
 			\end{equation} 							
 			Next, let us ``arbitrarily'' define:
 			\begin{equation}
-				\omega_d = \omega_n\sqrt{1-\zeta^2}
+				\omega_\text{d} = \omega_\text{n}\sqrt{1-\zeta^2}
 			\end{equation} 	
-			where $\omega_d$ is the \textbf{damped natural frequency}. Therefore, the equations become:
+			where $\omega_\text{d}$ is the \textbf{damped natural frequency}. Therefore, the equations become:
 			\begin{equation}
-				\lambda_{1} = -\zeta\omega_n + \omega_dj
+				\lambda_{1} = -\zeta\omega_\text{n} + \omega_\text{d}j
 			\end{equation} 			
 			and:
 			\begin{equation}
-				\lambda_{2} = -\zeta\omega_n - \omega_dj
+				\lambda_{2} = -\zeta\omega_\text{n} - \omega_\text{d}j
 			\end{equation} 	
 			Again, we have two solutions to a linear problem, so we can combine these into one solution and insert $\lambda$ into the assumed solution $ae^{\lambda t}$ to obtain:
 			\begin{equation}
-				x(t) = a_1e^{-\zeta\omega_nt + \omega_dtj} + a_2e^{-\zeta\omega_nt - \omega_dtj} 
+				x(t) = a_1e^{-\zeta\omega_\text{n}t + \omega_\text{d}tj} + a_2e^{-\zeta\omega_\text{n}t - \omega_\text{d}tj} 
 			\end{equation} 			
 			where $a_1$ and $a_2$ are complex valued constants. This can now be simplified into:	
 			\begin{equation}
-				x(t) = e^{-\zeta\omega_nt}(a_1e^{\omega_dtj} + a_2e^{-\omega_dtj}) 
+				x(t) = e^{-\zeta\omega_\text{n}t}(a_1e^{\omega_\text{d}tj} + a_2e^{-\omega_\text{d}tj}) 
 			\end{equation} 
 			Using Euler's equations, (same as before) and choosing:
 			\begin{equation}
@@ -715,15 +715,15 @@
 			\end{equation} 		
 			The \textbf{general form} of this solution is then:
 			\begin{equation}
-				x(t) = e^{-\zeta\omega_nt}\big(A_1\text{sin}(\omega_dt) + A_2\text{cos}(\omega_dt)\big)
+				x(t) = e^{-\zeta\omega_\text{n}t}\big(A_1\text{sin}(\omega_\text{d}t) + A_2\text{cos}(\omega_\text{d}t)\big)
 			\end{equation} 	
 			Recall that for undamped 1-DOF systems we showed 
 			\begin{equation}
-				x(t) = A\text{sin}(\omega_nt + \phi) = A_1\text{sin}(\omega_nt) + A_2\text{cos}(\omega_nt)
+				x(t) = A\text{sin}(\omega_\text{n}t + \phi) = A_1\text{sin}(\omega_\text{n}t) + A_2\text{cos}(\omega_\text{n}t)
 			\end{equation} 				
-			As $e^{-\zeta\omega_nt}$ accounts for the damping, our current solution becomes:
+			As $e^{-\zeta\omega_\text{n}t}$ accounts for the damping, our current solution becomes:
 			\begin{equation}
-				x(t) = Ae^{-\zeta\omega_nt}\text{sin}(\omega_dt + \phi) 
+				x(t) = Ae^{-\zeta\omega_\text{n}t}\text{sin}(\omega_\text{d}t + \phi) 
 			\end{equation} 		
 			Now that we have $x$ and $\dot{x}$, we can solve for the boundary conditions $x_0$ and $v_0$ by setting $t=0$, we get:
 			\begin{equation}
@@ -731,27 +731,27 @@
 			\end{equation} 			
 			and taking the directive of $x(t)$ using the product rule (fg)'= f'g+fg', we get:
 			\begin{equation}
-				\dot{x}(t) = -\zeta\omega_nAe^{-\zeta\omega_nt}\text{sin}(\omega_dt + \phi) + Ae^{-\zeta\omega_nt}\omega_d\text{cos}(\omega_dt + \phi) 
+				\dot{x}(t) = -\zeta\omega_\text{n}Ae^{-\zeta\omega_\text{n}t}\text{sin}(\omega_\text{d}t + \phi) + Ae^{-\zeta\omega_\text{n}t}\omega_\text{d}\text{cos}(\omega_\text{d}t + \phi) 
 			\end{equation} 
 			\begin{equation}
-				\dot{x}(0) =v_0= -\zeta\omega_nA\text{sin}(\phi) + A\omega_d\text{cos}(\phi) 
+				\dot{x}(0) =v_0= -\zeta\omega_\text{n}A\text{sin}(\phi) + A\omega_\text{d}\text{cos}(\phi) 
 			\end{equation} 
 			a simplification can be made to the prior equation by letting $A=x_0/\text{sin}(\phi)$. This gives us the equation:
 			\begin{equation}
-				\dot{x}(0) =v_0= -\zeta\omega_n\bigg(\frac{x_0}{\text{sin}(\phi)}\bigg)\text{sin}(\phi) + \bigg(\frac{x_0}{\text{sin}(\phi)}\bigg)\omega_d\text{cos}(\phi) 
+				\dot{x}(0) =v_0= -\zeta\omega_\text{n}\bigg(\frac{x_0}{\text{sin}(\phi)}\bigg)\text{sin}(\phi) + \bigg(\frac{x_0}{\text{sin}(\phi)}\bigg)\omega_\text{d}\text{cos}(\phi) 
 			\end{equation} 			
 			that can be simplified to:
 			\begin{equation}
-				\dot{x}(0) = v_0 = -\zeta\omega_nx_0 + x_0\omega_d\text{cot}(\phi) 
+				\dot{x}(0) = v_0 = -\zeta\omega_\text{n}x_0 + x_0\omega_\text{d}\text{cot}(\phi) 
 			\end{equation} 	
-			The above equation related $v_0$ to $\phi$ using terms that are known for a giving system ($\zeta,\, \omega_n,\, x_0 \text{, and }\omega_d $). Therefore, this expression can be used to solve for $\phi$:
+			The above equation related $v_0$ to $\phi$ using terms that are known for a giving system ($\zeta,\, \omega_\text{n},\, x_0 \text{, and }\omega_\text{d} $). Therefore, this expression can be used to solve for $\phi$:
 			\begin{equation}
-				\text{cot}(\phi) = \frac{v_0 +\zeta\omega_nx_0}{x_0\omega_d} 
+				\text{cot}(\phi) = \frac{v_0 +\zeta\omega_\text{n}x_0}{x_0\omega_\text{d}} 
 				\label{eq:underdamped_phi}
 			\end{equation} 	
 			and as $\tan(\phi) = 1/\text{cot}(\phi)$: 
 			\begin{equation}
-				\phi = \tan^{-1}\Bigg(\frac{x_0\omega_d}{v_0+\zeta\omega_nx_0}\Bigg)
+				\phi = \tan^{-1}\Bigg(\frac{x_0\omega_\text{d}}{v_0+\zeta\omega_\text{n}x_0}\Bigg)
 			\end{equation} 				
 			Thereafter, we can solve for $A$ considering the fact that we sent $A=x_0/\text{sin}(\phi)$. Using the trigonometric relationship between expressed in equation \ref{eq:underdamped_phi} and visualized in figure \ref{fig:trigonometric_relationship_underdamped}:
 			\begin{figure}[H]
@@ -762,19 +762,19 @@
 			\end{figure}
 			\noindent we show that $\text{sin}(\phi)$ can be expressed as: 
 			\begin{equation}
-				\text{sin}(\phi) = \frac{x_0\omega_d}{\sqrt{(v_0+\zeta\omega_nx_0)^2 + (x_0\omega_d)^2}}
+				\text{sin}(\phi) = \frac{x_0\omega_\text{d}}{\sqrt{(v_0+\zeta\omega_\text{n}x_0)^2 + (x_0\omega_\text{d})^2}}
 			\end{equation} 	
 			and applying $A=x_0/\text{sin}(\phi)$ we get:
 			\begin{equation}
-				A = \frac{\sqrt{(v_0+\zeta\omega_nx_0)^2 + (x_0\omega_d)^2}}{\omega_d} = \sqrt{x_0^2 + \Bigg( \frac{v_0 + \zeta \omega_n x_0}{\omega_d}\Bigg)^2}
+				A = \frac{\sqrt{(v_0+\zeta\omega_\text{n}x_0)^2 + (x_0\omega_\text{d})^2}}{\omega_\text{d}} = \sqrt{x_0^2 + \Bigg( \frac{v_0 + \zeta \omega_\text{n} x_0}{\omega_\text{d}}\Bigg)^2}
 			\end{equation} 								
 			Finally, collecting all of our important equations:
 			\begin{itemize}
-			\item Critical damping coefficient: $c_{\text{cr}} = 2\sqrt{km} = 2m\omega_n$
-			\item Damping ratio: $	\zeta = \frac{c}{c_{\text{cr}}} = \frac{c}{2\sqrt{km}} = \frac{c}{2m\omega_n}$
-			\item Damped natural frequency: $\omega_d = \omega_n\sqrt{1-\zeta^2}$
-			\item Solution for underdamped system: $x(t) = Ae^{-\zeta\omega_nt}\text{sin}(\omega_dt + \phi)$, where: \begin{align*}
-						A = \frac{\sqrt{(v_0+\zeta\omega_nx_0)^2 + (x_0\omega_d)^2}}{\omega_d} & \hspace{1.5cm} \phi = \text{tan}^{-1}\Bigg(\frac{x_0\omega_d}{v_0+\zeta\omega_nx_0}\Bigg) 
+			\item Critical damping coefficient: $c_{\text{cr}} = 2\sqrt{km} = 2m\omega_\text{n}$
+			\item Damping ratio: $	\zeta = \frac{c}{c_{\text{cr}}} = \frac{c}{2\sqrt{km}} = \frac{c}{2m\omega_\text{n}}$
+			\item Damped natural frequency: $\omega_\text{d} = \omega_\text{n}\sqrt{1-\zeta^2}$
+			\item Solution for underdamped system: $x(t) = Ae^{-\zeta\omega_\text{n}t}\text{sin}(\omega_\text{d}t + \phi)$, where: \begin{align*}
+						A = \frac{\sqrt{(v_0+\zeta\omega_\text{n}x_0)^2 + (x_0\omega_\text{d})^2}}{\omega_\text{d}} & \hspace{1.5cm} \phi = \text{tan}^{-1}\Bigg(\frac{x_0\omega_\text{d}}{v_0+\zeta\omega_\text{n}x_0}\Bigg) 
 						\end{align*}
 			\end{itemize}
 
@@ -796,7 +796,7 @@
 			
 			Calculate the undamped frequency:
 			\begin{equation}
-				\omega_n = \sqrt{\frac{k}{m}}= \sqrt{\frac{857.8}{49.2\times10^{-3}}} = 132 \hspace{1ex}\text{rad/s}
+				\omega_\text{n} = \sqrt{\frac{k}{m}}= \sqrt{\frac{857.8}{49.2\times10^{-3}}} = 132 \hspace{1ex}\text{rad/s}
 			\end{equation}	
 			The systems critical damping value:
 			\begin{equation}
@@ -808,27 +808,27 @@
 			\end{equation}				
 			This can also be expressed as 60\% damped, this is a underdamped system, and the system will oscillate. Now we can calculate the damped frequency:
 			\begin{equation}
-				\omega_d = \omega_n\sqrt{1-\zeta^2} = \omega_n\sqrt{1-0.600^2} = 105.6 \hspace{1ex}\text{rad/s}
+				\omega_\text{d} = \omega_\text{n}\sqrt{1-\zeta^2} = \omega_\text{n}\sqrt{1-0.600^2} = 105.6 \hspace{1ex}\text{rad/s}
 			\end{equation}		
 			Therefore, the system oscillates at 105.6 rad/sec or 16.81 Hz
 		\end{example}
 
 		\begin{example}
-			For a damped one DOF system where $m$, $c$, and $k$ are known to be $m$ = 1 kg, $c$ = 2 kg/s, and $k$ = 10 N/m. Calculate the value of $\zeta$ and $\omega_n$. Is the system overdamped, underdamped, or critically damped?	
+			For a damped one DOF system where $m$, $c$, and $k$ are known to be $m$ = 1 kg, $c$ = 2 kg/s, and $k$ = 10 N/m. Calculate the value of $\zeta$ and $\omega_\text{n}$. Is the system overdamped, underdamped, or critically damped?	
 
 			\noindent\textbf{Solution:} 
 						
 			The natural frequency is calculated as
 			\begin{equation}
-				\omega_n = \sqrt{\frac{k}{m}} = \sqrt{\frac{10}{1}} = 3.16 \hspace{1ex} \text{rad/s}
+				\omega_\text{n} = \sqrt{\frac{k}{m}} = \sqrt{\frac{10}{1}} = 3.16 \hspace{1ex} \text{rad/s}
 			\end{equation}
 			The damping can be calculated as:
 			\begin{equation}
-				\zeta = \frac{c}{2\omega_n m} = \frac{2}{2\Big(\sqrt{\frac{10}{1}}\Big)(1)} = \frac{1}{\sqrt{10}} = 0.316 
+				\zeta = \frac{c}{2\omega_\text{n} m} = \frac{2}{2\Big(\sqrt{\frac{10}{1}}\Big)(1)} = \frac{1}{\sqrt{10}} = 0.316 
 			\end{equation}
 			So the damped natural frequency is equal to:
 			\begin{equation}
-				\omega_d = \omega_n\sqrt{1-\zeta^2} =  \sqrt{10}\sqrt{1-\bigg(\frac{1}{\sqrt{10}}\bigg)^2} = 0.3 \hspace{1ex} \text{rad/s}
+				\omega_\text{d} = \omega_\text{n}\sqrt{1-\zeta^2} =  \sqrt{10}\sqrt{1-\bigg(\frac{1}{\sqrt{10}}\bigg)^2} = 0.3 \hspace{1ex} \text{rad/s}
 			\end{equation}			
 			As $0<\zeta<1$ the system is underdamped. 			
 		\end{example}
@@ -887,7 +887,7 @@
 			\end{equation*}				
 			Therefore, once the values for the system are measured the system's damped natural frequency in the vertical direction can be estimated as		
 			\begin{equation*}
-				\boxed{\omega_d = \omega_n\sqrt{1-\zeta^2}}
+				\boxed{\omega_\text{d} = \omega_\text{n}\sqrt{1-\zeta^2}}
 			\end{equation*}
 		\end{example}	
 				
@@ -895,20 +895,20 @@
 			
 			In the case of overdamped systems, $1<\zeta$, the solutions for $\lambda$ are distinct real roots that are written as:
 			\begin{equation}
-				\lambda_{1} = -\zeta\omega_n - \omega_n \sqrt{\zeta^2-1}
+				\lambda_{1} = -\zeta\omega_\text{n} - \omega_\text{n} \sqrt{\zeta^2-1}
 			\end{equation} 			
 			and:
 			\begin{equation}
-				\lambda_{2} = -\zeta\omega_n + \omega_n \sqrt{\zeta^2-1}
+				\lambda_{2} = -\zeta\omega_\text{n} + \omega_\text{n} \sqrt{\zeta^2-1}
 			\end{equation} 
 			The solution for the EOM using the assumed solution then becomes:
 			\begin{equation}
-				x(t) = e^{-\zeta\omega_nt}(a_1e^{-\omega_n t \sqrt{\zeta^2-1}} + a_2e^{+\omega_n t \sqrt{\zeta^2-1}}) 
+				x(t) = e^{-\zeta\omega_\text{n}t}(a_1e^{-\omega_\text{n} t \sqrt{\zeta^2-1}} + a_2e^{+\omega_\text{n} t \sqrt{\zeta^2-1}}) 
 			\end{equation}
 			This equation represents a non-oscillating response of the system. Again, $a_1$ and $a_2$ are solved for using known boundary conditions $x_0$ and $v_0$ such that:
 			\begin{align}
-				a_1 &= \frac{-v_0+\Big(-\zeta+\sqrt{\zeta^2-1}\Big)\omega_n x_0}{2\omega_n\sqrt{\zeta^2-1}} \\ 
-				a_2 &= \frac{v_0+\Big(\zeta+\sqrt{\zeta^2-1}\Big)\omega_n x_0}{2\omega_n\sqrt{\zeta^2-1}}
+				a_1 &= \frac{-v_0+\Big(-\zeta+\sqrt{\zeta^2-1}\Big)\omega_\text{n} x_0}{2\omega_\text{n}\sqrt{\zeta^2-1}} \\ 
+				a_2 &= \frac{v_0+\Big(\zeta+\sqrt{\zeta^2-1}\Big)\omega_\text{n} x_0}{2\omega_\text{n}\sqrt{\zeta^2-1}}
 			\end{align}				
 			Typical responses for a overdamped system with various initial conditions are shown below:
 			\begin{figure}[H]
@@ -921,24 +921,24 @@
 
 			In the case of critically damped systems, $\zeta=1$, the solutions for $\lambda$ will be equal negative real numbers, therefore from before:
 			\begin{equation}
-				\lambda_{1,2} = -\zeta\omega_n \pm \omega_n \sqrt{\zeta^2-1}
+				\lambda_{1,2} = -\zeta\omega_\text{n} \pm \omega_\text{n} \sqrt{\zeta^2-1}
 			\end{equation}
 			We get:
 			\begin{equation}
-				\lambda_{1} = \lambda_{2} = -\omega_n
+				\lambda_{1} = \lambda_{2} = -\omega_\text{n}
 			\end{equation} 			
 			Because both solutions ($a_1$ and $a_2$) are the same, we multiply the second solution by $t$ so the solution for a critically damped system is in the same form as before. The solution for the EOM using the assumed solution then becomes:
 			\begin{equation}
-				x(t) = a_1e^{-\omega_nt} + a_2te^{-\omega_nt} 
+				x(t) = a_1e^{-\omega_\text{n}t} + a_2te^{-\omega_\text{n}t} 
 			\end{equation} 
 			This simplifies into:			
 			\begin{equation}
-				x(t) = (a_1+a_2t) e^{-\omega_nt} 
+				x(t) = (a_1+a_2t) e^{-\omega_\text{n}t} 
 			\end{equation}
 			This equation represents a non-oscillating response of the system. Again, $a_1$ and $a_2$ are solved for using known boundary conditions $x_0$ and $v_0$ such that:
 			\begin{align}
 				a_1 &= x_0 \\ 
-				a_2 &= v_0+\omega_nx_0
+				a_2 &= v_0+\omega_\text{n}x_0
 			\end{align}				
 
 
@@ -954,7 +954,7 @@
 			\end{equation}		
 			Numerical manipulations can be undertaken to get the coefficients of the velocity and displacement terms into coefficients that more clearly express the characteristics of the vibrating system:
 			\begin{equation}
-				\ddot{x} + 2\zeta\omega_n\dot{x} + \omega_n^2x = 0
+				\ddot{x} + 2\zeta\omega_\text{n}\dot{x} + \omega_\text{n}^2x = 0
 			\end{equation}	
 
 		\begin{example}
@@ -996,7 +996,7 @@
 		\end{equation}	
 		Results in the following analytical solution for the natural frequency:
 		\begin{equation}
-			\omega_n = \sqrt{\frac{kl^2 }{J+ml^2}} \text{ rad/s}
+			\omega_\text{n} = \sqrt{\frac{kl^2 }{J+ml^2}} \text{ rad/s}
 		\end{equation}	
 							
 		\end{example}	
@@ -1005,9 +1005,9 @@
 
 		\subsection{Logarithmic decrement}
 			
-			For a vibrating system, the  mass ($m$) and stiffness ($k$) can be measured using scales and static deflection tests. However, the damping coefficient ($c$) is a more difficult quantity to determine. From $k$ and $m$ we can compute the natural frequency ($\omega_n$) and the critical damping coefficient ($c_\text{cr}$). Therefore, knowing that the critical damping ratio ($\zeta$) is defined as:
+			For a vibrating system, the  mass ($m$) and stiffness ($k$) can be measured using scales and static deflection tests. However, the damping coefficient ($c$) is a more difficult quantity to determine. From $k$ and $m$ we can compute the natural frequency ($\omega_\text{n}$) and the critical damping coefficient ($c_\text{cr}$). Therefore, knowing that the critical damping ratio ($\zeta$) is defined as:
 			\begin{equation}
-				\zeta = \frac{c}{c_{\text{cr}}} = \frac{c}{2\sqrt{km}} = \frac{c}{2m\omega_n}
+				\zeta = \frac{c}{c_{\text{cr}}} = \frac{c}{2\sqrt{km}} = \frac{c}{2m\omega_\text{n}}
 			\end{equation}				
 			if we calculate $\zeta$, we can obtain $c$ for the system of interest. This is made possible because $c_\text{cr}$ can be calculated from $k$ and $m$. Observing the temporal response for the underdamped system, 
 			\begin{figure}[H]
@@ -1018,29 +1018,29 @@
 			
 			\noindent we mark three points of maximum amplitude, $x_1$, $x_2$, and $x_3$ that happen at $t_1$, $t_2$, and $t_3$, respectively. Considering displacement values for the first two points $x_1$ and $x_2$. separated by a complete period ($T$).  Knowing that one cycle is $2 \pi$, the time period for this complete cycle is given by:
 			\begin{equation}
-				t_2-t_1 = \frac{2\pi}{\omega_d} = \frac{2\pi}{\omega_n\sqrt{1-\zeta^2}}
+				t_2-t_1 = \frac{2\pi}{\omega_\text{d}} = \frac{2\pi}{\omega_\text{n}\sqrt{1-\zeta^2}}
 			\end{equation}				
-			where $\omega_d$ is the damped natural frequency. This is the time period ($T$) of damped oscillations. If we derive an equation for the values of the peaks, also called the envelope of maximum values, we get: 
+			where $\omega_\text{d}$ is the damped natural frequency. This is the time period ($T$) of damped oscillations. If we derive an equation for the values of the peaks, also called the envelope of maximum values, we get: 
 			\begin{equation}
-				x_{\text{peaks}} = Ae^{-\zeta\omega_nt} 
+				x_{\text{peaks}} = Ae^{-\zeta\omega_\text{n}t} 
 			\end{equation} 		
 			Knowing that the system is underdamped, $A$ can be solved for using the initial conditions $x_0$ and $v_0$, therefore: 
 			\begin{equation}
-				A = \frac{\sqrt{(v_0+\zeta\omega_nx_0)^2 + (x_0\omega_d)^2}}{\omega_d}
+				A = \frac{\sqrt{(v_0+\zeta\omega_\text{n}x_0)^2 + (x_0\omega_\text{d})^2}}{\omega_\text{d}}
 			\end{equation} 	
 			In terms of $t_1$ and $t_2$, we can express the displacement at these times as:
 			\begin{equation}
-				x_{\text{1}} = A e^{-\zeta \omega_n t_1}
+				x_{\text{1}} = A e^{-\zeta \omega_\text{n} t_1}
 			\end{equation}				
 			and 
 			\begin{equation}
-				x_{\text{2}} = A e^{-\zeta \omega_n t_2}
+				x_{\text{2}} = A e^{-\zeta \omega_\text{n} t_2}
 			\end{equation}		
 			therefore:
 			\begin{equation}
-				\frac{x_{\text{1}}}{x_{\text{2}}} = \frac{e^{-\zeta \omega_n t_1}}{e^{-\zeta \omega_n t_2}} = e^{\zeta \omega_n(t_2-t_1)}
+				\frac{x_{\text{1}}}{x_{\text{2}}} = \frac{e^{-\zeta \omega_\text{n} t_1}}{e^{-\zeta \omega_\text{n} t_2}} = e^{\zeta \omega_\text{n}(t_2-t_1)}
 			\end{equation}		
-			However, from before we know that $t_2-t_1 = \frac{2\pi}{\omega_d} = \frac{2\pi}{\omega_n\sqrt{1-\zeta^2}}$. Therefore, we can express this last equation as:
+			However, from before we know that $t_2-t_1 = \frac{2\pi}{\omega_\text{d}} = \frac{2\pi}{\omega_\text{n}\sqrt{1-\zeta^2}}$. Therefore, we can express this last equation as:
 			\begin{equation}
 				\frac{x_{\text{1}}}{x_{\text{2}}} =e^{\Big(\frac{2 \pi \zeta}{\sqrt{1-\zeta^2}}\Big)}
 			\end{equation}			

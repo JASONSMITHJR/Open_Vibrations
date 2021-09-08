@@ -37,6 +37,10 @@
 \usepackage{textcomp} 
 \usepackage{multicol} 
 
+\usepackage{color} % color added for editing
+\newcommand{\bl}[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand{\gr}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\rd}[1]{\textcolor[rgb]{0.75,0.00,0.00}{#1}}
 
 %%%%%%%		define the symbols for positive directions		%%%%%%
 \makeatletter													%%	
@@ -106,7 +110,17 @@
 \begin{review}
 	\label{sec:Laplace_review}
 				
-		Laplace transforms, or more boradly integral transform, are a procedure for integrating the time dependence of a function into a function of an alternative variable, or parameter. These functions can often be manipulated algebraically. 
+		Laplace transforms, or more boradly integral transform, are a procedure for integrating the time ($t$) dependence of a function into a function of of position or space ($s$). By transforming the whole whole differential equation from the time domain into a lower order function of space the problem becomes easier to solve as the function can often be manipulated algebraically. 
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=2.71in]{../figures/Pierre-Simon_de_Laplace.jpg}
+			\caption{Portrait of Pierre-Simon Laplace by Johann Ernst Heinsius (1775). \bl{Johann Ernst Heinsius, CC BY-SA 4.0 $<$https://creativecommons.org/licenses/by-sa/4.0$>$, via Wikimedia Commons}}
+			\label{fig:fragility_curve}
+		\end{figure}
+
+		The Laplace transform is named after mathematician and astronomer Pierre-Simon Laplace (23 March 1749 - 5 March 1827 ). Pierre-Simon Laplace was one of the greatest scientists of all time and is often considered the French Newton. He taught Napoleon at the \'Ecole Militaire in 1784, became a count of the empire in 1806, and a marquis in 1817 after the restoration of the monarchy. He is credited with advancements in engineering, mathematics, statistics, physics, astronomy, and philosophy; however, maybe his greatest achievement is not only surviving but benefiting from the change from the Ancien R\'egime $\rightarrow$ Bonaparte $\rightarrow$ Bourbon Restoration. 
+
 		
 		Of interest to this class is the Laplace transform ($\Laplace{\hspace{1ex}}$) of the function $f(t)$, expressed as $\Laplace{f(t)}$. Here, a Laplace transform is used as a method of solving the differential equations of motion by reducing the computation needed to that of integration and algebraic manipulation. 
 		
