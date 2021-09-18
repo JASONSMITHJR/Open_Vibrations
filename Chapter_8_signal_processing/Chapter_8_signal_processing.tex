@@ -96,14 +96,16 @@
 
 
 \begin{document}
-
-
-
-\setcounter{section}{7}	
-\section{Experimental Vibrations}
-	\setcounter{figure}{0}   
+	
+	% set the section number, along with figure and equation numbers
+	\setcounter{section}{7}	
+	\setcounter{figure}{\thesection}   
 	\renewcommand\thefigure{\thesection.\arabic{figure}}
+	\setcounter{equation}{\thesection}   
+	\renewcommand\theequation{\thesection.\arabic{equation}}
 
+	\section{Experimental Vibrations}
+	
 Experimental vibration testing requires the practitioner to understand the basics of testing hardware and digital signal processing.
 
 \subsection{Hardware for vibration testing}

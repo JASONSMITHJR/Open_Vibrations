@@ -97,10 +97,15 @@
 
 \begin{document}
 	
-	\setcounter{section}{2}
-	\section{Forced Vibrations}
-	\setcounter{figure}{0}   
+	% set the section number, along with figure and equation numbers
+	\setcounter{section}{2}	
+	\setcounter{figure}{\thesection}   
 	\renewcommand\thefigure{\thesection.\arabic{figure}}
+	\setcounter{equation}{\thesection}   
+	\renewcommand\theequation{\thesection.\arabic{equation}}
+
+	\section{Forced Vibrations}
+
 
 		
 

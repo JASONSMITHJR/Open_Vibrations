@@ -96,13 +96,15 @@
 
 
 \begin{document}
-
-
-
+	
+	% set the section number, along with figure and equation numbers
 	\setcounter{section}{5}	
-	\section{Vibration Control}
-	\setcounter{figure}{0}   
+	\setcounter{figure}{\thesection}   
 	\renewcommand\thefigure{\thesection.\arabic{figure}}
+	\setcounter{equation}{\thesection}   
+	\renewcommand\theequation{\thesection.\arabic{equation}}
+
+	\section{Vibration Control}
 
 Throughout this text, we have studied various aspects related to analyzing and modeling vibrating systems. Therefore, it becomes prudent to look at methods for reducing or eliminating unwanted vibrations. However, before vibrations in a system can be effectively reduced they must be better understood in terms of their effects on the system under study. For this reason, this chapter first introduces the vibration Nomograph, this is then followed by vibration isolation, absorption, and active suppression.  
 
@@ -287,39 +289,38 @@ and the effective damping ratio of the system
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			\noindent
-			
-
+%	Use this code just to build the bibliography items and copy them out of the bbl file into the text above. This is the only way I was able to get the reference to show up when the entire text is compiled. 
 	\pagebreak
 	\renewcommand{\thepage}{}
 	\renewcommand\refname{References Cited}
 	\pagestyle{plain}
 	\bibliographystyle{unsrtDOI}
 	\bibliography{Chapter_6_vibration_control}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
 	
 \end{document}
 

@@ -96,13 +96,17 @@
 
 
 \begin{document}
-
-
-
-\setcounter{section}{4}	
-\section{Multiple degree-of-freedom systems}
-	\setcounter{figure}{0}   
+	
+	% set the section number, along with figure and equation numbers
+	\setcounter{section}{4}	
+	\setcounter{figure}{\thesection}   
 	\renewcommand\thefigure{\thesection.\arabic{figure}}
+	\setcounter{equation}{\thesection}   
+	\renewcommand\theequation{\thesection.\arabic{equation}}
+	
+	\section{Multiple degree-of-freedom systems}
+
+
 
 Until now we have only considered and modeled systems that can require one coordinate system to describe their motion. In this chapter we will develop the mathematical tools required to model multiple degree-of-freedom system that require multiple independent coordinates to describe their motion. As before, the equations that describe the motion of rigid bodies in space are developed from Newton's second law of motion. However, unlike before, there exists an independent equation for each body in motion. These equations are therefore coupled by the system and are often expressed in matrix notation such that the mass, damping, and stiffness matrices are easily defined. 
 

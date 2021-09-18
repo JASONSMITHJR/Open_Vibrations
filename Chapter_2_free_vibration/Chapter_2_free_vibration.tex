@@ -97,10 +97,14 @@
 
 \begin{document}
 	
-	\setcounter{section}{1}
-	\section{Free Vibration of Single-Degree-of-Freedom Systems}
-	\setcounter{figure}{0}   
+	% set the section number, along with figure and equation numbers
+	\setcounter{section}{1}	
+	\setcounter{figure}{\thesection}   
 	\renewcommand\thefigure{\thesection.\arabic{figure}}
+	\setcounter{equation}{\thesection}   
+	\renewcommand\theequation{\thesection.\arabic{equation}}
+	\section{Free Vibration of Single-Degree-of-Freedom Systems}
+
 
 
 

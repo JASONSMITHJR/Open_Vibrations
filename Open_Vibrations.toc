@@ -75,7 +75,7 @@
 \contentsline {subsection}{\numberline {6.4}Active Vibration Suppression}{136}{subsection.6.4}%
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-6}
-\contentsline {section}{\numberline {7} Structural Dynamics}{138}{section.7}%
+\contentsline {section}{\numberline {7}Structural Dynamics}{138}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Single-story frame}{138}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Duhamel's Integral}{141}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Two-story frame}{144}{subsection.7.3}%
