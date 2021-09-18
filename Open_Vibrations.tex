@@ -1,0 +1,180 @@
+\documentclass[12pt,letter]{article}
+\usepackage{mathptmx} % added for time new roman font
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+
+% defines all example enviorment
+\usepackage[framemethod=tikz]{mdframed} % added for the box around examples
+\newtheorem{ex}{Example}
+\numberwithin{ex}{section} % allows for the use of example numbers that lign up with the section numbers
+\newenvironment{example}{\begin{mdframed}[middlelinewidth=0.5mm]\begin{ex}\normalfont}{\end{ex}\end{mdframed}}
+
+% defines all review enviorment
+\usepackage[framemethod=tikz]{mdframed} % added for the box around examples
+\newtheorem{re}{Review}
+\numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
+\newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
+
+% defines the quotation enviorment 
+\usepackage{xcolor}
+\newcommand{\quotebox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth}{\space\Huge``}{#1}{\Huge''}{\break\null\hfill} {\small #2}  \end{minipage}\medbreak\end{minipage}}\end{center}}
+
+% defines the definition enviorment 
+\newcommand{\definitionbox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth} {{\textbf{Definition} - }{#1}: {#2}}\end{minipage}\medbreak\end{minipage}}\end{center}}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+%\usepackage{parskip} % remove all the paragraph indents
+\usepackage[textsize=tiny]{todonotes}
+
+
+\usepackage{setspace}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{textcomp} 
+\usepackage{multicol} 
+
+% added for MATLAB code
+\usepackage[framed]{matlab-prettifier}
+\let\ph\mlplaceholder % shorter macro
+\lstMakeShortInline"
+
+\lstset{
+  style              = Matlab-editor,
+  basicstyle         = \mlttfamily,
+  escapechar         = ",
+  mlshowsectionrules = true,
+}
+
+
+
+\usepackage{color} % color added for editing
+\newcommand{\bl}[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand{\gr}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\rd}[1]{\textcolor[rgb]{0.75,0.00,0.00}{#1}}
+\newcommand{\tl}[1]{\textcolor[rgb]{0,0.6,0.60}{#1}}
+
+
+
+%%%%%%%		define the symbols for positive directions		%%%%%%
+\makeatletter													%%	
+																%%					
+\newcommand*\curveplus{% positive counterclockwise				%%
+  \mathbin{\rotatebox[origin=c]{90}{$\m@th\curvearrowleft$}+}}	%%
+																%%
+\newcommand*\rightplus{% positive right							%%
+  \mathpalette\@rightplus\relax}								%%
+\newcommand*\@rightplus[1]{%									%%
+  \mathbin{\vcenter{\hbox{$\m@th\overset{#1+}{\to}$}}}}			%%
+																%%	
+\newcommand*\upplus{% positive up								%%
+  \mathbin{+\mathord\uparrow}}									%%
+																%%			
+\newcommand*\downplus{% positive down							%%		
+  \mathbin{+\mathord\downarrow}}								%%
+  																%%		
+\newcommand*\downrightplus{% positive down and right			%%	
+  \mathbin{+ \rotatebox[origin=c]{-30}{$\m@th\rightarrow$}}}	%%
+\makeatother 													%%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{mathtools}          %loads amsmath as well added for the piece wise function
+\DeclarePairedDelimiter\Floor\lfloor\rfloor
+\DeclarePairedDelimiter\Ceil\lceil\rceil
+
+ 
+\newcounter{NumberInTable}
+\newcommand{\LTNUM}{\stepcounter{NumberInTable}{(\theNumberInTable)}}
+
+\newcommand{\Laplace}[1]{\ensuremath{\mathcal{L}{\left[#1\right]}}}
+\newcommand{\InvLap}[1]{\ensuremath{\mathcal{L}^{-1}{\left[#1\right]}}}
+\renewcommand{\textuparrow}{$\uparrow$}
+
+
+\usepackage{standalone} % This is the only new package required to compile the entire document
+\usepackage{chapterbib}   
+
+
+
+\begin{document}
+
+
+\title{Open Vibrations}
+
+
+\author{Austin Downey\\ Department of Mechanical Engineering \\ Department of Civil and Enviormental Engineering \\ University of South Carolina, Colubmia SC, USA \\ \\ \\ Laura Micheli\\  Department of Civil and Enviormental Engineering \\ Catholic University of America, Wahington DC, USA}
+
+\maketitle
+
+
+\tableofcontents
+
+\pagebreak
+
+
+% Chapter 1 Fundamentals of vibrations
+\graphicspath{Chapter_1_fundamentals_of_vibrations/} % Not sure why, but I only need this in the first chapter. After that, it seems the graphicspath keeps the working directory 
+\input{Chapter_1_fundamentals_of_vibrations/Chapter_1_fundamentals_of_vibrations.tex}
+
+% Chapter 2 Free Vibrations
+%\graphicspath{Chapter_2_free_vibration/}
+\include{Chapter_2_free_vibration/Chapter_2_free_vibration.tex}
+
+% Chapter 3 Forced Vibrations
+%\graphicspath{Chapter_3_forced_vibration/}
+\include{Chapter_3_forced_vibration/Chapter_3_forced_vibration.tex}
+
+% Chapter 4 Transfer Function
+%\graphicspath{Chapter_4_Transfer_Function/}
+\include{Chapter_4_Transfer_Function/Chapter_4_Transfer_Function.tex}
+
+% Chapter 5 Multiple DOF Systems
+%\graphicspath{Chapter_5_multiple_DOF_systems/}
+\include{Chapter_5_multiple_DOF_systems/Chapter_5_multiple_DOF_systems.tex}
+
+% Chapter 6 Vibration Control
+%\graphicspath{Chapter_6_vibration_control/}
+\include{Chapter_6_vibration_control/Chapter_6_vibration_control.tex}
+
+% Chapter 7 Structural Dynamics
+%\graphicspath{Chapter_7_Structural_Dynamics/}
+\include{Chapter_7_Structural_Dynamics/Chapter_7_Structural_Dynamics.tex}
+
+%% Chapter 8 Signal Processing
+%\graphicspath{Chapter_8_signal_processing/}
+\include{Chapter_8_signal_processing/Chapter_8_signal_processing.tex}
+
+
+
+
+
+	\pagebreak
+	\renewcommand{\thepage}{}
+	\renewcommand\refname{References Cited}
+	\pagestyle{plain}
+	\bibliographystyle{Downey_NSF}
+	\bibliography{Chapter_1_Basic_Concepts}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
