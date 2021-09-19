@@ -545,7 +545,7 @@ For the mass, damping, and stiffness values given above this can be plotted as:
 	
 \subsubsection{Defining the transfer function $\mathbf{H(s)}$}
 
-Again, consider the genertic system represented in figure~\ref{fig:transfer_function_system}. For this system representation, F(s) is the Laplace of the transform of the driving force and H(s) is the Laplace transform of the response of the system h(t). 
+Again, consider the generic system represented in figure~\ref{fig:transfer_function_system}. For this system representation, F(s) is the Laplace of the transform of the driving force and H(s) is the Laplace transform of the response of the system h(t). 
 
 We need to define transfer function $H(s)$ for a generic system. To do this let us show the reasoning behind the transfer function. Here we will show that the output of any system ($x(t)$) can be related to the input of the system ($f(t)$) through a series of polynomial coefficients ($a$ and $b$). Consider the general $n^{th}$-order linear, time-invariant differential equation that governs the behavior of the dynamic system.
 
@@ -637,14 +637,18 @@ so
 	 |H(j\omega)|=\sqrt{\text{R}^2+\text{I}^2}
 \end{equation}  
 multiplying $H(j\omega)$ by 1 that is represented by the its unit complex conjugate yields:
-\begin{multline}
-	 H(j\omega) = \bigg( \frac{1}{k-m\omega^2+c\omega j} \bigg) \bigg( \frac{k-m\omega^2-c\omega j}{k-m\omega^2-c\omega j}\bigg) \\ =  \bigg( \frac{k-m\omega^2}{(k-m\omega^2)^2(c\omega)^2} \bigg) \bigg( \frac{-c\omega}{(k-m\omega^2)^2(c\omega)^2}j\bigg) 
-\end{multline}  
+\begin{align}
+H(j\omega) &= \bigg( \frac{1}{k-m\omega^2+c\omega j} \bigg) \bigg( \frac{k-m\omega^2-c\omega j}{k-m\omega^2-c\omega j}\bigg) \\
+&= \bigg( \frac{k-m\omega^2}{(k-m\omega^2)^2(c\omega)^2} \bigg) \bigg( \frac{-c\omega}{(k-m\omega^2)^2(c\omega)^2}j\bigg) 
+\end{align}
 therefore, $\text{R} = \frac{k-m\omega^2}{(k-m\omega^2)^2(c\omega)^2} $ and $\text{I} = \frac{-c\omega}{(k-m\omega^2)^2(c\omega)^2}$. Now, calculating the amplitude of $H(j\omega)$ we get:
-\begin{multline}
-H(\omega) = |H(j\omega)| = \sqrt{\text{R}^2+\text{I}^2} =  \sqrt{\frac{(k-m\omega)^2+(-c\omega)^2}{\big((k-m\omega^2)^2+(c\omega)^2)\big)^2}} \\ 
-= \sqrt{\frac{1}{(k-m\omega^2)^2+c^2\omega^2}} = \frac{1}{\sqrt{(k-m\omega^2)^2+c^2\omega^2}}
-\end{multline}
+\begin{align}
+H(\omega) &= |H(j\omega)| \\
+&=  \sqrt{\text{R}^2+\text{I}^2} \\
+&=  \sqrt{\frac{(k-m\omega)^2+(-c\omega)^2}{\big((k-m\omega^2)^2+(c\omega)^2)\big)^2}} \\
+&=  \sqrt{\frac{1}{(k-m\omega^2)^2+c^2\omega^2}} \\
+&= \frac{1}{\sqrt{(k-m\omega^2)^2+c^2\omega^2}}
+\end{align}
 where $H(\omega)$ represents only the amplitude of the frequency response function and therefore drops the $j$ term from the expression. 
 
 
