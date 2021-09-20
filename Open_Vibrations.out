@@ -1,0 +1,73 @@
+\BOOKMARK [1][-]{section.1}{Basic Concepts in Vibrations}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Single Degree-of-Freedom Systems}{section.1}% 2
+\BOOKMARK [3][-]{subsubsection.1.1.1}{Spring-Mass Model}{subsection.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.2}{Linear Springs}{subsection.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.2}{Equivalent Stiffness}{section.1}% 5
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Equivalent Stiffness of Structural Systems}{subsection.1.2}% 6
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Springs in Series and Parallel}{subsection.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.3}{Equation of Motion for an Oscillating System}{section.1}% 8
+\BOOKMARK [1][-]{section.2}{Free Vibration of Single-Degree-of-Freedom Systems}{}% 9
+\BOOKMARK [2][-]{subsection.2.1}{Mathematical Modeling of Free Vibration}{section.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Solve for the Natural Frequency \(n\) of the System }{subsection.2.1}% 11
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Solve for Initial Phase \(\) of the System }{subsection.2.1}% 12
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Solve for Amplitude \(A\) of the System }{subsection.2.1}% 13
+\BOOKMARK [3][-]{subsubsection.2.1.4}{Response for Simple Harmonic Motion}{subsection.2.1}% 14
+\BOOKMARK [3][-]{subsubsection.2.1.5}{Special Considerations for No Initial Velocity \(v0=0\)}{subsection.2.1}% 15
+\BOOKMARK [2][-]{subsection.2.2}{General Solution for Vibrating Systems}{section.2}% 16
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Formulating the General Solution for a 1-DOF Spring-Mass System}{subsection.2.2}% 17
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Solution of 1-DOF System in Three Forms}{subsection.2.2}% 18
+\BOOKMARK [2][-]{subsection.2.3}{Damping}{section.2}% 19
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Modeling Vibrating Systems with Damping}{subsection.2.3}% 20
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Modeling Underdamped Motion}{subsection.2.3}% 21
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Modeling Overdamped Motion}{subsection.2.3}% 22
+\BOOKMARK [3][-]{subsubsection.2.3.4}{Modeling critically damped motion}{subsection.2.3}% 23
+\BOOKMARK [3][-]{subsubsection.2.3.5}{Standard Form of the EOM}{subsection.2.3}% 24
+\BOOKMARK [2][-]{subsection.2.4}{Logarithmic decrement}{section.2}% 25
+\BOOKMARK [1][-]{section.3}{Forced Vibrations}{}% 26
+\BOOKMARK [2][-]{subsection.3.1}{Harmonic Excitations of Undamped Systems}{section.3}% 27
+\BOOKMARK [2][-]{subsection.3.2}{Harmonic Resonance}{section.3}% 28
+\BOOKMARK [2][-]{subsection.3.3}{Harmonic Excitations of Underdamped Systems}{section.3}% 29
+\BOOKMARK [2][-]{subsection.3.4}{Frequency Response of Underdamped Systems}{section.3}% 30
+\BOOKMARK [2][-]{subsection.3.5}{Base Excitation}{section.3}% 31
+\BOOKMARK [3][-]{subsubsection.3.5.1}{Displacement Transmissibility Solution for Base Excitation}{subsection.3.5}% 32
+\BOOKMARK [3][-]{subsubsection.3.5.2}{Force Transmissibility Solution for Base Excitation}{subsection.3.5}% 33
+\BOOKMARK [1][-]{section.4}{Transfer Function for Vibrating Systems}{}% 34
+\BOOKMARK [2][-]{subsection.4.1}{Transfer Function Method \(Generic\)}{section.4}% 35
+\BOOKMARK [2][-]{subsection.4.2}{Transfer Function Method for Solving Vibrating Systems}{section.4}% 36
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Free Vibration for Undamped Systems}{subsection.4.2}% 37
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Impulse Response Function}{subsection.4.2}% 38
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Unit step function}{subsection.4.2}% 39
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Undamped spring-mass system}{subsection.4.2}% 40
+\BOOKMARK [3][-]{subsubsection.4.2.5}{Under damped spring-mass system}{subsection.4.2}% 41
+\BOOKMARK [3][-]{subsubsection.4.2.6}{Arbitrary Inputs to a System}{subsection.4.2}% 42
+\BOOKMARK [3][-]{subsubsection.4.2.7}{Base excitation}{subsection.4.2}% 43
+\BOOKMARK [2][-]{subsection.4.3}{Transfer Function for Response to Random Inputs}{section.4}% 44
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Defining the transfer function H\(s\)}{subsection.4.3}% 45
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Transfer Function method \(Steady-State solution\)}{subsection.4.3}% 46
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Response to Random Inputs}{subsection.4.3}% 47
+\BOOKMARK [1][-]{section.5}{Multiple degree-of-freedom systems}{}% 48
+\BOOKMARK [2][-]{subsection.5.1}{General Discussion on Mode Shapes}{section.5}% 49
+\BOOKMARK [2][-]{subsection.5.2}{Modeling Undamped Two Degree of Freedom Systems}{section.5}% 50
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Solution for the Two-Degree-of-Freedom System}{subsection.5.2}% 51
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Deriving the Solution for the Two-Degree-of-Freedom System}{subsection.5.2}% 52
+\BOOKMARK [2][-]{subsection.5.3}{Eigenvalue-based Solution for Natural Frequencies and Mode Shapes}{section.5}% 53
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Deriving the Eigenvalue-based Solution}{subsection.5.3}% 54
+\BOOKMARK [2][-]{subsection.5.4}{Transfer-function method}{section.5}% 55
+\BOOKMARK [2][-]{subsection.5.5}{Cramer's Rule for Solving 2-DOF Systems}{section.5}% 56
+\BOOKMARK [2][-]{subsection.5.6}{Frequency Response Transfer Functions}{section.5}% 57
+\BOOKMARK [2][-]{subsection.5.7}{Computational Methods for 2-DOF Systems}{section.5}% 58
+\BOOKMARK [3][-]{subsubsection.5.7.1}{Python}{subsection.5.7}% 59
+\BOOKMARK [2][-]{subsection.5.8}{Multiple Degrees of Freedom}{section.5}% 60
+\BOOKMARK [2][-]{subsection.5.9}{Modal Analysis}{section.5}% 61
+\BOOKMARK [1][-]{section.6}{Vibration Control}{}% 62
+\BOOKMARK [2][-]{subsection.6.1}{Vibration Nomograph}{section.6}% 63
+\BOOKMARK [2][-]{subsection.6.2}{Vibration Isolation}{section.6}% 64
+\BOOKMARK [2][-]{subsection.6.3}{Vibration Absorption}{section.6}% 65
+\BOOKMARK [2][-]{subsection.6.4}{Active Vibration Suppression}{section.6}% 66
+\BOOKMARK [1][-]{section.7}{Structural Dynamics}{}% 67
+\BOOKMARK [2][-]{subsection.7.1}{Single-story frame}{section.7}% 68
+\BOOKMARK [2][-]{subsection.7.2}{Duhamel's Integral}{section.7}% 69
+\BOOKMARK [2][-]{subsection.7.3}{Two-story frame}{section.7}% 70
+\BOOKMARK [1][-]{section.8}{Experimental Vibrations}{}% 71
+\BOOKMARK [2][-]{subsection.8.1}{Hardware for vibration testing}{section.8}% 72
+\BOOKMARK [2][-]{subsection.8.2}{Digital Signal Processing}{section.8}% 73
