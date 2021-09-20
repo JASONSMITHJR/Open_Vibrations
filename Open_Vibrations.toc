@@ -46,7 +46,7 @@
 \contentsline {subsubsection}{\numberline {4.2.5}Under damped spring-mass system}{81}{subsubsection.4.2.5}%
 \contentsline {subsubsection}{\numberline {4.2.6}Arbitrary Inputs to a System}{83}{subsubsection.4.2.6}%
 \contentsline {subsubsection}{\numberline {4.2.7}Base excitation}{85}{subsubsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.3}Transform Function for Response to Random Inputs}{85}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.3}Transfer Function for Response to Random Inputs}{85}{subsection.4.3}%
 \contentsline {subsubsection}{\numberline {4.3.1}Defining the transfer function $\mathbf {H(s)}$}{86}{subsubsection.4.3.1}%
 \contentsline {subsubsection}{\numberline {4.3.2}Transfer Function method (Steady-State solution)}{87}{subsubsection.4.3.2}%
 \contentsline {subsubsection}{\numberline {4.3.3}Response to Random Inputs}{90}{subsubsection.4.3.3}%

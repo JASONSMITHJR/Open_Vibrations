@@ -41,7 +41,7 @@
 \BOOKMARK [3][-]{subsubsection.4.2.5}{Under damped spring-mass system}{subsection.4.2}% 41
 \BOOKMARK [3][-]{subsubsection.4.2.6}{Arbitrary Inputs to a System}{subsection.4.2}% 42
 \BOOKMARK [3][-]{subsubsection.4.2.7}{Base excitation}{subsection.4.2}% 43
-\BOOKMARK [2][-]{subsection.4.3}{Transform Function for Response to Random Inputs}{section.4}% 44
+\BOOKMARK [2][-]{subsection.4.3}{Transfer Function for Response to Random Inputs}{section.4}% 44
 \BOOKMARK [3][-]{subsubsection.4.3.1}{Defining the transfer function H\(s\)}{subsection.4.3}% 45
 \BOOKMARK [3][-]{subsubsection.4.3.2}{Transfer Function method \(Steady-State solution\)}{subsection.4.3}% 46
 \BOOKMARK [3][-]{subsubsection.4.3.3}{Response to Random Inputs}{subsection.4.3}% 47

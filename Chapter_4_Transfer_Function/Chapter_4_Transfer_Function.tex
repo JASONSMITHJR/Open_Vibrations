@@ -532,7 +532,7 @@ For the mass, damping, and stiffness values given above this can be plotted as:
 
 % good notes are in Rao 4.5.3
 
-\subsection{Transform Function for Response to Random Inputs}
+\subsection{Transfer Function for Response to Random Inputs}
 
 			Consider the following system
 			\begin{figure}[H]
@@ -545,7 +545,7 @@ For the mass, damping, and stiffness values given above this can be plotted as:
 	
 \subsubsection{Defining the transfer function $\mathbf{H(s)}$}
 
-Again, consider the generic system represented in figure~\ref{fig:transfer_function_system}. For this system representation, F(s) is the Laplace of the transform of the driving force and H(s) is the Laplace transform of the response of the system h(t). 
+Again, consider the generic system represented in figure~\ref{fig:transfer_function_system}. For this system representation, $F(s)$ is the Laplace of the transform of the driving force and $H(s)$ is the Laplace transform of the response of the system $h(t)$. 
 
 We need to define transfer function $H(s)$ for a generic system. To do this let us show the reasoning behind the transfer function. Here we will show that the output of any system ($x(t)$) can be related to the input of the system ($f(t)$) through a series of polynomial coefficients ($a$ and $b$). Consider the general $n^{th}$-order linear, time-invariant differential equation that governs the behavior of the dynamic system.
 
@@ -585,7 +585,7 @@ X(s) = H(s)F(s)
 Considering the forced system:
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.4\textwidth]{../Figures/forced_spring_mass_damper_system.png}
+	\includegraphics[width=0.4\textwidth]{../Figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 	\caption{A spring-dashpot-mass model of a 1-DOF system with external excitation.}
 \end{figure}
 \noindent that can be expressed as the equation of motion
@@ -670,7 +670,7 @@ H(\omega) = |H(j\omega)| = \frac{1}{\sqrt{(k-m\omega^2)^2+c^2\omega^2}}
 	Considering the forced system:
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.4\textwidth]{../Figures/forced_spring_mass_damper_system.png}
+		\includegraphics[width=0.4\textwidth]{../Figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 		\caption{A spring-dashpot-mass model of a 1-DOF system with external excitation.}
 	\end{figure}
 	Set the forcing function to be $F_0 \sin(\omega t)$ and calculate the transfer function. 
@@ -792,7 +792,7 @@ where $R_{ff}$ denotes the autocorrelation function of $F(t)$ and $S_{ff}$ denot
 	Consider the following system
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.4\textwidth]{../Figures/forced_spring_mass_damper_system.png}
+		\includegraphics[width=0.4\textwidth]{../Figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 		\caption{A spring-dashpot-mass model of a 1-DOF system with external excitation.}
 	\end{figure}
 	Calculate the PSD of the response $x(t)$ given that the PSD of the applied force $S_{ff}(\omega)$ is white noise. 
@@ -853,7 +853,7 @@ When combined with equation \ref{eq:variance_for_S_O}, these integrals allow for
 	For system below, calculate the mean-square response of the system given that the the spectrum of the input force $F(t)$ is a perfect theoretical white noise.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.4\textwidth]{../Figures/forced_spring_mass_damper_system.png}
+		\includegraphics[width=0.4\textwidth]{../Figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 		\caption{A spring-dashpot-mass model of a 1-DOF system with external excitation.}
 	\end{figure}
 	\noindent\textbf{Solution:} Again, as the forcing function $S_{ff}(\omega)$ is constant across the frequency spectrum $S_{ff}(\omega)=S_0$ the mean-square response can be calculated as:
