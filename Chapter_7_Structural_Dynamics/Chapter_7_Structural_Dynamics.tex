@@ -99,9 +99,9 @@
 	
 	% set the section number, along with figure and equation numbers
 	\setcounter{section}{6}	
-	\setcounter{figure}{\thesection}   
+	\setcounter{figure}{0}   
 	\renewcommand\thefigure{\thesection.\arabic{figure}}
-	\setcounter{equation}{\thesection}   
+	\setcounter{equation}{0}   
 	\renewcommand\theequation{\thesection.\arabic{equation}}	
 	
 	\section{Structural Dynamics}	
@@ -111,7 +111,7 @@
 
 The dynamic response of civil infrastructures, including buildings, bridges, and towers, can be studied by applying fundamental vibrations concepts studied in the previous chapters. 
 
-Let's start by considering the single-story frame shown in Fig. \ref{fig:single_} (a) in free vibration (no external load is applied to the structure). The frame has height $H$ and bay width $L$. As shown in Fig. \ref{fig:single_}, the frame consists of two columns with modulus of elasticity $E$ and moment of inertia (second moment of the cross sectional area) $I$. The columns are fixed at the base. The frame in Fig. \ref{fig:single_} (a) can be modeled as a single-degree of freedom (SDOF) system under the following assumptions:
+Let's start by considering the single-story frame shown in Fig. \ref{fig:one_story_frame_example} (a) in free vibration (no external load is applied to the structure). The frame has height $H$ and bay width $L$. As shown in Fig. \ref{fig:one_story_frame_example}, the frame consists of two columns with modulus of elasticity $E$ and moment of inertia (second moment of the cross sectional area) $I$. The columns are fixed at the base. The frame in Fig. \ref{fig:one_story_frame_example} (a) can be modeled as a single-degree of freedom (SDOF) system under the following assumptions:
 
 \begin{itemize}
 	\item Shear building: flexible columns ($EI \neq 0$), beam infinitely rigid ($EI_b$ = $\infty$), axial deformations of beams and columns negligible ($EA$ = 0);
@@ -124,7 +124,7 @@ Fig. \ref{fig:single_} (b) illustrates a SDOF with mass $m$ and stiffness $k$ th
 	\centering
 	\includegraphics{../figures/Single_story_frame.png}
 	\caption{(a) Single story frame; (b) undamped single degree of freedom system.}
-	\label{fig:single_}
+	\label{fig:one_story_frame_example}
 \end{figure}
 
 %\begin{figure}[H]
@@ -212,7 +212,7 @@ where $k$ is also called \emph{lateral stiffness}. Note that the lateral stiffne
 
 If the columns have same properties, Eq. (\ref{omega_frame}) becomes:
 
-\begin{equation} \label{omega_frame}
+\begin{equation}
 \omega_n = \sqrt{\frac{k}{m}} = \sqrt{\frac{24EI}{H^3m}}
 \end{equation}
 
@@ -228,7 +228,7 @@ x(t) = x_0\text{cos}(\omega_n t) + \frac{v_0}{\omega_n}\text{sin}(\omega_n t)
 
 \begin{example}
 	
-Let's consider the single-story frame shown in Fig. \ref{fig:single_} with mass $m$ = 0.15 kip $s^2$/ft, $L$ = 12 ft, $EI$= 1800 kip $ft^2$. a) Determine the EOM and the natural period of the frame; b) assume that the moment of inertia of the right column is $2I$. Will the EOM change?
+Let's consider the single-story frame shown in Fig. \ref{fig:one_story_frame_example} with mass $m$ = 0.15 kip $s^2$/ft, $L$ = 12 ft, $EI$= 1800 kip $ft^2$. a) Determine the EOM and the natural period of the frame; b) assume that the moment of inertia of the right column is $2I$. Will the EOM change?
 
 \vspace{1ex}
 
