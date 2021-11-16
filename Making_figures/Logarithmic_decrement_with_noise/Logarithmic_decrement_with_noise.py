@@ -30,6 +30,21 @@ tt1 = time.time()
 plt.close('all')
 
 
+# set default fonts and plot colors
+plt.rcParams.update({'text.usetex': True})
+plt.rcParams.update({'image.cmap': 'viridis'})
+plt.rcParams.update({'font.serif':['Times New Roman', 'Times', 'DejaVu Serif',
+ 'Bitstream Vera Serif', 'Computer Modern Roman', 'New Century Schoolbook',
+ 'Century Schoolbook L',  'Utopia', 'ITC Bookman', 'Bookman', 
+ 'Nimbus Roman No9 L', 'Palatino', 'Charter', 'serif']})
+plt.rcParams.update({'font.family':'serif'})
+plt.rcParams.update({'font.size': 10})
+plt.rcParams.update({'mathtext.rm': 'serif'})
+plt.rcParams.update({'mathtext.fontset': 'custom'}) # I don't think I need this as its set to 'stixsans' above.
+
+cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
+
+
 
 #%% Problem 3
 
@@ -55,8 +70,8 @@ xx_underdamped = A*np.exp(-zeta*omega_n*tt)*np.sin(omega_d*tt+theta)
 xx_underdamped = xx_underdamped + 0.0005*np.random.randn(len(xx_underdamped))
 
 
-plt.figure(figsize=(6,5))
-plt.plot(tt,xx_underdamped*1000,label='data')
+plt.figure(figsize=(6,3.0))
+plt.plot(tt,xx_underdamped*1000,lw=0.5,label='data')
 
 plt.grid('on')
 plt.ylabel('amplitude (mm)',labelpad=0)
@@ -66,7 +81,7 @@ plt.xticks(list(np.linspace(0,10,21)))
 plt.xlim(0,10)
 plt.tight_layout()
 #plt.legend(loc=1,ncol=3)
-plt.savefig('Logarithmic_decrement_with_noise',dpi=300)
+plt.savefig('Logarithmic_decrement_with_noise_python',dpi=300)
 
 
 
