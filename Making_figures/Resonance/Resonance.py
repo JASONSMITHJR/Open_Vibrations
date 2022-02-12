@@ -27,6 +27,19 @@ import time
 import scipy.io as sio
 tt1 = time.time()
 
+# set default fonts and plot colors
+plt.rcParams.update({'image.cmap': 'viridis'})
+cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
+plt.rcParams.update({'font.serif':['Times New Roman', 'Times', 'DejaVu Serif',
+ 'Bitstream Vera Serif', 'Computer Modern Roman', 'New Century Schoolbook',
+ 'Century Schoolbook L',  'Utopia', 'ITC Bookman', 'Bookman', 
+ 'Nimbus Roman No9 L', 'Palatino', 'Charter', 'serif']})
+plt.rcParams.update({'font.family':'serif'})
+plt.rcParams.update({'font.size': 10})
+plt.rcParams.update({'mathtext.fontset': 'custom'})
+plt.rcParams.update({'mathtext.rm': 'serif'})
+plt.rcParams.update({'mathtext.it': 'serif:italic'})
+plt.rcParams.update({'mathtext.bf': 'serif:bold'})
 plt.close('all')
 
 

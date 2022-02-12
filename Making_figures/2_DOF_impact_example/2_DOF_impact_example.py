@@ -64,7 +64,7 @@ plt.ylabel('displacement (m)')
 plt.tight_layout()
 plt.legend(framealpha=1)
 plt.savefig('2_DOF_impact_example',dpi=300)
-
+plt.savefig('2_DOF_impact_example.pdf',dpi=300)
 
 
 

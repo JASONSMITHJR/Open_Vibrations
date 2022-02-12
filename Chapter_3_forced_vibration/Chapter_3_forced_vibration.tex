@@ -112,12 +112,14 @@
 			Mechanical systems are ofter subjected to an external loading. For example, a piston in a engine if forced up and down my a crankshaft or a seat in an airplane my vibrate due to movement of the jet engines transmitted through the aircraft structure. 
 			
 		\subsection{Harmonic Excitations of Undamped Systems}
+		
+			\todo{I may have an issue where the radicand of the damped natural frequency is 1-2$\zeta^2$.}
 
 			
 			Investigating a single-degree of freedom system for a harmonic input is a useful as it can be solved mathematically with straightforward techniques. Consider the system:
 			\begin{figure}[H]
 				\centering
-				\includegraphics[]{../Figures/1-DOF-spring_mass_horizontal_forced_FBD.png}
+				\includegraphics[]{../figures/1-DOF-spring_mass_horizontal_forced_FBD.png}
 				\caption{1-DOF system with an external force ($F(t)$) applied, showing: (a) the system configuration; and (b) the free body diagram}
 				\label{fig:1-DOF-spring_mass_horizontal_forced_FBD}
 			\end{figure}	
@@ -129,7 +131,7 @@
 			\begin{equation}
 				m \ddot{x}(t)+kx(t) = F_0\text{cos}(\omega t)
 			\end{equation}			
-			For convinces we drop the ``$(t)$'' to make the writing easier can convert this to the standard form by dividing the equation through by $m$:					
+			For convenience we drop the ``$(t)$'' to make the writing easier. Then, we convert the EOM to the standard form by dividing the equation through by $m$:					
 			\begin{equation}
 				\ddot{x}+\omega_n^2x = f_0\text{cos}(\omega t)
 			\end{equation}					
@@ -227,7 +229,7 @@
 				For a the 1-DOF system:
 				\begin{figure}[H]
 					\centering
-					\includegraphics[width=0.5\textwidth]{../Figures/1-DOF-spring_mass_horizontal_forced.png}
+					\includegraphics[width=0.5\textwidth]{../figures/1-DOF-spring_mass_horizontal_forced.png}
 					\caption{1-DOF spring-mass system subjected to an external force $F(t)$.}
 				\end{figure}
 				with with $k$ = 10 N/m, $m$ = 2.5 kg, $\omega$ = 4 rad/sec, $F_0$ = 0.1 kN, $x_0$ = 1 mm, and $v_0$ = 0 mm plot the temporal responses of system considering the free-vibration case and the excited case. Plot these on a single plot to compare the responses. 
@@ -243,7 +245,7 @@
 				These temporal responses are plotted as (Note that the forcing function uses the axis on the right):
 				\begin{figure}[H]
 					\centering
-					\includegraphics[width=0.9\textwidth]{../Figures/free_and_forced_temporal_response.png}
+					\includegraphics[width=0.9\textwidth]{../figures/free_and_forced_temporal_response.png}
 					\caption{Comparison of the temporal response for a 1-DOF system; expressing how the forcing function changes the vibrational  temporal response of the system.}
 				\end{figure}	
 			\end{example}
@@ -270,7 +272,7 @@
 			Where the first two terms account for the oscillations while the third terms accounts for the continued increase of the maximum amplitude. The following plot shows the forced response of a spring-mass system driven harmonically at its natural frequency.
 			\begin{figure}[H]
 				\centering
-				\includegraphics[]{../Figures/resonance.png}
+				\includegraphics[]{../figures/resonance.png}
 			\end{figure}				
 
 \begin{example}
@@ -279,7 +281,7 @@
 			
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=0.5\textwidth]{../Figures/1-DOF-spring_mass_horizontal_forced.png}
+				\includegraphics[width=0.5\textwidth]{../figures/1-DOF-spring_mass_horizontal_forced.png}
 				\caption{1-DOF spring-mass system subjected to an external force $F(t)$.}
 			\end{figure}
 			
@@ -307,7 +309,7 @@
 			This leads to the following results. 
 			\begin{figure}[H]
 				\centering
-				\includegraphics[]{../Figures/homogeneous_and_particular_solutions.png}
+				\includegraphics[]{../figures/homogeneous_and_particular_solutions.png}
 			\end{figure}			
 
 \end{example}
@@ -316,7 +318,7 @@
 			Considering the following system, write the equation of motion and calculate the response assuming a) that the system is initially at rest, and b) that the system has an initial displacement of 0.005 m. Use $k$ = 2000 N/m, $m$ = 100 kg, $F(t)$ = 10sin(10t) N.
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=0.5\textwidth]{../Figures/1-DOF-spring_mass_horizontal_forced.png}
+				\includegraphics[width=0.5\textwidth]{../figures/1-DOF-spring_mass_horizontal_forced.png}
 				\caption{1-DOF spring-mass system subjected to an external force $F(t)$.}
 			\end{figure}
 			\noindent\textbf{Solution:} The equation of motion is
@@ -365,7 +367,7 @@
 			\end{equation}			
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=1.0\textwidth]{../Figures/response_1-DOF-spring_mass_forced.png}
+				\includegraphics[width=1.0\textwidth]{../figures/response_1-DOF-spring_mass_forced.png}
 			\end{figure}
 \end{example}
 
@@ -376,7 +378,7 @@
 			Consider the system:
 			\begin{figure}[H]
 				\centering
-				\includegraphics[]{../Figures/1-DOF-spring_dashpot_mass_horizontal_forced_FBD.png}
+				\includegraphics[]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced_FBD.png}
 				\caption{Damped 1-DOF system with an external force ($F(t)$) applied, showing: (a) the system configuration; and (b) the free body diagram}
 			\end{figure}	
 			\noindent Again, for simplicity let us consider a harmonic excitation for $F(t)$ such that:
@@ -527,7 +529,7 @@
 				
 				\begin{figure}[H]
 					\centering
-					\includegraphics[]{../Figures/1-DOF-spring_dashpot_mass_horizontal_forced_FBD.png}
+					\includegraphics[]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced_FBD.png}
 					\caption{Damped 1-DOF system with an external force ($F(t)$) applied, showing: (a) the system configuration; and (b) the free body diagram}
 				\end{figure}
 				
@@ -537,21 +539,21 @@
 				\noindent\textbf{Solution a):} Therefore, plotting the temporal responses for configuration a yields:
 				\begin{figure}[H]
 					\centering
-					\includegraphics[]{../Figures/homogeneous_and_particular_solutions_in_resonance_a.png}
+					\includegraphics[]{../figures/homogeneous_and_particular_solutions_in_resonance_a.png}
 					\caption{Temporal responses for a underdamped system with $k=100$ N/m, $m=10$ kg,  $c=10$ kg/s, $F_0=1$ N, and $\omega = 8.162$.}
 				\end{figure}			
 				 
 				\noindent\textbf{Solution b):} Configuration b increases the forcing function $F_0$ to 3 N. This results a similar response to configuration a but with a lineally scaled amplitude:
 				\begin{figure}[H]
 					\centering
-					\includegraphics[]{../Figures/homogeneous_and_particular_solutions_in_resonance_b.png}
+					\includegraphics[]{../figures/homogeneous_and_particular_solutions_in_resonance_b.png}
 					\caption{Temporal responses for a underdamped system with $k=100$ N/m, $m=10$ kg,  $c=10$ kg/s, $F_0=3$ N, and $\omega = 8.162$.}
 				\end{figure}			
 				
 				\noindent\textbf{Solution c):} Now, using $\omega=3.162$ rad/sec we put the system into resonance as $\omega=\omega_n$. However, unlike the undamped system  the amplitude of the displacement is not unbounded as the damper absorbs energy from the system. Therefore, after about 7 seconds the systems enters an equilibrium state where any additional increase in amplitude caused by the system entering into resonance is canceled out by the damping in the system as demonstrated in the plot below:
 				\begin{figure}[H]
 					\centering
-					\includegraphics[]{../Figures/homogeneous_and_particular_solutions_in_resonance_c.png}
+					\includegraphics[]{../figures/homogeneous_and_particular_solutions_in_resonance_c.png}
 					\caption{Temporal responses for a underdamped system with $k=100$ N/m, $m=10$ kg,  $c=10$ kg/s, $F_0=3$ N, and $\omega = 3.162$.}
 				\end{figure}				
 			\end{example}	
@@ -604,13 +606,13 @@
 			If we plot the values of the normalize amplitude vs $\beta$ we obtain:
 			\begin{figure}[H]
 				\centering
-				\includegraphics[]{../Figures/underdamped_frequency_response_amplitude.png}
+				\includegraphics[]{../figures/underdamped_frequency_response_amplitude.png}
 				\caption{Normalized amplitude response for frequency ratio ($\beta$) from 0 to 2 for a variety of critical damping ratios.}
 			\end{figure}			
 			\noindent And again, if we plot the values of the phase vs $\beta$ ($\omega/\omega_n$) we obtain:
 			\begin{figure}[H]
 				\centering
-				\includegraphics[]{../Figures/underdamped_frequency_response_phase.png}
+				\includegraphics[]{../figures/underdamped_frequency_response_phase.png}
 				\caption{Phase response for frequency ratio ($\beta$) from 0 to 2 for a variety of critical damping ratios.}
 			\end{figure}				
 			\noindent note that the dashed black line is there because the phase values after $\pi/2$ need to be adjusted to obtain a continuous plot. An astute observer would notice that the maximum amplitude is not at $\omega = \omega_n$. While resonance is defined as $\omega = \omega_n$, this does not define the point of maximum displacement of the steady state response. Let us solve for the frequency ratio with the maximum displacement. This will happen when
@@ -637,7 +639,7 @@
 			Consider the simple spring mass system, 
 			\begin{figure}[H]
 				\centering
-				\includegraphics[]{../Figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
+				\includegraphics[]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 				\caption{Damped 1-DOF spring-mass system subjected to an external force $F(t)$.}
 			\end{figure}				
 			\noindent where $\omega_n = 132$ rad/sec and $\zeta$ = 0.0085. Calculate the displacements of the steady-state response for $\omega$=132 and 125 rad/sec. In both cases, use $f_0$ = 10 N/kg. 
@@ -660,7 +662,7 @@
 			The steady state response for an engineered system must not surpass 1 cm, if the system can be modeled as the spring and mass system below, what value of $c$ must be used?  
 			\begin{figure}[H]
 				\centering
-				\includegraphics[]{../Figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
+				\includegraphics[]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 				\caption{Damped 1-DOF spring-mass system subjected to an external force $F(t)$.}
 			\end{figure}	
 			\noindent Use $k$ = 2000 N/m, $m$ = 100 kg, $F(t)$ = 20 cos($6.3t$) N. 			
@@ -701,7 +703,7 @@
 			Consider the following system base excited system
 			\begin{figure}[H]
 				\centering
-				\includegraphics[]{../Figures/1_DOF_spring_dashpot_mass_vertical_base_excited_FBD.png}
+				\includegraphics[]{../figures/1_DOF_spring_dashpot_mass_vertical_base_excited_FBD.png}
 				\caption{Damped 1-DOF spring-mass system subjected to a displacement controlled base excitation showing the FBDs for the equilibrium and displaced positions.}
 				\label{fig:1_DOF_spring_dashpot_mass_vertical_base_excited_FBD}
 			\end{figure}
@@ -810,7 +812,7 @@
 				Plotting this for several critical damping ratios:
 				\begin{figure}[H]
 					\centering
-					\includegraphics[]{../Figures/base_excitation_displacement_transmissibility.png}
+					\includegraphics[]{../figures/base_excitation_displacement_transmissibility.png}
 					\caption{Displacement transmissibility for an underdamped 1-DOF system.}
 				\end{figure}
 				Around resonance, the maximum amount of displacement is transmitted to the mass. Additionally,  the above plot shows that at $\beta=\sqrt{2}$ the displacement transmissibility $X/Y$ is 1. Note the ``flip'' where overdamped systems have a greater response to excitations after $\beta=\sqrt{2}$ than do underdamped systems.
@@ -820,7 +822,7 @@
 					A very common example of base motion is the SDOF model of a vehicle wheel driving over a ``rough'' road as shown below. 
 					\begin{figure}[H]
 						\centering
-						\includegraphics[]{../Figures/vehicle_on_road_example.png}
+						\includegraphics[]{../figures/vehicle_on_road_example.png}
 					\end{figure}				
 					\noindent where $k$ = 400,000 N, $m$ = 1007 kg, $c$ = 20,000 kg/s, the period of road roughness = 6 m, and the height of road roughness = 0.02 m. What is the deflection experience by the car at $v$ = 20 km/h?
 					
@@ -896,7 +898,7 @@
 				Plotting this for several critical damping ratios:
 				\begin{figure}[H]
 					\centering
-					\includegraphics[]{../Figures/base_excitation_force_transmissibility.png}
+					\includegraphics[]{../figures/base_excitation_force_transmissibility.png}
 					\caption{Force transmissibility for an underdamped 1-DOF system.}
 				\end{figure}
 				Again, note the key location $\beta=\sqrt{2}$. At $\beta=\sqrt{2}$ the force transmitted to the system is 2 $\frac{F_\text{T}}{kY}$. However, also note that the normalized force does not necessarily fall off for $\beta$ values greater than $\beta=\sqrt{2}$.  
@@ -907,20 +909,20 @@
 		
 					\begin{figure}[H]
 						\centering
-						\includegraphics[]{../Figures/1_DOF_spring_dashpot_mass_vertical_base_excited.png}
+						\includegraphics[]{../figures/1_DOF_spring_dashpot_mass_vertical_base_excited.png}
 						\caption{Force transmissibility for an underdamped 1-DOF system.}
 					\end{figure}		
 				
 					\noindent\textbf{Solution:} We can plot the transmissibility of both the force and displacement onto one plot. For $\zeta=0.1$
 					\begin{figure}[H]
 						\centering
-						\includegraphics[]{../Figures/base_excitation_force_and_displacement_transmissibility_1.png}
+						\includegraphics[]{../figures/base_excitation_force_and_displacement_transmissibility_1.png}
 						\caption{Force and displacement transmissibility for the considered base excited system with $\zeta=0.1$.}
 					\end{figure}
 					it is clear that to minimize the force, the system should be driven with a frequency below the natural frequency. Next for  $\zeta=2$:
 					\begin{figure}[H]
 						\centering
-						\includegraphics[]{../Figures/base_excitation_force_and_displacement_transmissibility_2.png}
+						\includegraphics[]{../figures/base_excitation_force_and_displacement_transmissibility_2.png}
 						\caption{Force and displacement transmissibility for the considered base excited system with $\zeta=2$.}
 					\end{figure}			
 					it can be seen that the same rationale applies. Therefore, for both $\zeta=0.1$ and $\zeta=2$ the system should be excited below the natural frequency.
@@ -934,7 +936,7 @@
 					A single story building is subjected to a harmonic ground motion, $\ddot{y}(t) = A \text{cos}(\omega_b t)$. a) Find the steady-state solution for the structure.  b) If a damper was added between the base and the floor, and $r=2$, what would be the ideal critical damping coefficient to insure the safety of the building. (Think of safety as limiting displacement and transmitted force.) 
 					\begin{figure}[H]
 						\centering
-						\includegraphics[width=0.35\textwidth]{../Figures/base_excited_structure.png}
+						\includegraphics[width=0.35\textwidth]{../figures/base_excited_structure.png}
 					\end{figure}				
 								
 					\noindent\textbf{Solution (a):}
@@ -942,7 +944,7 @@
 					For simplicity, we can rearrange the system as what follows:
 					\begin{figure}[H]
 						\centering
-						\includegraphics[width=0.35\textwidth]{../Figures/base_excited_structure_simple.png}
+						\includegraphics[width=0.35\textwidth]{../figures/base_excited_structure_simple.png}
 					\end{figure}			
 		
 					solving for the EOM yields:

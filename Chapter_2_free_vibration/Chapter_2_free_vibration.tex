@@ -567,6 +567,7 @@
 			\end{equation}	
 			where $A$, $\phi$, $A_1$, and $A_2$, are all real-valued constants. Each set of constants can be related to each other by:
 			\begin{align}
+				\label{eq:A_1_and_A_2}
 				A = \sqrt{A_1^2+ A_2^2} & \hspace{1.5cm} \phi = \text{tan}^{-1}\bigg(\frac{A_1}{A_2}\bigg) \\
 				A_1 = (a_1+a_2) & \hspace{1.5cm} A_2 = (a_1-a_2)j \\
 				a_1 = \frac{A_1-A_2j}{2} & \hspace{1.5cm} a_2 = \frac{A_1+A_2j}{2}
@@ -733,6 +734,7 @@
 			\begin{equation}
 				x(t) = e^{-\zeta\omega_\text{n}t}(a_1e^{\omega_\text{d}tj} + a_2e^{-\omega_\text{d}tj}) 
 			\end{equation} 
+
 			Using Euler's equations, (same as before) and choosing:
 			\begin{equation}
 				A_1=(a_1-a_2)j
@@ -741,18 +743,19 @@
 			\begin{equation}
 				A_2=(a_1+a_2)
 			\end{equation} 		
-			The \textbf{general form} of this solution is then:
+			Note that the $A_1$ and $A_2$ defined here are the reverse of those defined in Eq.~\ref{eq:A_1_and_A_2}. This is done to allow the general form to be in the same format as before, however, assuming the same $A_1$ and $A_2$ would not change the final solution expressed below. The general form of this solution is then:
 			\begin{equation}
 				x(t) = e^{-\zeta\omega_\text{n}t}\big(A_1\text{sin}(\omega_\text{d}t) + A_2\text{cos}(\omega_\text{d}t)\big)
 			\end{equation} 	
 			Recall that for undamped 1-DOF systems we showed 
 			\begin{equation}
 				x(t) = A\text{sin}(\omega_\text{n}t + \phi) = A_1\text{sin}(\omega_\text{n}t) + A_2\text{cos}(\omega_\text{n}t)
-			\end{equation} 				
+			\end{equation} 	
 			As $e^{-\zeta\omega_\text{n}t}$ accounts for the damping, our current solution becomes:
 			\begin{equation}
 				x(t) = Ae^{-\zeta\omega_\text{n}t}\text{sin}(\omega_\text{d}t + \phi) 
 			\end{equation} 		
+
 			Now that we have $x$ and $\dot{x}$, we can solve for the boundary conditions $x_0$ and $v_0$ by setting $t=0$, we get:
 			\begin{equation}
 				x(0)=x_0 = A\text{sin}(\phi) 
@@ -862,7 +865,7 @@
 		\end{example}
 
 		\begin{example}
-			For the following industrial device consisting of a mass isolated from its fixtures by two rubber dampers and a offset spring provide an estimate of the system's damped natural frequency in the vertical direction.	Assume the the rubber dampers add damping and only negligible stiffness to the system and that the spring is long enough such that the angles remain constant. 	
+			Figure~\ref{fig:rubber_mounted_mass_with_spring} shows an industrial device consisting of a mass isolated from its fixtures by two rubber dampers and a offset spring with an angle $\alpha$. Provide an estimate of the system's damped natural frequency in the vertical direction.	Assume the the rubber dampers add damping and only negligible stiffness to the system and that the spring is long enough such that the angles remain constant. 	
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/rubber_mounted_mass_with_spring.png}
@@ -938,11 +941,12 @@
 				a_1 &= \frac{-v_0+\Big(-\zeta+\sqrt{\zeta^2-1}\Big)\omega_\text{n} x_0}{2\omega_\text{n}\sqrt{\zeta^2-1}} \\ 
 				a_2 &= \frac{v_0+\Big(\zeta+\sqrt{\zeta^2-1}\Big)\omega_\text{n} x_0}{2\omega_\text{n}\sqrt{\zeta^2-1}}
 			\end{align}				
-			Typical responses for a overdamped system with various initial conditions are shown below:
+			Typical responses for an overdamped system with various initial conditions are shown below in figure~\ref{fig:Over_damped_various_initial_conditions}.
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/Over_damped_various_initial_conditions.png}
 				\caption{Four example responses for an over damped 1-DOF system ($\zeta=2.371$) with various initial conditions.}
+				\label{fig:Over_damped_various_initial_conditions}
 			\end{figure}
 
 		\subsubsection{Modeling critically damped motion}			
