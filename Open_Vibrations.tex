@@ -16,6 +16,12 @@
 \numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
 \newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
 
+% defines all practical example enviorment
+\newtheorem{pr}{Practical Example}
+\numberwithin{pr}{section} % allows for the use of numbers that lign up with the section numbers
+\newenvironment{practical_example}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{pr}\normalfont}{\end{pr}\end{mdframed}}
+
+
 % defines the quotation enviorment 
 \usepackage{xcolor}
 \newcommand{\quotebox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth}{\space\Huge``}{#1}{\Huge''}{\break\null\hfill} {\small #2}  \end{minipage}\medbreak\end{minipage}}\end{center}}
@@ -23,12 +29,12 @@
 % defines the definition enviorment 
 \newcommand{\definitionbox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth} {{\textbf{Definition} - }{#1}: {#2}}\end{minipage}\medbreak\end{minipage}}\end{center}}
 
+% load in packages needed for basic layout functions
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{booktabs}
-%\usepackage{parskip} % remove all the paragraph indents
 \usepackage[textsize=tiny]{todonotes}
 
 

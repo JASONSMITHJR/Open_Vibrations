@@ -113,9 +113,7 @@
 			
 		\subsection{Harmonic Excitations of Undamped Systems}
 		
-			\todo{I may have an issue where the radicand of the damped natural frequency is 1-2$\zeta^2$.}
-
-			
+		
 			Investigating a single-degree of freedom system for a harmonic input is a useful as it can be solved mathematically with straightforward techniques. Consider the system:
 			\begin{figure}[H]
 				\centering
@@ -273,6 +271,7 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/resonance.png}
+				\caption{Temporal response of a system in resonance showing the enveloped maximum amplitude of displacement.}
 			\end{figure}				
 
 \begin{example}
@@ -310,6 +309,7 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/homogeneous_and_particular_solutions.png}
+				\caption{Temporal response for example problem where the envelope of the total solution is a ``beat'' with a period of approximately 6 seconds.}
 			\end{figure}			
 
 \end{example}
@@ -368,6 +368,7 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=1.0\textwidth]{../figures/response_1-DOF-spring_mass_forced.png}
+				\caption{Temporal response for example problem.}
 			\end{figure}
 \end{example}
 
@@ -580,15 +581,15 @@
 			\end{equation}				
 			If we factor out $\omega_n^2$ from the denominator and substitute in $\omega_n^2 = k/m$ and $r = \omega/\omega_n$, we get:
 			\begin{equation}
-				X = \frac{\frac{F_0}{m}}{\omega_n^2 \sqrt{\big(1 - (\frac{\omega}{\omega_n})^2\big)^2 +  (2\zeta \frac{\omega}{\omega_n})^2}} =  \frac{\frac{F_0}{k}}{\sqrt{(1-r^2)^2+(2\zeta r)^2}}
+				X = \frac{\frac{F_0}{m}}{\omega_n^2 \sqrt{\big(1 - (\frac{\omega}{\omega_n})^2\big)^2 +  (2\zeta \frac{\omega}{\omega_n})^2}} =  \frac{\frac{F_0}{k}}{\sqrt{(1-\beta^2)^2+(2\zeta \beta)^2}}
 			\end{equation}				
 			this becomes:
 			\begin{equation}
-				\frac{Xk}{F_0} = \frac{X \omega_n^2}{f_0} = \frac{1}{\sqrt{(1-r^2)^2+(2\zeta r)^2}}
+				\frac{Xk}{F_0} = \frac{X \omega_n^2}{f_0} = \frac{1}{\sqrt{(1-\beta^2)^2+(2\zeta \beta)^2}}
 			\end{equation}				
 			in a similar fashion, if we manipulate the equation for $\phi_p$ we can get $\phi_p$ in term of $\beta$:
 			\begin{equation}
-				\phi_p = \tan^{-1} \bigg(\frac{2 \zeta r}{1-r^2}\bigg)
+				\phi_p = \tan^{-1} \bigg(\frac{2 \zeta \beta}{1-\beta^2}\bigg)
 			\end{equation}	
 			If we solve for a few key values of $\beta$ we can get the following data points. On the board, we can solve for a few different frequency responses for a few different damping coefficients. 
 			\begin{table}[H]
@@ -617,17 +618,17 @@
 			\end{figure}				
 			\noindent note that the dashed black line is there because the phase values after $\pi/2$ need to be adjusted to obtain a continuous plot. An astute observer would notice that the maximum amplitude is not at $\omega = \omega_n$. While resonance is defined as $\omega = \omega_n$, this does not define the point of maximum displacement of the steady state response. Let us solve for the frequency ratio with the maximum displacement. This will happen when
 			\begin{equation}
-				\frac{d}{dr}\Bigg(\frac{Xk}{F_0} \Bigg)= 0
+				\frac{d}{d\beta}\Bigg(\frac{Xk}{F_0} \Bigg)= 0
 			\end{equation}				
 			We can show that:
 			\begin{equation}
-			\Bigg(\frac{1}{\sqrt{(1-\beta^2)^2+(2\zeta \beta)^2}}\Bigg)	\frac{d}{dr} =0
+			\Bigg(\frac{1}{\sqrt{(1-\beta^2)^2+(2\zeta \beta)^2}}\Bigg)	\frac{d}{d\beta} =0
 			\end{equation}	
 			when 
 			\begin{equation}
 			\beta_{\text{peak}} = \sqrt{1-2 \zeta^2}= \frac{\omega_p}{\omega_n}, \hspace{1cm} \zeta<1/\sqrt{2} 
 			\end{equation}				
-			however, this is only true for under damped system in which $\zeta<1/\sqrt{2}$. If $\zeta>1/\sqrt{2}$ than the value in imaginary and the peak value is at $r=0$. In these cases, the maximum displacement is a function of only $\omega_n$. $\omega_p$ represents the driving frequency that correspond to the maximum amplitude ($\frac{Xk}{F_0}$) and is called the \textbf{peak frequency}, and can be calculated as:
+			however, this is only true for under damped system in which $\zeta<1/\sqrt{2}$. If $\zeta>1/\sqrt{2}$ than the value in imaginary and the peak value is at $\beta=0$. In these cases, the maximum displacement is a function of only $\omega_n$. $\omega_p$ represents the driving frequency that correspond to the maximum amplitude ($\frac{Xk}{F_0}$) and is called the \textbf{peak frequency}, and can be calculated as:
 			\begin{equation}
 			\omega_p = \omega_n \beta_{\text{peak}} = \omega_n \sqrt{1-2 \zeta^2}, \hspace{1cm} \zeta<1/\sqrt{2} 
 			\end{equation}				
@@ -823,6 +824,7 @@
 					\begin{figure}[H]
 						\centering
 						\includegraphics[]{../figures/vehicle_on_road_example.png}
+						\caption{A 1-DOF ``car'' traveling over an uneven road.}
 					\end{figure}				
 					\noindent where $k$ = 400,000 N, $m$ = 1007 kg, $c$ = 20,000 kg/s, the period of road roughness = 6 m, and the height of road roughness = 0.02 m. What is the deflection experience by the car at $v$ = 20 km/h?
 					
@@ -933,10 +935,11 @@
 							
 				\begin{example}
 		
-					A single story building is subjected to a harmonic ground motion, $\ddot{y}(t) = A \text{cos}(\omega_b t)$. a) Find the steady-state solution for the structure.  b) If a damper was added between the base and the floor, and $r=2$, what would be the ideal critical damping coefficient to insure the safety of the building. (Think of safety as limiting displacement and transmitted force.) 
+					A single story building is subjected to a harmonic ground motion, $\ddot{y}(t) = A \text{cos}(\omega_b t)$. a) Find the steady-state solution for the structure.  b) If a damper was added between the base and the floor, and $\beta=2$, what would be the ideal critical damping coefficient to insure the safety of the building. (Think of safety as limiting displacement and transmitted force.) 
 					\begin{figure}[H]
 						\centering
 						\includegraphics[width=0.35\textwidth]{../figures/base_excited_structure.png}
+						\caption{A 1-DOF latterly excited system that represents a 1 story building. }
 					\end{figure}				
 								
 					\noindent\textbf{Solution (a):}
@@ -945,6 +948,7 @@
 					\begin{figure}[H]
 						\centering
 						\includegraphics[width=0.35\textwidth]{../figures/base_excited_structure_simple.png}
+						\caption{A base excited 1-DOF spring-mass system.}
 					\end{figure}			
 		
 					solving for the EOM yields:
