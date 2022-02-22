@@ -16,6 +16,11 @@
 \numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
 \newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
 
+% defines all practical example enviorment
+\newtheorem{pr}{Practical Example}
+\numberwithin{pr}{section} % allows for the use of numbers that lign up with the section numbers
+\newenvironment{practical_example}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{pr}\normalfont}{\end{pr}\end{mdframed}}
+
 % defines the quotation enviorment 
 \usepackage{xcolor}
 \newcommand{\quotebox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth}{\space\Huge``}{#1}{\Huge''}{\break\null\hfill} {\small #2}  \end{minipage}\medbreak\end{minipage}}\end{center}}
@@ -826,7 +831,7 @@
 						\includegraphics[]{../figures/vehicle_on_road_example.png}
 						\caption{A 1-DOF ``car'' traveling over an uneven road.}
 					\end{figure}				
-					\noindent where $k$ = 400,000 N, $m$ = 1007 kg, $c$ = 20,000 kg/s, the period of road roughness = 6 m, and the height of road roughness = 0.02 m. What is the deflection experience by the car at $v$ = 20 km/h?
+					\noindent where $k$ = 400,000 N/m, $m$ = 1007 kg, $c$ = 20,000 kg/s, the period of road roughness = 6 m, and the height of road roughness = 0.02 m. What is the deflection experience by the car at $v$ = 20 km/h?
 					
 					\noindent\textbf{Solution:} The road is applying a base excitation that can be approximated as 
 					\begin{equation}
@@ -858,7 +863,7 @@
 					into the temporal response to obtain:
 					\begin{equation}
 					\begin{split}
-					X = Y \sqrt{\frac{1+(2 \zeta r)^2}{(1-r^2)^2 + (2 \zeta r )^2}} = Y \sqrt{\frac{1+(2 \cdot 0.498 \cdot 0.292)^2}{(1-0.292^2)^2 + (2 \cdot 0.498 \cdot 0.292 )^2}}  \\ = 0.0108 \text{ m}
+					X = Y \sqrt{\frac{1+(2 \zeta \beta)^2}{(1-\beta^2)^2 + (2 \zeta \beta )^2}} = Y \sqrt{\frac{1+(2 \cdot 0.498 \cdot 0.292)^2}{(1-0.292^2)^2 + (2 \cdot 0.498 \cdot 0.292 )^2}}  \\ = 0.0108 \text{ m}
 					\end{split}
 					\end{equation} 		
 				\end{example}	
@@ -895,7 +900,7 @@
 				\end{equation}
 				Again, this can be converted to a force transmissibility to provide a normalized response such that:
 				\begin{equation}
-					\frac{F_\text{T}}{kY} = \beta^2 \sqrt{\frac{1+(2 \zeta \beta)^2}{(1-r^2)^2 + (2 \zeta \beta )^2}} 
+					\frac{F_\text{T}}{kY} = \beta^2 \sqrt{\frac{1+(2 \zeta \beta)^2}{(1-\beta^2)^2 + (2 \zeta \beta )^2}} 
 				\end{equation}
 				Plotting this for several critical damping ratios:
 				\begin{figure}[H]
@@ -921,13 +926,13 @@
 						\includegraphics[]{../figures/base_excitation_force_and_displacement_transmissibility_1.png}
 						\caption{Force and displacement transmissibility for the considered base excited system with $\zeta=0.1$.}
 					\end{figure}
-					it is clear that to minimize the force, the system should be driven with a frequency below the natural frequency. Next for  $\zeta=2$:
+					\noindent it is clear that to minimize the force, the system should be driven with a frequency below the natural frequency. Next for  $\zeta=2$:
 					\begin{figure}[H]
 						\centering
 						\includegraphics[]{../figures/base_excitation_force_and_displacement_transmissibility_2.png}
 						\caption{Force and displacement transmissibility for the considered base excited system with $\zeta=2$.}
-					\end{figure}			
-					it can be seen that the same rationale applies. Therefore, for both $\zeta=0.1$ and $\zeta=2$ the system should be excited below the natural frequency.
+					\end{figure}
+					\noindent it can be seen that the same rationale applies. Therefore, for both $\zeta=0.1$ and $\zeta=2$ the system should be excited below the natural frequency.
 				
 				\end{example}
 	
@@ -988,11 +993,18 @@
 					\noindent\textbf{Solution (b):} From the plots we solved for before, we can see that we want a critical damping coefficient that is as low as possible. This means any damping added to the system will decrease its safety. This may seem counter-intuitive, but this is because we are attempting to drive the structure at a frequency higher than its natural frequency, something that does not commonalty happen. Typically excitations for a structure are well below its natural frequency.  			
 				
 				\end{example}			
+
+
+		\begin{practical_example}
+			Discuss the Base excitation challenges of the Convair F2Y SeaDart
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=4in]{../figures/Convair_F2Y_SeaDart}
+				\caption{XF2Y-1 Sea Dart (BuNo 135762) during landing. This airframe disintegrated in mid-air over San Diego Bay, California (USA) during a demonstration flight on November 4th, 1954 killing test Charles E. Richbourg after the airframe limitations were exceed. \bl{Public Domain 	U.S. Navy National Museum of Naval Aviation photo No. 1996.253.7213.010}}
+			\end{figure}	
+		\end{practical_example}
 		
 \end{document}
-
-
-
 
 
 

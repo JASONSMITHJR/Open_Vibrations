@@ -16,6 +16,11 @@
 \numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
 \newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
 
+% defines all practical example enviorment
+\newtheorem{pr}{Practical Example}
+\numberwithin{pr}{section} % allows for the use of numbers that lign up with the section numbers
+\newenvironment{practical_example}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{pr}\normalfont}{\end{pr}\end{mdframed}}
+
 % defines the quotation enviorment 
 \usepackage{xcolor}
 \newcommand{\quotebox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth}{\space\Huge``}{#1}{\Huge''}{\break\null\hfill} {\small #2}  \end{minipage}\medbreak\end{minipage}}\end{center}}
@@ -1033,8 +1038,16 @@
 							
 		\end{example}	
 
+		\begin{practical_example}
+	Discuss the Millennium bridge damping issues, note that 37 energy dissipating dampers were used to control the horizontal movement of the bridge while another 52 inertial dampers were used mitigate vertical movement.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=4in]{../figures/Under_the_Millennium_Bridge}
+		\caption{The only BAC TSR-2 prototype to fly, picture taken in 1966 at what is now BAE Warton Lancashire. \bl{David Martin / Under the Millennium Bridge / CC BY-SA 2.0}}
+	\end{figure}
 	
-
+\end{practical_example}
+	
 		\subsection{Logarithmic decrement}
 			
 			For a vibrating system, the  mass ($m$) and stiffness ($k$) can be measured using scales and static deflection tests. However, the damping coefficient ($c$) is a more difficult quantity to determine. From $k$ and $m$ we can compute the natural frequency ($\omega_\text{n}$) and the critical damping coefficient ($c_\text{cr}$). Therefore, knowing that the critical damping ratio ($\zeta$) is defined as:
