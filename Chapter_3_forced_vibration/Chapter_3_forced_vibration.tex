@@ -16,10 +16,10 @@
 \numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
 \newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
 
-% defines all practical example enviorment
-\newtheorem{pr}{Practical Example}
-\numberwithin{pr}{section} % allows for the use of numbers that lign up with the section numbers
-\newenvironment{practical_example}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{pr}\normalfont}{\end{pr}\end{mdframed}}
+% defines all vibration case studies
+\newtheorem{vcs}{Vibration Case Studies}
+\numberwithin{vcs}{section} % allows for the use of numbers that lign up with the section numbers
+\newenvironment{vibration_case_studies}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{vcs}\normalfont}{\end{vcs}\end{mdframed}}
 
 % defines the quotation enviorment 
 \usepackage{xcolor}
@@ -114,12 +114,12 @@
 
 		
 
-			Mechanical systems are ofter subjected to an external loading. For example, a piston in a engine if forced up and down my a crankshaft or a seat in an airplane my vibrate due to movement of the jet engines transmitted through the aircraft structure. 
+			Mechanical systems are subjected to external loading. For example, a piston in an engine when forced up and down by a crankshaft or a seat in an airplane may vibrate due to the movement of the jet engines transmitted through the aircraft structure.  
 			
 		\subsection{Harmonic Excitations of Undamped Systems}
 		
 		
-			Investigating a single-degree of freedom system for a harmonic input is a useful as it can be solved mathematically with straightforward techniques. Consider the system:
+			Investigating a single-degree of freedom system for a harmonic input is useful as it can be solved mathematically with straightforward techniques. Consider the system:
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/1-DOF-spring_mass_horizontal_forced_FBD.png}
@@ -142,11 +142,11 @@
 			\begin{equation}
 				f_0 = \frac{F_0}{m}
 			\end{equation}	
-			The EOM in this form is a second order, linear nonhomogeneous differential equation. It is nonhomogeneous because there are no terms related to $x$ on the right-hand side of the equation. One way to solve such such an ODE is to recall that the solution for a nonhomogeneous equation is the sum of the homogeneous and particular solutions. 
+			The EOM in this form is a second-order, linear nonhomogeneous differential equation. It is nonhomogeneous because there are no terms related to $x$ on the right-hand side of the equation. One way to solve such an ODE is to recall that the solution for a nonhomogeneous equation is the sum of the homogeneous and particular solutions. 
 			\begin{equation}
 				x = x_h + x_p
 			\end{equation}	
-			again, noting that this is a temporal solution where ``$(t)$'' is implied. First, knowing that the solution is the sum of two parts: 1) oscillations caused by the spring/mass system; and 2) vibrations caused by the forcing function. The oscillations caused by the spring/mass system will form the homogeneous while the vibrations caused by the forcing function will form the particular solution. As we know the solution for oscillations caused by the spring/mass system form our prior investigation of unforced system we set the equation for the homogeneous solution to be:
+			again, noting that this is a temporal solution where ``$(t)$'' is implied. First, knowing that the solution is the sum of two parts: 1) oscillations caused by the spring/mass system; and 2) vibrations caused by the forcing function. The oscillations caused by the spring/mass system will form the homogeneous while the vibrations caused by the forcing function will form the particular solution. As we know the solution for oscillations caused by the spring/mass system from our prior investigation of unforced systems we set the equation for the homogeneous solution to be:
 			\begin{equation}
 				x_h = A\text{sin}(\omega_n t + \phi)
 			\end{equation}			
@@ -498,7 +498,7 @@
 			\begin{equation}
 				x(t) = Ae^{-\zeta \omega_n t}\text{sin}(\omega_d t + \phi) +  X \text{cos}(\omega t - \phi_p)
 			\end{equation}				
-			Note for larger values of $t$, the homogeneous solution approaches zero resulting in the particular solution becoming the total solution. Therefore, the particular solution is sometimes called the steady state response and the homogeneous solution is called the transient response. Solving for the constants $A$ and $\phi$ using boundary conditions ($x_0=0$ and $v_0=0$) results a total solution expressed as:
+			Note for larger values of $t$, the homogeneous solution approaches zero resulting in the particular solution becoming the total solution. Therefore, the particular solution is sometimes called the steady-state response, and the homogeneous solution is called the transient response. Solving for the constants $A$ and $\phi$ using boundary conditions ($x_0=0$ and $v_0=0$) results in a total solution expressed as:
 			\begin{equation}
 				A = \frac{x_0 -X \text{cos}(\phi_p)}{\text{sin}(\phi)}
 			\end{equation}			 
@@ -556,7 +556,7 @@
 					\caption{Temporal responses for a underdamped system with $k=100$ N/m, $m=10$ kg,  $c=10$ kg/s, $F_0=3$ N, and $\omega = 8.162$.}
 				\end{figure}			
 				
-				\noindent\textbf{Solution c):} Now, using $\omega=3.162$ rad/sec we put the system into resonance as $\omega=\omega_n$. However, unlike the undamped system  the amplitude of the displacement is not unbounded as the damper absorbs energy from the system. Therefore, after about 7 seconds the systems enters an equilibrium state where any additional increase in amplitude caused by the system entering into resonance is canceled out by the damping in the system as demonstrated in the plot below:
+				\noindent\textbf{Solution c):} Now, using $\omega=3.162$ rad/sec we put the system into resonance as $\omega=\omega_n$. However, unlike the undamped system, the amplitude of the displacement is not unbounded as the damper absorbs energy from the system. Therefore, after about 7 seconds the system enters an equilibrium state where any additional increase in amplitude caused by the system entering into resonance is canceled out by the damping in the system as demonstrated in the plot below:
 				\begin{figure}[H]
 					\centering
 					\includegraphics[]{../figures/homogeneous_and_particular_solutions_in_resonance_c.png}
@@ -565,7 +565,7 @@
 			\end{example}	
 
 		\subsection{Frequency Response of Underdamped Systems}						
-			From equations \ref{eq:damped_forced_x} through \ref{eq:damped_forced_theta_p} and the figures in example \ref{ex:homogeneous_and_particular_solutions_in_resonance} we can see that for larger values of $t$ the transient response dies out while only the steady state response controls the displacement of the total response. This is always true if the system has any significant damping. Therefore, it is often prudent to ignore the transient part and focus only on the steady-state response. Considering the equation for the particular solution: 
+			From equations \ref{eq:damped_forced_x} through \ref{eq:damped_forced_theta_p} and the figures in example \ref{ex:homogeneous_and_particular_solutions_in_resonance} we can see that for larger values of $t$ the transient response dies out while only the steady-state response controls the displacement of the total response. This is always true if the system has any significant damping. Therefore, it is often prudent to ignore the transient part and focus only on the steady-state response. Considering the equation for the particular solution: 
 			\begin{equation}
 				x_p(t) = X \text{cos}(\omega t - \phi_p)
 			\end{equation}			 
@@ -633,7 +633,7 @@
 			\begin{equation}
 			\beta_{\text{peak}} = \sqrt{1-2 \zeta^2}= \frac{\omega_p}{\omega_n}, \hspace{1cm} \zeta<1/\sqrt{2} 
 			\end{equation}				
-			however, this is only true for under damped system in which $\zeta<1/\sqrt{2}$. If $\zeta>1/\sqrt{2}$ than the value in imaginary and the peak value is at $\beta=0$. In these cases, the maximum displacement is a function of only $\omega_n$. $\omega_p$ represents the driving frequency that correspond to the maximum amplitude ($\frac{Xk}{F_0}$) and is called the \textbf{peak frequency}, and can be calculated as:
+			however, this is only true for under damped system in which $\zeta<1/\sqrt{2}$. If $\zeta>1/\sqrt{2}$ than the value in imaginary and the peak value is at $\beta=0$. In these cases, the maximum displacement is a function of only $\omega_n$. $\omega_p$ represents the driving frequency that corresponds to the maximum amplitude ($\frac{Xk}{F_0}$) and is called the \textbf{peak frequency}, and can be calculated as:
 			\begin{equation}
 			\omega_p = \omega_n \beta_{\text{peak}} = \omega_n \sqrt{1-2 \zeta^2}, \hspace{1cm} \zeta<1/\sqrt{2} 
 			\end{equation}				
@@ -697,7 +697,7 @@
 	
 		\subsection{Base Excitation}
 
-			Often, loading is not applied directly to the mass, but rather the mass of the system is excited when the base of mount that it is attached to is excited. This is called base excitation, or sometimes support motion. Examples of base excitation, or where base excitation is considered, include:
+			Often, loading is not applied directly to the mass, but rather the mass of the system is excited when the base of the mount that it is attached to is excited. This is called base excitation or sometimes support motion. Examples of base excitation, or where base excitation is considered, include:
 			
 			\begin{itemize}
 			\item machines on rubber mounts
@@ -755,7 +755,7 @@
 
 	
 			\subsubsection{Displacement Transmissibility Solution for Base Excitation}
-				The steady-state solution is often of more important than the transient solution when designing systems for continuous use. The particular solution for the base excited system annotated in figure \ref{fig:1_DOF_spring_dashpot_mass_vertical_base_excited_FBD} with the EOM presented in equation \ref{eq:standard_form_base_excitation_CD} can be expressed as $	x_p(t)$. To solve for this expression we will use the linearity of the system and solve for a solution that is the sum of two particular solutions. Resulting in:
+				The steady-state solution is often more important than the transient solution when designing systems for continuous use. The particular solution for the base excited system annotated in figure \ref{fig:1_DOF_spring_dashpot_mass_vertical_base_excited_FBD} with the EOM presented in equation \ref{eq:standard_form_base_excitation_CD} can be expressed as $	x_p(t)$. To solve for this expression we will use the linearity of the system and solve for a solution that is the sum of two particular solutions. Resulting in:
 				\begin{equation}
 				 x_p(t) = 	x_p^{(1)}(t) + 	x_p^{(2)}(t)  
 				\end{equation}
@@ -940,7 +940,7 @@
 							
 				\begin{example}
 		
-					A single story building is subjected to a harmonic ground motion, $\ddot{y}(t) = A \text{cos}(\omega_b t)$. a) Find the steady-state solution for the structure.  b) If a damper was added between the base and the floor, and $\beta=2$, what would be the ideal critical damping coefficient to insure the safety of the building. (Think of safety as limiting displacement and transmitted force.) 
+					A single-story building is subjected to a harmonic ground motion, $\ddot{y}(t) = A \text{cos}(\omega_b t)$. a) Find the steady-state solution for the structure.  b) If a damper was added between the base and the floor, and $\beta=2$, what would be the ideal critical damping coefficient to ensure the safety of the building. (Think of safety as limiting displacement and transmitted force.) 
 					\begin{figure}[H]
 						\centering
 						\includegraphics[width=0.35\textwidth]{../figures/base_excited_structure.png}
@@ -995,14 +995,14 @@
 				\end{example}			
 
 
-		\begin{practical_example}
+		\begin{vibration_case_studies}
 			Discuss the Base excitation challenges of the Convair F2Y SeaDart
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=4in]{../figures/Convair_F2Y_SeaDart}
 				\caption{XF2Y-1 Sea Dart (BuNo 135762) during landing. This airframe disintegrated in mid-air over San Diego Bay, California (USA) during a demonstration flight on November 4th, 1954 killing test Charles E. Richbourg after the airframe limitations were exceed. \bl{Public Domain 	U.S. Navy National Museum of Naval Aviation photo No. 1996.253.7213.010}}
 			\end{figure}	
-		\end{practical_example}
+		\end{vibration_case_studies}
 		
 \end{document}
 

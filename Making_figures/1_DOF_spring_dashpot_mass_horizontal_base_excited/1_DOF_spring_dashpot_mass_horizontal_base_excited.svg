@@ -10378,16 +10378,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.856837"
-     inkscape:cx="203.37774"
-     inkscape:cy="417.78036"
+     inkscape:zoom="4.847002"
+     inkscape:cx="358.998"
+     inkscape:cy="457.46558"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="1072"
-     inkscape:window-y="642"
+     inkscape:window-y="520"
      inkscape:window-maximized="1"
      inkscape:snap-global="false"
      units="in"
@@ -20556,8 +20556,8 @@
          y="188.57396"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">m</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker3722-4-2-6)"
-       d="m 39.952374,186.13702 h -9.08716"
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker3722-4-2-6)"
+       d="m 39.952374,142.44313 h -9.08716"
        id="path3457-0-0-0"
        inkscape:connector-curvature="0"
        inkscape:export-filename="1_DOF_spring_dashpot_mass_horizontal_base_excited_FBD.png"
@@ -20575,7 +20575,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="27.730707"
-       y="184.48676"
+       y="140.79286"
        id="text4404-0-6-1"
        inkscape:export-filename="1_DOF_spring_dashpot_mass_horizontal_base_excited_FBD.png"
        inkscape:export-xdpi="300"
@@ -20583,7 +20583,7 @@
          sodipodi:role="line"
          id="tspan4402-6-0-1"
          x="27.730707"
-         y="184.48676"
+         y="140.79286"
          style="font-style:italic;stroke-width:0.264583">kδ</tspan></text>
     <text
        xml:space="preserve"
@@ -20657,7 +20657,7 @@
     <text
        id="text4404-0-0-4-5"
        y="191.78336"
-       x="80.979568"
+       x="85.185722"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        xml:space="preserve"
        inkscape:export-filename="1_DOF_spring_dashpot_mass_horizontal_base_excited_FBD.png"
@@ -20665,11 +20665,11 @@
        inkscape:export-ydpi="300"><tspan
          style="font-style:italic;stroke-width:0.264583"
          y="191.78336"
-         x="80.979568"
+         x="85.185722"
          id="tspan4402-6-7-5-5"
          sodipodi:role="line">k<tspan
    style="font-style:normal;stroke-width:0.264583"
-   id="tspan5504-6-7">(</tspan>δ+x-y<tspan
+   id="tspan5504-6-7">(</tspan>x-y<tspan
    style="font-style:normal;stroke-width:0.264583"
    id="tspan5506-2-6">)</tspan></tspan></text>
     <text
@@ -33673,6 +33673,24 @@
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          sodipodi:nodetypes="cc" />
     </g>
+    <text
+       id="text4404-0-0-4-5-6"
+       y="156.14655"
+       x="83.729691"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       inkscape:export-filename="1_DOF_spring_dashpot_mass_horizontal_base_excited_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         style="font-style:italic;stroke-width:0.264583"
+         y="156.14655"
+         x="83.729691"
+         id="tspan4402-6-7-5-5-3"
+         sodipodi:role="line">k<tspan
+   style="font-style:normal;stroke-width:0.264583"
+   id="tspan5504-6-7-0">(</tspan>δ+x-y<tspan
+   style="font-style:normal;stroke-width:0.264583"
+   id="tspan5506-2-6-9">)</tspan></tspan></text>
   </g>
   <style
      id="style5799">text.intmath,text.intmathItalic{stroke:none;fill:#000;font-weight:400}@font-face{font-family:MathJax_Math-italic;src:url(/includes/cssjs/katex/fonts/MathJax_Math-Italic.woff2) format('woff2'),url(/includes/cssjs/katex/fonts/MathJax_Math-Italic.woff) format('woff')}@font-face{font-family:MathJax_Main;src:url(/includes/cssjs/katex/fonts/MathJax_Main-Regular.woff2) format('woff2'),url(/includes/cssjs/katex/fonts/MathJax_Main-Regular.woff) format('woff')}path.grids{shape-rendering:crispEdges}text.intmath{font-size:14.4px;font-family:MathJax_Main,'Times New Roman',Times,serif}text.intmathItalic{font-size:16px;font-style:normal;font-family:MathJax_Math-italic,'Times New Roman',Times,serif}</style>

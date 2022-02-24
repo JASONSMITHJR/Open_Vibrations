@@ -111,7 +111,7 @@
 
 The dynamic response of civil infrastructures, including buildings, bridges, and towers, can be studied by applying fundamental vibrations concepts studied in the previous chapters. 
 
-Let's start by considering the single-story frame shown in Fig. \ref{fig:one_story_frame_example} (a) in free vibration (no external load is applied to the structure). The frame has height $H$ and bay width $L$. As shown in Fig. \ref{fig:one_story_frame_example}, the frame consists of two columns with modulus of elasticity $E$ and moment of inertia (second moment of the cross sectional area) $I$. The columns are fixed at the base. The frame in Fig. \ref{fig:one_story_frame_example} (a) can be modeled as a single-degree of freedom (SDOF) system under the following assumptions:
+Let's start by considering the single-story frame shown in Fig. \ref{fig:one_story_frame_example} (a) in free vibration (no external load is applied to the structure). The frame has height $H$ and bay width $L$. As shown in Fig. \ref{fig:one_story_frame_example}, the frame consists of two columns with a modulus of elasticity $E$ and moment of inertia (second moment of the cross-sectional area) $I$. The columns are fixed at the base. The frame in Fig. \ref{fig:one_story_frame_example} (a) can be modeled as a single-degree of freedom (SDOF) system under the following assumptions:
 
 \begin{itemize}
 	\item Shear building: flexible columns ($EI \neq 0$), beam infinitely rigid ($EI_b$ = $\infty$), axial deformations of beams and columns negligible ($EA$ = 0);
@@ -152,7 +152,7 @@ x(t) = x_0\text{cos}(\omega_n t) + \frac{v_0}{\omega_n}\text{sin}(\omega_n t)
 
 where $\omega_n$ is the natural frequency of the frame, $x_0$ and $v_0$ are the initial conditions. In order to find $\omega_n$, we need to calculate the stiffness of the system. The mass is usually given. 
 
-The stiffness of the system can be found by applying the Hooke's law: $F = k x$. To find $k$, let's imagine to apply an arbitrary lateral force $F$ to the frame and analyze a single column. At the top, the column will be subjected to a force $F$ and to a moment $M_0$, as schematically shown in Fig. \ref{fig:columns_draw} (a). Applying the equilibrium equations to the column, it can be found that $M_0 = \frac{F H}{2}$. 
+The stiffness of the system can be found by applying Hooke's law: $F = k x$. To find $k$, let's imagine applying an arbitrary lateral force $F$ to the frame and analyzing a single column. At the top, the column will be subjected to a force $F$ and to a moment $M_0$, as schematically shown in Fig. \ref{fig:columns_draw} (a). Applying the equilibrium equations to the column, it can be found that $M_0 = \frac{F H}{2}$. 
 
 \begin{figure}[H]
 	\centering
@@ -236,7 +236,7 @@ Let's consider the single-story frame shown in Fig. \ref{fig:one_story_frame_exa
 
 \vspace{1ex}
 
-a) The frame can be modeled as a single-degree of freedom in free vibration. Therefore, the EOM is:
+a) The frame can be modeled as a single degree of freedom in free vibration. Therefore, the EOM is:
 
 \begin{equation}
 	m \ddot{x} + k x = 0
@@ -285,7 +285,7 @@ where $\omega_d$ is the damped natural frequency of the system:
 
 \subsection{Duhamel's Integral}
 
-In Chapter 4, the frequency response method was used to solve the EOM of a SDOF system subjected to an arbitrary force. Here, an alternative method widely employed in structural dynamics to find the solution of the EOM is presented. This method exploits a specif integral, named Duhamel's integral. 
+In Chapter 4, the frequency response method was used to solve the EOM of an SDOF system subjected to an arbitrary force. Here, an alternative method widely employed in structural dynamics to find the solution of the EOM is presented. This method exploits a specif integral, named Duhamel's integral. 
 
 Let's consider an underdamped SDOF system subjected to an arbitrary force $F$($t$). The EOM is:
 
@@ -294,7 +294,7 @@ Let's consider an underdamped SDOF system subjected to an arbitrary force $F$($t
 m \ddot{x} + c \dot{x} + k x = F(t)
 \end{equation}
 
-Let's assume that the system is at rest: $x$(0) = 0 and $\dot{x}$ = 0. The assumption underlying the Duhamel's integral method is that a generic force $F$($t$) can be expressed as a sequence of impulses of very small duration and the response of the system as the sum of the response to individual unit impulses. 
+Let's assume that the system is at rest: $x$(0) = 0 and $\dot{x}$ = 0. The assumption underlying Duhamel's integral method is that a generic force $F$($t$) can be expressed as a sequence of impulses of very small duration and the response of the system as the sum of the response to individual unit impulses. 
 
 An impulsive force can be defined as a very large force applied in a very short time interval. Fig. \ref{fig:impulsive_force} (a) shows an impulsive force $F(t) = \frac{1}{\epsilon}$ applied at time $t = \tau$. Assuming to apply an impulsive force to a generic mass $m$ and applying Netwon's second law:
 
@@ -316,7 +316,7 @@ In the limit case in which $\epsilon$ tends to 0, $F(t)$ tends to 1 and the impu
 \dot{x}(\tau)=\frac{1}{m}
 \end{equation}
 
-A similar concept applies to a SDOF system. Since the impulse is applied in a very short time interval, the spring and the damper do not have the time to react. When we apply a unit impulse to an underdamped SDOF, the system will start vibrating with velocity $\dot{x}(\tau)$ given by Eq. (\ref{Eq_vel}) and displacement $x(\tau) = 0$. The response of the system is given by the following equation:
+A similar concept applies to an SDOF system. Since the impulse is applied in a very short time interval, the spring and the damper do not have the time to react. When we apply a unit impulse to an underdamped SDOF, the system will start vibrating with velocity $\dot{x}(\tau)$ given by Eq. (\ref{Eq_vel}) and displacement $x(\tau) = 0$. The response of the system is given by the following equation:
 
 
 \begin{equation}
@@ -355,7 +355,7 @@ Similarly, the response of an undamped SDOF system to an arbitrary force can be 
 x(t) = \frac{1}{m \omega_n} \int_{0}^{t} p(\tau) sin(\omega_n (t - \tau)) d\tau
 \end{equation}
 
-If $F(t)$ is characterized by a simple function, the Duhamel's integral can be evaluated in closed form. If the equation of $F(t)$ is complicated, the Duhamel's integral can be solved with numerical methods.
+If $F(t)$ is characterized by a simple function, Duhamel's integral can be evaluated in closed form. If the equation of $F(t)$ is complicated, Duhamel's integral can be solved with numerical methods.
 
 Note that Eq. (\ref{Eq_Duhamel}) and (\ref{Eq_Duhamel_undamped}) apply when the initial conditions are zero (the system is at rest). If the initial conditions are different than zero, we need to add the free vibration response of the system to Eq. (\ref{Eq_Duhamel}) and (\ref{Eq_Duhamel_undamped}), respectively. 
 
@@ -502,7 +502,7 @@ $\phi_1$, $\phi_2$, $A_1$, and $A_2$ are constants that can be found based on th
 		
 \begin{example}
 
-Consider the frame in Fig. \ref{fig:two_story_frame_ex}. Determine natural frequency of vibration and mode shapes of the system.
+Consider the frame in Fig. \ref{fig:two_story_frame_ex}. Determine the natural frequency of vibration and mode shapes of the system.
 
 \begin{figure}[H]
 	\centering
@@ -615,7 +615,7 @@ In order to determine the natural frequency of vibration and the mode shapes of 
 	\textbf{u}_2 = \begin{bmatrix} -1\\ 1\end{bmatrix}
 \end{equation}
 
-\noindent Fig. \ref{fig:modeshapes} represents the two mode shapes of the building. 
+\noindent Fig. \ref{fig:modeshapes} represents the two-mode shapes of the building. 
 
 \vspace{4ex}
 

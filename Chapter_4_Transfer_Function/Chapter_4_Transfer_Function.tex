@@ -16,6 +16,11 @@
 \numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
 \newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
 
+% defines all vibration case studies
+\newtheorem{vcs}{Vibration Case Studies}
+\numberwithin{vcs}{section} % allows for the use of numbers that lign up with the section numbers
+\newenvironment{vibration_case_studies}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{vcs}\normalfont}{\end{vcs}\end{mdframed}}
+
 % defines the quotation enviorment 
 \usepackage{xcolor}
 \newcommand{\quotebox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth}{\space\Huge``}{#1}{\Huge''}{\break\null\hfill} {\small #2}  \end{minipage}\medbreak\end{minipage}}\end{center}}
@@ -107,7 +112,7 @@
 	\section{Transfer Function for Vibrating Systems}
 
 
-		Thusfar, this text has only considered forced vibrations for 1-DOF systems excited with forcing functions that can be easily expressed using either sin or cos examples. Therefore, the previously developed solutions are only acceptable for systems with known and simple excitations. This chapter will introduce the concept of transfer functions for solving vibration related problems. The transfer function, in particular the Laplace transfer function, is an important tool in the study of vibrations as it allows the practitioner to solve for the temporal response of a system for a variety of inputs using a single approach. Examples of force excitation that can be calculated include using this method include:
+		Thus far, this text has only considered forced vibrations for 1-DOF systems excited with forcing functions that can be easily expressed using either sin or cos examples. Therefore, the previously developed solutions are only acceptable for systems with known and simple excitations. This chapter will introduce the concept of transfer functions for solving vibration-related problems. The transfer function, in particular the Laplace transfer function, is an important tool in the study of vibrations as it allows the practitioner to solve for the temporal response of a system for a variety of inputs using a single approach. Examples of force excitation that can be calculated include using this method include:
 		\begin{itemize}
 			\item sinusoidal
 			\item base excitation
@@ -133,7 +138,7 @@
 \begin{review}
 	\label{sec:Laplace_review}
 				
-		Laplace transforms, or more boradly integral transform, are a procedure for integrating the time ($t$) dependence of a function into a function of of position or space ($s$). By transforming the whole whole differential equation from the time domain into a lower order function of space the problem becomes easier to solve as the function can often be manipulated algebraically. 
+		Laplace transforms, or more broadly integral transform, are a procedure for integrating the time ($t$) dependence of a function into a function of position or space ($s$). By transforming the whole differential equation from the time domain into a lower order function of space the problem becomes easier to solve as the function can often be manipulated algebraically. 
 
 		\begin{figure}[H]
 			\centering
@@ -142,7 +147,7 @@
 			\label{fig:fragility_curve}
 		\end{figure}
 
-		The Laplace transform is named after mathematician and astronomer Pierre-Simon Laplace (23 March 1749 - 5 March 1827 ). Pierre-Simon Laplace was one of the greatest scientists of all time and is often considered the French Newton. He taught Napoleon at the \'Ecole Militaire in 1784, became a count of the empire in 1806, and a marquis in 1817 after the restoration of the monarchy. He is credited with advancements in engineering, mathematics, statistics, physics, astronomy, and philosophy; however, maybe his greatest achievement is not only surviving but benefiting from the change from the Ancien R\'egime $\rightarrow$ Bonaparte $\rightarrow$ Bourbon Restoration. 
+		The Laplace transform is named after mathematician and astronomer Pierre-Simon Laplace (23 March 1749 - 5 March 1827 ). Pierre-Simon Laplace was one of the greatest scientists of all time and is often considered the French Newton. He taught Napoleon at the \'Ecole Militaire in 1784, became a count of the empire in 1806, and a marquis in 1817 after the restoration of the monarchy. He is credited with advancements in engineering, mathematics, statistics, physics, astronomy, and philosophy; however, may be his greatest achievement is not only surviving but benefiting from the change from the Ancien R\'egime $\rightarrow$ Bonaparte $\rightarrow$ Bourbon Restoration. 
 
 		
 		Of interest to this class is the Laplace transform ($\Laplace{\hspace{1ex}}$) of the function $f(t)$, expressed as $\Laplace{f(t)}$. Here, a Laplace transform is used as a method of solving the differential equations of motion by reducing the computation needed to that of integration and algebraic manipulation. 
@@ -301,7 +306,7 @@
 
 \subsubsection{Impulse Response Function}
 
-Shock loads on mechanical systems represent a very common source of vibration. These short-duration forces are also called called an impulse. An impulse excitation is defined as a force that is applied for a very short, or infinitesimal, length of time. An impulse is a nonperiodic force that is represented by the symbol $\delta$. The response of a system to an impulse load is the same as the system's free response provided that the correct initial conditions are applied. This is illustrated in the following where the applied force $F(t)$ is impulsive in nature (i.e., large magnitude over a very short time).
+Shock loads on mechanical systems represent a very common source of vibration. These short-duration forces are also called an impulse. An impulse excitation is defined as a force that is applied for a very short, or infinitesimal, length of time. An impulse is a nonperiodic force that is represented by the symbol $\delta$. The response of a system to an impulse load is the same as the system's free response provided that the correct initial conditions are applied. This is illustrated in the following where the applied force $F(t)$ is impulsive (i.e., large magnitude over a very short time).
 
 \begin{figure}[H]
 	\centering
@@ -417,12 +422,12 @@ After obtaining equations for the undamped and under damped cases, the responses
 \begin{figure}[H]
 	\centering
 	\includegraphics[]{../Figures/response_unit_step.png}
-	\caption{Temporal responses from a underdamped and undamped 1-DOF systems to a impulse response function.}
+	\caption{Temporal responses from underdamped and undamped 1-DOF systems subjected to an impulse response function.}
 \end{figure}
 Note that the system will settle out around $F_0/k$ where $F_0  \Phi$ is a scaling factor for the step loading.
 
 \begin{example}
-A load of roosters $m_r$ is dumped into the back of a dump truck. Assuming the roosters do not move, the bed of the truck can be modeled as a spring-mass-damper system (of values $k$, $m$, and $c$, respectively). Next, the load of roosters is modeled as a force $F(t) = m_r g$ that is applied to the spring-mass-damper system, as illustrated in the following figure. The simplification of the system allows for the analysis of the truck bed's vibrations as a simple spring-mass-damper system. First assume that the trucks damper is broken, how does the maximum dynamic displacement compare to the static displacement. What would happen to the maximum displacement if the damper was repaired on the truck? %Next, using a damping value of $\zeta=0.5$ and $\omega_n=\pi$ what is the maximum displacement. How does this compare to the displacement for the case without the damper?  
+A load of roosters $m_r$ is dumped into the back of a dump truck. Assuming the roosters do not move, the bed of the truck can be modeled as a spring-mass-damper system (of values $k$, $m$, and $c$, respectively). Next, the load of roosters is modeled as a force $F(t) = m_r g$ that is applied to the spring-mass-damper system, as illustrated in the following figure. The simplification of the system allows for the analysis of the truck bed's vibrations as a simple spring-mass-damper system. First, assume that the truck's damper is broken, how does the maximum dynamic displacement compare to the static displacement. What would happen to the maximum displacement if the damper was repaired on the truck? %Next, using a damping value of $\zeta=0.5$ and $\omega_n=\pi$ what is the maximum displacement. How does this compare to the displacement for the case without the damper?  
 
 \begin{figure}[H]
 	\centering
@@ -445,7 +450,7 @@ This can be rearranged for the maximum displacement value $x_\text{max} $ as:
 	x_\text{max} = 2\frac{m_rg}{k}
 \end{equation} 
 
-Note that the dynamic displacement of the truck bed is twice that of the static displacement. Therefore, if the truck manufacturer designed the truck to only take the static load of rosters (i.e., if the roosters were placed gently into the truck bed), the frame of the truck would be damaged when the roosters were loaded into the truck dynamically. From this, it can be understood that it is important to consider dynamic responses of a system during the design phase.
+Note that the dynamic displacement of the truck bed is twice that of the static displacement. Therefore, if the truck manufacturer designed the truck to only take the static load of rosters (i.e., if the roosters were placed gently into the truck bed), the frame of the truck would be damaged when the roosters were loaded into the truck dynamically. From this, it can be understood that it is important to consider the dynamic responses of a system during the design phase.
 
 %\textbf{Example 1 - under damped}
 %For the case where the truck has a damper with a value of $\zeta=0.5$, the displacement $(x)$ can be modeled as:
@@ -457,7 +462,7 @@ Note that the dynamic displacement of the truck bed is twice that of the static 
 
 \subsubsection{Arbitrary Inputs to a System}
 \label{sec:impulse_inputs}
-The time domain response of a system to an arbitrary input force in time can be calculated using a series of impulses as shown in figure \ref{fig:Arbitary_excitation_forces}. This method allows the practitioner to easily calculate the response of an arbitrary input to a system using a single expression executed in a ``for loop''. This type of analysis is often more efficient in terms of programing than more direct methods such as the transfer functions sown in this text. 
+The time-domain response of a system to an arbitrary input force in time can be calculated using a series of impulses as shown in figure \ref{fig:Arbitary_excitation_forces}. This method allows the practitioner to easily calculate the response of an arbitrary input to a system using a single expression executed in a ``for loop''. This type of analysis is often more efficient in terms of programing than more direct methods such as the transfer functions sown in this text. 
 
 \begin{figure}[H]
 	\centering
@@ -471,7 +476,7 @@ The time domain response of a system to an arbitrary input force in time can be 
 \begin{example}
 
 
-In testing, an hammer is used to excite a 1-DOF system with an impact (i.e. impulse), however, the hammer ascendantly impacts the system twice. The first impact has a force of 0.2 N, while the second has a force of 0.1 N and happens 0.1 seconds after the first impact. Plot the response for the double impact. The system has the parameters $m$ = 1 kg, $c$ = 0.5 kg/s, k = 4 N/m. 
+In testing, a hammer is used to excite a 1-DOF system with an impact (i.e. impulse), however, the hammer impacts the system twice by ascendant (a double hit). The first impact has a force of 0.2 N, while the second has a force of 0.1 N and happens 0.1 seconds after the first impact. Plot the response for the double impact. The system has the parameters $m$ = 1 kg, $c$ = 0.5 kg/s, k = 4 N/m. 
 
 \noindent\textbf{Solution:} First, we can define the forcing function as:
 
@@ -572,7 +577,7 @@ this shows that the ratio of the input algebraic expressions over the output alg
 H(s) = \frac{X(s)}{F(s)}
 \label{eq:transfer_function}
 \end{equation}
-In a more formal term, the transfer function that is defined as: ``The ratio of the Laplace transforms of the output or response function to the laplace transform of the input or forcing function assuming zero initial conditions''.
+In a more formal term, the transfer function is defined as: ``The ratio of the Laplace transforms of the output or response function to the Laplace transform of the input or forcing function assuming zero initial conditions''.
 
 Equation \ref{eq:transfer_function} can be rearranged to show that the output of the system $X(s)$, can be obtained if we know the input $F(s)$ and the transfer function $H(s)$:
 \begin{equation}
@@ -618,7 +623,7 @@ H(s) = \frac{1}{ms^2+cs+k}
 \end{equation}
 This ratio is termed the transfer function of a system and is an important tool in vibration analysis.
 
-Sometimes, how the system responds to a inputs with certain frequency components is important in understanding they system in general, therefore, we want to solve for the frequency response function of the system. The frequency response function is denoted as $H(j\omega)$ where the complex number $s$ is replaced by the frequency component of the system while considering the imaginary portion in the complex plane (i.e., $s = j\omega$). Therefor, the frequency response function of the system becomes:
+Sometimes, how the system responds to an input with certain frequency components is important in understanding the system in general, therefore, we want to solve for the frequency response function of the system. The frequency response function is denoted as $H(j\omega)$ where the complex number $s$ is replaced by the frequency component of the system while considering the imaginary portion in the complex plane (i.e., $s = j\omega$). Therefore, the frequency response function of the system becomes:
 
 \begin{equation}
 H(j\omega) = \frac{1}{m(j\omega)^2+cj\omega+k} = \frac{1}{-m\omega^2+cj\omega+k} 
@@ -706,18 +711,27 @@ H(\omega) = |H(j\omega)| = \frac{1}{\sqrt{(k-m\omega^2)^2+c^2\omega^2}}
 	This is identical to the solution obtained using $F_0 \cos(\omega t)$ as would be expected because the transfer function is related to the system and not to the input. 
 \end{example}  
 
+		\begin{vibration_case_studies}
+			Discuss why chimney's are tapered and wind bands. This is useful as wind contains all frequency contents.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=2in]{../figures/tapered_chimney}
+				\caption{Tapered chimney with wind bands at a Weaving Factory in the UK \bl{P Flannagan / Large Chimney Stack of the disused Weaving Factory, Donaghcloney. / CC BY-SA 2.0}}
+			\end{figure}	
+		\end{vibration_case_studies}
+
 
 \subsubsection{Response to Random Inputs}
-The transfer and frequency response functions can be very useful for determining the system's response to random inputs. Up to this point we have solved for deterministic input. 
+The transfer and frequency response functions can be very useful for determining the system's response to random inputs. Up to this point, we have solved for deterministic input. 
 
 \begin{itemize}
 \item \textbf{Deterministic}-For a known time $t$, the value of the input force $F(t)$ is precisely known. 
 \item \textbf{Random} For a known time $t$, the value of the input force $F(t)$ is known only statistically. 
 \end{itemize}
 
-To expand, a random signal is a signal with no obvious pattern. For these types of it is not possible to focus on the details of the input signal, as is done with a deterministic signal, rather the signal is classified and manipulated in terms of its statistical properties. 
+To expand, a random signal is a signal with no obvious pattern. For these types of signals, it is not possible to focus on the details of the input signal, as is done with a deterministic signal, rather the signal is classified and manipulated in terms of its statistical properties. 
 
-Randomness in vibration analysis can be thought of as the result of a series of results obtained from testing a system repeatability for various inputs under varying conditions. In these cases, one record or time history is not enough to describe the system. Rather, an ensemble of various tests are used to describe how the system will respond to the various inputs. 
+Randomness in vibration analysis can be thought of as the result of a series of results obtained from testing a system's repeatability for various inputs under varying conditions. In these cases, one record or time history is not enough to describe the system. Rather, an ensemble of various tests are used to describe how the system will respond to the various inputs. 
 
 First, let us consider two inputs, a deterministic input (typical sin wave), and a random input (white noise). These inputs are shown in figure \ref{fig:Response_to_random_input_inputs}. 
 
@@ -751,7 +765,7 @@ This expression leads to the calculation of the root-mean-square (RMS) of the si
 x_\text{rms} = \sqrt{\overline{x^2}} 
 \end{equation}
 
-Considering a nonstationary signal, a important measure of interests is how fast the value of the variables change. This is important to understand as it provides context for how long a signal must be sampled to before a meaningful representation of the signal can be calculated in a statistical sense. One way to quantify how fast the values of signal change is the autocorrelation function: 
+Considering a nonstationary signal, an important measure of interest is how fast the value of the variables changes. This is important to understand as it provides context for how long a signal must be sampled before a meaningful representation of the signal can be calculated in a statistical sense. One way to quantify how fast the values of signal change is the autocorrelation function: 
 \begin{equation}
 R_{xx}(\tau) = \lim\limits_{T \rightarrow \infty} \frac{1}{T} \int_{0}^{T}x(t)x(t+\tau)dt
 \end{equation}

@@ -16,6 +16,11 @@
 \numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
 \newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
 
+% defines all vibration case studies
+\newtheorem{vcs}{Vibration Case Studies}
+\numberwithin{vcs}{section} % allows for the use of numbers that lign up with the section numbers
+\newenvironment{vibration_case_studies}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{vcs}\normalfont}{\end{vcs}\end{mdframed}}
+
 % defines the quotation enviorment 
 \usepackage{xcolor}
 \newcommand{\quotebox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth}{\space\Huge``}{#1}{\Huge''}{\break\null\hfill} {\small #2}  \end{minipage}\medbreak\end{minipage}}\end{center}}
@@ -108,7 +113,7 @@
 
 
 
-Until now we have only considered and modeled systems that can require one coordinate system to describe their motion. In this chapter we will develop the mathematical tools required to model multiple degree-of-freedom system that require multiple independent coordinates to describe their motion. As before, the equations that describe the motion of rigid bodies in space are developed from Newton's second law of motion. However, unlike before, there exists an independent equation for each body in motion. These equations are therefore coupled by the system and are often expressed in matrix notation such that the mass, damping, and stiffness matrices are easily defined. 
+Until now we have only considered and modeled systems that can require one coordinate system to describe their motion. In this chapter, we will develop the mathematical tools required to model multiple degree-of-freedom systems that require multiple independent coordinates to describe their motion. As before, the equations that describe the motion of rigid bodies in space are developed from Newton's second law of motion. However, unlike before, there exists an independent equation for each body in motion. These equations are therefore coupled by the system and are often expressed in matrix notation such that the mass, damping, and stiffness matrices are easily defined. 
 
 
 
@@ -127,12 +132,12 @@ Another arrangement of the same principle, in a format more related to vibration
   \begin{bmatrix} a_1+a_2 & b \\ c & d \end{bmatrix}\begin{bmatrix} e \\  f \end{bmatrix} = \begin{bmatrix} (a_1+a_2)e+bf \\ ce + df \end{bmatrix}
 \end{eqnarray}
 
-The transpose of a matrix is an  operator which flips a matrix over its diagonal. For a matrix $A$, the transpose $A^\text{T}$ can be written as:
+The transpose of a matrix is an operator which flips a matrix over its diagonal. For a matrix $A$, the transpose $A^\text{T}$ can be written as:
 \begin{eqnarray}
    A = \begin{bmatrix} a & b \\ c & d \\ e & f\end{bmatrix} \rightarrow A^\text{T} = \begin{bmatrix} a & c & e \\  b & d & f \end{bmatrix}
 \end{eqnarray}
 
-A matrix is symmetric if $A =A^\text{T}$. Therefore, symmetric matrix must be square and can be written as:
+A matrix is symmetric if $A =A^\text{T}$. Therefore, the symmetric matrix must be square and can be written as:
 \begin{eqnarray}
    A = \begin{bmatrix} a & b &c \\ d & e & f\\ g & h & i \end{bmatrix} = A^\text{T} = \begin{bmatrix} a & d & g \\ b & e & h \\ c & f & i \end{bmatrix}\text{, where } b=d \text{, }c=g\text{, }f=h
 \end{eqnarray}
@@ -151,7 +156,7 @@ and the inverse of a 2 $\times$ 2 matrix is defined as:
 A^{-1} = \frac{1}{\det (A)} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix} \text{, when } A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}
 \end{eqnarray}
 
-Matrices that do not have an inverse are called a singular matrix.  \rd{add notes on notation of vectors}
+A matrix that does not have an inverse is called a singular matrix.  \rd{add notes on the notation of vectors}
 \end{review}
 
 \subsection{General Discussion on Mode Shapes}
@@ -159,7 +164,7 @@ Matrices that do not have an inverse are called a singular matrix.  \rd{add note
 Studying and characterizing the natural frequencies of a system allows for the detailed investigation of the system response. Modern vibration analysis relies heavily on the concepts of mode shapes for various engineering tasks. 
 
 
-Mode shapes are not the displacement of a system, rather the describe the configurations into which a structure will naturally displace at a given frequency. For example, consider the 4-DOF system shown in figure~\ref{fig:general_mode_shapes} that represents a pole (i.e. cantilever beam). Assuming that the system experience a linear response and using the mode-superposition method we can see that the displaced shape $\vec{x}$ is a function of all of the mode shapes $u_i$ and their corresponding participation factors $q_i$. Note that the mode shapes associated with the lower frequencies tend to provide the greatest contribution to structural response. As the frequencies that excite the modes increase, the mode shapes contribute less, are predicted less reliably, and are harder to measure. Therefore, the analysis of the system is often truncated after the first few modes and rarely exceeds the 10$^{\text{th}}$ mode. 
+Mode shapes are not the displacement of a system, rather they describe the configurations into which a structure will naturally displace at a given frequency. For example, consider the 4-DOF system shown in figure~\ref{fig:general_mode_shapes} that represents a pole (i.e. cantilever beam). Assuming that the system experience a linear response and using the mode-superposition method we can see that the displaced shape $\vec{x}$ is a function of all of the mode shapes $u_i$ and their corresponding participation factors $q_i$. Note that the mode shapes associated with the lower frequencies tend to provide the greatest contribution to structural response. As the frequencies that excite the modes increase, the mode shapes contribute less, are predicted less reliably, and are harder to measure. Therefore, the analysis of the system is often truncated after the first few modes and rarely exceeds the 10$^{\text{th}}$ mode. 
 
 Figure~\ref{fig:general_mode_shapes} shows a structure with $N$ degrees of freedom that therefore had $N$ corresponding mode shapes. Each mode shape is independent and normalized such that the maximum displacements are the same. The summation of the mode shapes multiplied by their corresponding participation factors ($q_i$) yields the deflection of the structure. 
 
@@ -178,7 +183,7 @@ Figure~\ref{fig:general_mode_shapes} shows a structure with $N$ degrees of freed
 \subsection{Modeling Undamped Two Degree of Freedom Systems}
 \label{sec:two_degree_of_freedom}
 
-Consider the undamped 2-DOF systems presented in figure \ref{fig:2-DOF-spring_mass_examples}. These system with a single mass capable of moving in two directions. To expand, figure \ref{fig:2-DOF-spring_mass_examples}(a) reports a mass that can move horizontally or vertically in space. However, this mass does not rotate during its movements. Moreover, figure \ref{fig:2-DOF-spring_mass_examples}(b) presents a system that rotates about the spring and displaces vertically. These are examples of 2 DOF systems because each system has two independent coordinate systems that express the movement of the mass. 
+Consider the undamped 2-DOF systems presented in figure \ref{fig:2-DOF-spring_mass_examples}. This system with a single mass capable of moving in two directions. To expand, figure \ref{fig:2-DOF-spring_mass_examples}(a) reports a mass that can move horizontally or vertically in space. However, this mass does not rotate during its movements. Moreover, figure \ref{fig:2-DOF-spring_mass_examples}(b) presents a system that rotates about the spring and displaces vertically. These are examples of 2 DOF systems because each system has two independent coordinate systems that express the movement of the mass. 
 
 \begin{figure}[H]
 	\centering
@@ -187,7 +192,7 @@ Consider the undamped 2-DOF systems presented in figure \ref{fig:2-DOF-spring_ma
 	\label{fig:2-DOF-spring_mass_examples}
 \end{figure}
 
-Another example of a 2-DOF system with two masses, each with their own independent coordinate system, is presented in figure \ref{fig:2-DOF-spring_mass_horizontal}. The two coordinates that describe the systems movements are $x_1$ and $x_2$.
+Another example of a 2-DOF system with two masses, each with their own independent coordinate system, is presented in figure \ref{fig:2-DOF-spring_mass_horizontal}. The two coordinates that describe the system's movements are $x_1$ and $x_2$.
 
 \begin{figure}[H]
 	\centering
@@ -215,9 +220,9 @@ Where the bold text denotes vectors. Therefore, the vectors $\vec{u}_1$ and $\ve
 \end{eqnarray}
 The four key components of the solution expressed in equation \ref{eq:2-DOF_solution} are:
 \begin{enumerate}
-\item $\omega_1$ and $\omega_2$ are the natural frequencies of the system. They are not the frequencies of the masses. The solution states that each of the masses oscillates at the two frequencies $\omega_1$ and $\omega_2$. Moreover, consider the special case where the initial conditions are selected to force $A_2 = 0$, in this case, each mas would only oscillates at only one frequency, $\omega_1$.
+\item $\omega_1$ and $\omega_2$ are the natural frequencies of the system. They are not the frequencies of the masses. The solution states that each of the masses oscillates at the two frequencies $\omega_1$ and $\omega_2$. Moreover, consider the special case where the initial conditions are selected to force $A_2 = 0$, in this case, each mas would only oscillate at only one frequency, $\omega_1$.
 \item $A_1$ and $A_2$ are the constants of integration and determine the amplitude of the system.
-\item $\phi_1$ and $\phi_2$ represent the phase shift of the system
+\item $\phi_1$ and $\phi_2$ represents the phase shift of the system
 \item $\vec{u}_1$ and $\vec{u}_2$ are the first and second mode shapes of the system and couple the system together.
 \end{enumerate}
 
@@ -247,7 +252,7 @@ x_1(0) = x_{10} \\
 x_2(0) = x_{20} \nonumber \\ 
 \dot{x}_2(0) = \dot{x}_{20} = v_{20} \nonumber
 \end{eqnarray}
-As before, these initial conditions will be the constants of integration used to solve the two second-order differential equations. This solution will provide the free response of each mass in the system. There is a multitude of ways to solve these two coupled  second-order differential equations, however, here we will just consider a matrix notation solution. This matrix notation solution is used as this formulation is readably solved using computers and is expandable to more than 2 DOF.
+As before, these initial conditions will be the constants of integration used to solve the two second-order differential equations. This solution will provide the free response of each mass in the system. There is a multitude of ways to solve these two coupled second-order differential equations, however, here we will just consider a matrix notation solution. This matrix notation solution is used as this formulation is readably solved using computers and is expandable to more than 2 DOF.
 
 To initiate the solution, let us first develop the matrix formulation of the two coupled ODEs:
 \begin{eqnarray}
@@ -269,13 +274,13 @@ along with the displacement, velocity, and acceleration matrices:
 \begin{eqnarray}
  \vec{x}=  \begin{bmatrix} x_1 \\  x_2 \end{bmatrix} , \hspace{2ex} \dot{\vec{x}}=  \begin{bmatrix} \dot{x}_1 \\  \dot{x}_2 \end{bmatrix}, \hspace{2ex} \ddot{\vec{x}}=  \begin{bmatrix} \ddot{x}_1 \\  \ddot{x}_2 \end{bmatrix}
 \end{eqnarray}
-Beyond these equations we can write the initial conditions as:
+Beyond these equations, we can write the initial conditions as:
 \begin{eqnarray}
 \vec{x}_0=  \begin{bmatrix} x_1(0) \\  x_2(0) \end{bmatrix},  \hspace{1cm} \dot{\vec{x}}_0=  \begin{bmatrix} \dot{x}_1(0) \\  \dot{x}_2(0) \end{bmatrix}
 \end{eqnarray}
 This simple connection between vibration analysis and matrix analysis allows computers to be used to solve large and complicated vibration problems quickly.
 
-Recall that the 1-DOF version of the equation of motion was solved by calculating the values of the constants in an assumed harmonic solution. The same approach is applied here in order to solve for the displacement of the two-DOF system. This time, the the solution is assumed in the form:
+Recall that the 1-DOF version of the equation of motion was solved by calculating the values of the constants in an assumed harmonic solution. The same approach is applied here in order to solve for the displacement of the two-DOF system. This time, the solution is assumed in the form:
 
 \begin{equation}
 	\vec{x}(t) = \vec{u}e^{j\omega t}
@@ -303,7 +308,7 @@ As $e^{j\omega t} \neq 0$ for any value of $t$ and not allowing $\vec{u}$ to be 
 \begin{equation}
 (-\omega^2 M  + K)\vec{u} =0, \hspace{1cm} \vec{u}\neq0
 \end{equation}
-This forms a homogeneous set of algebraic equations. To be useful, these equations have a nonzero solution for the system must exist. For this to be true, the the inverse of the coefficient matrix $(-\omega^2 M  + K)$ must not exist. To expand, assume that the the inverse of $(-\omega^2 M  + K)$ does exist, by multiplying both sides of the equation by $(-\omega^2 M  + K)^{-1}$ yields $\vec{u}=0$. This is trivial solution (its not useful) as it no motion in the system is implied. Therefore, the logical connection can be drawn between the  solution of equation and the inverse of the coefficient matrix $(-\omega^2 M  + K)$.
+This forms a homogeneous set of algebraic equations. To be useful, these equations have a nonzero solution for the system must exist. For this to be true, the inverse of the coefficient matrix $(-\omega^2 M  + K)$ must not exist. To expand, assume that the inverse of $(-\omega^2 M  + K)$ does exist, by multiplying both sides of the equation by $(-\omega^2 M  + K)^{-1}$ yields $\vec{u}=0$. This is a trivial solution (it is not useful) as no motion in the system is implied. Therefore, the logical connection can be drawn between the solution of the equation and the inverse of the coefficient matrix $(-\omega^2 M  + K)$.
 
 Applying the singularity condition to the coefficient matrix of equation $(-\omega^2 M  + K)\vec{u} =0, \hspace{1ex} \vec{u}\neq0$ results a nonzero solution of $\vec{u}$. However, for this to exist the following must be true:
 \begin{equation}
@@ -337,7 +342,7 @@ The values obtained for $\vec{u}_1$ and $\vec{u}_2$ can now be combined with the
 \begin{equation}
 	\vec{x}(t) = \vec{u}e^{j\omega t}
 \end{equation}
-to form a set of solution:
+to form a set of solutions:
 \begin{equation}
 	\vec{x}(t) = \vec{u}_1e^{-j\omega_1 t}, \hspace{2ex} \vec{u}_1e^{j\omega_1 t}, \hspace{2ex} \vec{u}_2e^{-j\omega_2 t}, \hspace{2ex} \vec{u}_2e^{j\omega_2 t}
 \end{equation}
@@ -356,7 +361,7 @@ Another way to write this equation is in the form:
 \end{equation}
 Where the values for $A_1$ and $A_2$ can be obtained by setting applying the boundary conditions and taking the derivatives of the equations as done in the 1-DOF problems. 
 
-The final form of the equation provides a physical insight into the solution of the system. It states that the each mass in the system oscillates at both of the natural frequencies of the system ($\omega_1$ and $\omega_2$). Furthermore, the importance of the  initial conditions can be understood. Assume that initial conditions are chosen that result in $A_2=0$, this cancels out the second natural frequency such that each mass oscillates at only one frequency,  $\omega_1$. Moreover, the positions of the masses can determined by the values of the vector $\vec{u}_1$ at any given time. For this reason,  $\vec{u}_1$ is termed the first mode shape of the system. Likewise, if the opposite initial conditions are chosen such that  $A_1=0$, then both system coordinates (e.g., masses in the systems we have studied) will oscillate at $\omega_2$ and again, the positions can be obtained from the vector $\vec{u}_2$. Where $\vec{u}_2$ is termed the second mode shape. The interactions between mode shapes and natural frequencies are very important and form the basis of several area in the field of vibrations.
+The final form of the equation provides physical insight into the solution of the system. It states that each mass in the system oscillates at both of the natural frequencies of the system ($\omega_1$ and $\omega_2$). Furthermore, the importance of the initial conditions can be understood. Assume that initial conditions are chosen that result in $A_2=0$, this cancels out the second natural frequency such that each mass oscillates at only one frequency,  $\omega_1$. Moreover, the positions of the masses can be determined by the values of the vector $\vec{u}_1$ at any given time. For this reason,  $\vec{u}_1$ is termed the first mode shape of the system. Likewise, if the opposite initial conditions are chosen such that  $A_1=0$, then both system coordinates (e.g., masses in the systems we have studied) will oscillate at $\omega_2$ and again, the positions can be obtained from the vector $\vec{u}_2$. Where $\vec{u}_2$ is termed the second mode shape. The interactions between mode shapes and natural frequencies are very important and form the basis of several areas in the field of vibrations.
 
 \begin{example}
 \label{ex:2-DOF}
@@ -645,7 +650,7 @@ Moreover, the inverse of the diagonal matrix ($M^{1/2}$) is denoted as $M^{-1/2}
 
 \subsubsection{Deriving the Eigenvalue-based Solution}
  
-To derive an eigenvalue-based solution for calculating the natural frequencies and mode shapes let us consider the previously derived EOM for a undamped 2-DOF system:
+To derive an eigenvalue-based solution for calculating the natural frequencies and mode shapes let us consider the previously derived EOM for an undamped 2-DOF system:
 \begin{equation}
 M\ddot{\vec{x}} + K\vec{x} =0
 \end{equation}
@@ -659,7 +664,7 @@ I\ddot{\vec{q}} + \widetilde{K}\vec{q} =0
 \end{equation}
 where $\widetilde{K}=M^{-1/2}KM^{-1/2}$ is analogous to $\sqrt{k/m}$ from the 1-DOF system. 
 
-As before, a solution is found by assuming a solution, taking the derivatives of the solution and substituting it into the EOM. Following these steps and assuming a solution of:
+As before, a solution is found by assuming a solution, taking the derivatives of the solution, and substituting it into the EOM. Following these steps and assuming a solution of:
 \begin{equation}
 \vec{q} = \textbf{v}e^{j\omega t}
 \end{equation}
@@ -676,7 +681,7 @@ Knowing that $\textbf{v}\neq0$, as a vector with zeros would mean no motion is p
 \widetilde{K}\textbf{v} =  \lambda \textbf{v}
 \label{eq:eigenvalue_problem}
 \end{equation}
-where $\lambda = \omega^2 $. Or more importantly, $\omega = \sqrt{\lambda}$. As $\widetilde{K}$ is symmetric, this is a symmetric eigenvalue problem. Moreover, the vector $\lambda$ represent the eigenvalues of the system. Given that  we set $\vec{x}=M^{-1/2}\vec{q}$, the eigenvectors are not a direct representation of the mode shapes. To develop a link between the eigenvectors and mode shapes we first need to normalize the lengths of the eigenvectors obtained by solving equation \ref{eq:eigenvalue_problem} to that of a unit vector. The norm of a unit vector is defined as:
+where $\lambda = \omega^2 $. Or more importantly, $\omega = \sqrt{\lambda}$. As $\widetilde{K}$ is symmetric, this is a symmetric eigenvalue problem. Moreover, the vector $\lambda$ represents the eigenvalues of the system. Given that we set $\vec{x}=M^{-1/2}\vec{q}$, the eigenvectors are not a direct representation of the mode shapes. To develop a link between the eigenvectors and mode shapes we first need to normalize the lengths of the eigenvectors obtained by solving equation \ref{eq:eigenvalue_problem} to that of a unit vector. The norm of a unit vector is defined as:
 \begin{equation}
 1= ||\textbf{v}|| = \sqrt{\textbf{v}^{\text{T}}\textbf{v}} = \sqrt{\sum_{i=1}^{n}(v_i^2)}
 \end{equation} 
@@ -886,7 +891,7 @@ Considering a system where $F_0=10$ N, $m_1=1000$ kg, $m_2=1000$ kg, and $k=1500
 
 \subsection{Cramer's Rule for Solving 2-DOF Systems}
 
-Cramer's rule is an explicit formula for the solution of a system of linear equations with as many equations as unknown. Cramer's rule is valid whenever the system has a unique solution and can be used as a more generalized approach to solve for the temporal solution to a 2-DOF. Consider the 2-DOF systems shown in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_double_wall}, where the two coupled equations of motion are expressed as: 
+Cramer's rule is an explicit formula for the solution of a system of linear equations with as many equations as unknowns. Cramer's rule is valid whenever the system has a unique solution and can be used as a more generalized approach to solving for the temporal solution to a 2-DOF. Consider the 2-DOF systems shown in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_double_wall}, where the two coupled equations of motion are expressed as: 
 \begin{eqnarray}
 m_1\ddot{x}_1 + (c_1+c_2)\dot{x}_1 - c_2\dot{x}_2 + (k_1+k_2)x_1 - k_2x_2 =0 \\
 m_2\ddot{x}_2 + (c_2+c_3)\dot{x}_2 - c_2\dot{x}_1 + (k_2+k_3)x_2 - k_2x_1 =0 \nonumber
@@ -1000,7 +1005,7 @@ content...
 
 \subsection{Multiple Degrees of Freedom}
 
-This chapter introduces methodologies for the solving of systems with more than 2-DOF. As shown in Chapter 5, 2-DOF systems can be solved analytically using 2 EOM coupled through their mode shapes. However, these methods become tedious when extended to systems with damping or even beyond beyond 2-DOF system.
+This chapter introduces methodologies for the solving of systems with more than 2-DOF. As shown in Chapter 5, 2-DOF systems can be solved analytically using 2 EOM coupled through their mode shapes. However, these methods become tedious when extended to systems with damping or even beyond the 2-DOF system.
 
 
 
@@ -1017,7 +1022,7 @@ This chapter introduces methodologies for the solving of systems with more than 
 \end{figure}
 \footnotetext[1]{``A Beechcraft Baron 58 in flight'' by San Diego Air \& Space Museum Archives, Public Domain.}  
 
-Modeling the vibrations of a dual engine airplane as a three-degree-of-freedom system can be done as shown in figure~\ref{fig:mode_shape_aiplane_example} where the fuselage is a center mass, and the engines are point masses suspended by cantilevers from the center mass. The stiffness of the wing corresponds to the modulus of the wing $E$ and its moment of inertia $I$. assuming that $m_1=m_3=1m$, $m_2=4m$, and $k=\frac{3EI}{l}$, the EOM can be written as:
+Modeling the vibrations of a twin-engine airplane as a three-degree-of-freedom system can be done as shown in figure~\ref{fig:mode_shape_aiplane_example} where the fuselage is a center mass, and the engines are point masses suspended by cantilevers from the center mass. The stiffness of the wing corresponds to the modulus of the wing $E$ and its moment of inertia $I$. assuming that $m_1=m_3=1m$, $m_2=4m$, and $k=\frac{3EI}{l}$, the EOM can be written as:
 
 \begin{equation}
 	  m\begin{bmatrix} 1 & 0 & 0 \\    0  & 2 & 0 \\ 0  & 0 & 1 \end{bmatrix} \begin{bmatrix} \ddot{x}_1 \\    \ddot{x}_2 \\    \ddot{x}_3  \end{bmatrix} + \frac{3EI}{l} \begin{bmatrix} 3 & -3 & 0 \\  -3  & 6 & -3 \\  0  & -3 & 3 \end{bmatrix} \begin{bmatrix} x_1 \\    x_2 \\    x_3 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \\ 0 \end{bmatrix} 
@@ -1082,7 +1087,7 @@ solving for the eigenvalues and eigenvectors yields:
 \begin{equation}
 v_1 = \begin{bmatrix} -0.57735 \\    -0.57735 \\   -0.57735  \end{bmatrix}, \; \; v_2 = \begin{bmatrix} 0.707107 \\    0.0 \\    -0.707107 \end{bmatrix}, \; \; v_3 = \begin{bmatrix} 0.666667 \\    -0.333333 \\    0.666667  \end{bmatrix}
 \end{equation}
-Note that the eigenvalues are the same as those solved for using the normalized stiffness matrix approach while the eigenvectors appear to be different. This is because for generalized eigenvalue approach $u_i=v_i \alpha$ where $\alpha$ is a scaling value. Note that here $\alpha=1$ as the mode shapes are already normalized. Note, that some software tools may not return normalized modes and the nodes should be normalized by the norm of the vector ($u_i = \frac{u_i}{|u_i|}$) to achieve the same mode shapes as before. Moreover, recall that the information stored in the eigenvectors are just the direction of the transform. Therefore, the mode shapes are correct but some amplitudes are reversed but as the mode shapes only report the shape these are corrected.  Plotting the mode shapes results in:
+Note that the eigenvalues are the same as those solved for using the normalized stiffness matrix approach while the eigenvectors appear to be different. This is because for generalized eigenvalue approach $u_i=v_i \alpha$ where $\alpha$ is a scaling value. Note that here $\alpha=1$ as the mode shapes are already normalized. Note, that some software tools may not return normalized modes and the nodes should be normalized by the norm of the vector ($u_i = \frac{u_i}{|u_i|}$) to achieve the same mode shapes as before. Moreover, recall that the information stored in the eigenvectors is just the direction of the transform. Therefore, the mode shapes are correct but some amplitudes are reversed as the mode shapes only report the shape these are corrected.  Plotting the mode shapes results in:
 
 \begin{figure}[H]
 	\centering
@@ -1214,7 +1219,7 @@ and solving yields:
 \begin{equation}
 \lambda_2 = 6.765 \text{, } \vec{v}_2 = \begin{bmatrix} -0.151349 \\  0.988480 \end{bmatrix}  \nonumber
 \end{equation}
-this is than related to the natural frequency and mode shapes as:
+this is then related to the natural frequency and mode shapes as:
 \begin{equation}
 \omega_1 = \sqrt{\lambda_1} = 1.65 \text{ rad/s, } \vec{v}_1 = \vec{v}_1 \alpha_1 = \begin{bmatrix} 0.546819 \\  0.837251 \end{bmatrix} \alpha_1
 \end{equation}

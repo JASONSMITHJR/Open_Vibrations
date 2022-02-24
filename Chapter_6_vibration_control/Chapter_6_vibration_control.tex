@@ -16,6 +16,11 @@
 \numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
 \newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
 
+% defines all vibration case studies
+\newtheorem{vcs}{Vibration Case Studies}
+\numberwithin{vcs}{section} % allows for the use of numbers that lign up with the section numbers
+\newenvironment{vibration_case_studies}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{vcs}\normalfont}{\end{vcs}\end{mdframed}}
+
 % defines the quotation enviorment 
 \usepackage{xcolor}
 \newcommand{\quotebox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth}{\space\Huge``}{#1}{\Huge''}{\break\null\hfill} {\small #2}  \end{minipage}\medbreak\end{minipage}}\end{center}}
@@ -170,6 +175,17 @@ For a constant value of velocity, ($v_\text{max}$), equation \ref{eq:ln_v_max_2}
 \end{figure}
 
 
+		\begin{vibration_case_studies}
+			Discuss vibration mitigation in tall structures
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=3.5in]{../figures/Taipei_101_Tuned_Mass_Damper.png}
+				\caption{Illustration of Taipei 101's main tuned mass damper. \bl{Someformofhuman, CC BY-SA 4.0 $<$https://creativecommons.org/licenses/by-sa/4.0$>$, via Wikimedia Commons}}
+			\end{figure}	
+		\end{vibration_case_studies}
+
+
+
 \subsection{Vibration Isolation}
 
 
@@ -286,6 +302,28 @@ and the effective damping ratio of the system
 \begin{equation}
 \zeta = \frac{c+g_2}{2\sqrt{m(k+g_1)}}
 \end{equation}
+
+
+
+
+
+
+
+
+		\begin{vibration_case_studies}
+			Discuss hot tire thread is off-set to control the pitch created by road noise.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=4.5in]{../figures/tire_tred_patent.png}
+				\caption{Illustration for US patent US2006197A which proposed the use of irregular thread patterns to control the pitch of road noses. \bl{Public Domain}}
+			\end{figure}	
+		\end{vibration_case_studies}
+
+
+
+
+
+
 
 
 

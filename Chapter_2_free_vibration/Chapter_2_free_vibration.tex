@@ -16,10 +16,10 @@
 \numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
 \newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
 
-% defines all practical example enviorment
-\newtheorem{pr}{Practical Example}
-\numberwithin{pr}{section} % allows for the use of numbers that lign up with the section numbers
-\newenvironment{practical_example}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{pr}\normalfont}{\end{pr}\end{mdframed}}
+% defines all vibration case studies
+\newtheorem{vcs}{Vibration Case Studies}
+\numberwithin{vcs}{section} % allows for the use of numbers that lign up with the section numbers
+\newenvironment{vibration_case_studies}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{vcs}\normalfont}{\end{vcs}\end{mdframed}}
 
 % defines the quotation enviorment 
 \usepackage{xcolor}
@@ -115,7 +115,7 @@
 
 
 			
-		Vibrations (i.e. the exchange of potential and kinetic energy) requires oscillatory motion that may repeat itself regularly or irregularly. A motion that is repeated on time intervals is called periodic motion. If this motion has a single frequency and amplitude it is called simple harmonic motion are represents the most basic form of oscillatory motion as depicted in figure \ref{fig:oscillatorymotion}.  For a 1-DOF system simple harmonic motion is defined as a periodic motion where the restoring force is directly proportional to the displacement and acts in the direction opposite to that of displacement.	
+		Vibrations (i.e. the exchange of potential and kinetic energy) require oscillatory motion that may repeat itself regularly or irregularly. A motion that is repeated at time intervals is called periodic motion. If this motion has a single frequency and amplitude it is called simple harmonic motion are represents the most basic form of oscillatory motion as depicted in figure \ref{fig:oscillatorymotion}.  For a 1-DOF system, simple harmonic motion is defined as a periodic motion where the restoring force is directly proportional to the displacement and acts in the direction opposite to that of displacement.	
 		
 
 		\begin{figure}[H]
@@ -125,7 +125,7 @@
 			\label{fig:oscillatorymotion}
 		\end{figure}
 
-		Given the nature of simple harmonic motion, constant amplitude and frequency, the wave starting at the origin $O$ can be modeled at a point on the end of a vector with length $A$ rotating rotating at a constant angular velocity $\omega_\text{n}$ where the angle from the origin of the vector is $\phi$, defined as $\phi = \omega t$. Where $\omega$ is the lowercase Greek letter Omega and $\phi$ is the lowercase Coptic letter phi. This is similar to a Greek phi ($\varphi$) and either can be used in this context. The subscript $n$ on $\omega$ denotes that this frequency relates to the natural frequency of the system, the only frequency in simple harmonic motion. A visualization of the harmonic motion obtained from projecting the point on the edge of a vector onto the $\omega_\text{n} t$ space is presented in figure \ref{fig:Harmonic_Motion}. 
+		Given the nature of simple harmonic motion, constant amplitude, and frequency, the wave starting at the origin $O$ can be modeled at a point on the end of a vector with length $A$ rotating at a constant angular velocity $\omega_\text{n}$ where the angle from the origin of the vector is $\phi$, defined as $\phi = \omega t$. Where $\omega$ is the lowercase Greek letter Omega and $\phi$ is the lowercase Coptic letter phi. This is similar to a Greek phi ($\varphi$) and either can be used in this context. The subscript $n$ on $\omega$ denotes that this frequency relates to the natural frequency of the system, the only frequency in simple harmonic motion. A visualization of the harmonic motion obtained from projecting the point on the edge of a vector onto the $\omega_\text{n} t$ space is presented in figure \ref{fig:Harmonic_Motion}. 
 
 		\begin{figure}[H]
 			\centering
@@ -195,7 +195,7 @@
 				\omega_\text{n}= \sqrt{\frac{k}{m}}
 				\label{eq:natural_frequency}
 			\end{equation}
-			Equation \ref{eq:natural_frequency} represents a solution to the EOM  presented in equation \ref{eq:EOM}. This solution is not in the form of an ODE  so, therefore, we can experientially prove that this is the correct solution. For example, we could build a systems with known mass and stiffness and measure the natural frequency of the system. Equation \ref{eq:natural_frequency} equation leads to:
+			Equation \ref{eq:natural_frequency} represents a solution to the EOM  presented in equation \ref{eq:EOM}. This solution is not in the form of an ODE  so, therefore, we can experientially prove that this is the correct solution. For example, we could build a system with known mass and stiffness and measure the natural frequency of the system. Equation \ref{eq:natural_frequency} equation leads to:
 			\begin{equation}
 				T= \frac{2 \pi}{\omega_\text{n}}
 			\end{equation}
@@ -283,7 +283,7 @@
 				\label{eq:response_simple_harmonic_motion}
 			\end{equation}
 			
-			\noindent This equation provides a mathematical solutions that relates displacement of the mass to the initial conditions $x_0$ and $v_0$. The solution is considered a free response because no input is applied after t=0. The relationship between the initial conditions ($x_0$ and $v_0$) and the amplitude and phase of the response can be expressed using the Pythagorean theorem, $a^2 + b^2 = c^2$, as annotated in figure \ref{fig:Trigonometric_relationship}.
+			\noindent This equation provides a mathematical solution that relates displacement of the mass to the initial conditions $x_0$ and $v_0$. The solution is considered a free-response because no input is applied after t=0. The relationship between the initial conditions ($x_0$ and $v_0$) and the amplitude and phase of the response can be expressed using the Pythagorean theorem, $a^2 + b^2 = c^2$, as annotated in figure \ref{fig:Trigonometric_relationship}.
 			
 			\begin{figure}[H]
 				\centering
@@ -300,7 +300,7 @@
 				\bigg(\frac{x_0\omega_\text{n}}{v_0}\bigg) = \pm \frac{\pi}{2}, \text{ when } v_0=0
 			\end{equation}			
 			
-			This step is applied in IEEE floating point arithmetic (IEEE 754) and results in either $\pi/2$ or $\pm \pi/2$ depending on the rounding format used. From the practitioner's side, it becomes important to recognize the situation $v_0=0$ and correct this value as needed. 
+			This step is applied in IEEE floating-point arithmetic (IEEE 754) and results in either $\pi/2$ or $\pm \pi/2$ depending on the rounding format used. From the practitioner's side, it becomes important to recognize the situation $v_0=0$ and correct this value as needed. 
 			
 			\begin{figure}[H]
 				\centering
@@ -312,7 +312,7 @@
 
 			\begin{example}
 		
-				A vehicle wheel, tire, and suspension can be modeled as a SDOF spring and mass as depicted below: The mass of the wheel and tire is measured to be 300 kg and its frequency of oscillation is observed to be 10 rad/sec. What is the stiffness of the wheel assembly?
+				A vehicle wheel, tire, and suspension can be modeled as an SDOF spring and mass as depicted below: The mass of the wheel and tire is measured to be 300 kg and its frequency of oscillation is observed to be 10 rad/sec. What is the stiffness of the wheel assembly?
 				
 				\begin{figure}[H]
 					\centering
@@ -360,7 +360,7 @@
 
 	\subsection{General Solution for Vibrating Systems}
 
-		The EOM for a vibrating system has many solutions and can be be expressed in various forms including a general solution. These forms offer different mathematical approaches to solve the same 1-DOF spring-mass system and relate to each other through Euler's equations.
+		The EOM for a vibrating system has many solutions and can be expressed in various forms including a general solution. These forms offer different mathematical approaches to solve the same 1-DOF spring-mass system and relate to each other through Euler's equations.
 				
 		\begin{review}
 			Vibration analysis uses complex numbers to solve the EOM's differential equation. In this text the imaginary number is termed $j$ (sometimes referred to as $i$): such that:
@@ -376,7 +376,7 @@
 			\begin{equation}
 				x=a+bj
 			\end{equation}			 	
-			here, $a$ is referred to as the real number and $b$ is the imaginary part of the number $x$. Such complex numbers can be represented in the complex plane, also called a Argand plot. The absolute value or modules is defined as $|x|$ presented on the complex plot. 
+			here, $a$ is referred to as the real number and $b$ is the imaginary part of the number $x$. Such complex numbers can be represented in the complex plane, also called an Argand plot. The absolute value or modules is defined as $|x|$ presented on the complex plot. 
 			
 			\begin{figure}[H]
 				\centering
@@ -584,7 +584,7 @@
 	\subsection{Damping}
 	
 	
-		The response of a spring-mass system predicts that a system will oscillate indefinitely. However, we know that this is not true from observing real-world solutions. So based on real-world observations and mathematical conveniences, we need to add a term that will remove ``energy'' from the system with time. To do this the idea of the ideal dashpot is introduced. A linear dashpot is diagrammed in figure \ref{fig:linear_dashpot} and is a mechanical device that resits motion via viscous friction and therefore converts the mechanical energy of the system into thermal energy that is dissipated.
+		The response of a spring-mass system predicts that a system will oscillate indefinitely. However, we know that this is not true from observing real-world solutions. So based on real-world observations and mathematical conveniences, we need to add a term that will remove ``energy'' from the system with time. To do this the idea of the ideal dashpot is introduced. A linear dashpot is diagrammed in figure \ref{fig:linear_dashpot} and is a mechanical device that resists motion via viscous friction and therefore converts the mechanical energy of the system into thermal energy that is dissipated.
 		
 		\begin{figure}[H]
 			\centering
@@ -597,7 +597,7 @@
 		\begin{equation}
 			f_c = c \dot{x}
 		\end{equation}
-		the constant $c$, called the damping coefficient, has the units of kg/s. Dashpots are a mathematical representation of viscous dampers installed in automobiles, aircraft, structures, and other mechanical devices. However, all systems have inherent damping not just systems with physical dampers. The spring-mass system can be used as a representations of real-world systems with inherent damping as demonstrated by the rubber engine mount depicted in figure \ref{fig:rubber_engine_mount}.
+		the constant $c$, called the damping coefficient, has the units of kg/s. Dashpots are a mathematical representation of viscous dampers installed in automobiles, aircraft, structures, and other mechanical devices. However, all systems have inherent damping not just systems with physical dampers. The spring-mass system can be used as a representation of real-world systems with inherent damping as demonstrated by the rubber engine mount depicted in figure \ref{fig:rubber_engine_mount}.
 		
 		
 		\begin{figure}[H]
@@ -607,7 +607,7 @@
 			\label{fig:rubber_engine_mount}
 		\end{figure}
 
-		Depending on the amount of damping present in a system, the temporal response of the system will represent itself in various way, as represented in figure \ref{fig:damping_cases}. To reiterate, an undamped case will oscillates around the equilibrium and does not decay. If a limited amount of damping is present in a system it will oscillates around the equilibrium and slowly decay with time to the equilibrium position, this is termed underdamped. If an excessive amount of damping is present, the system will not oscillate but decay directly to the equilibrium position, this is termed the overdamped case. Lastly, there exists a special case that results in the system converging as quickly as possible to the equilibrium position without oscillations; this cases is termed the critically damped case. Furthermore, the amount of damping required to obtain a critically damped system is the damping value that the underdamped and overdamped cases for a specific system. To recap, the key types of damping are:
+		Depending on the amount of damping present in a system, the temporal response of the system will represent itself in various ways, as represented in figure \ref{fig:damping_cases}. To reiterate, an undamped case will oscillate around the equilibrium and does not decay. If a limited amount of damping is present in a system it will oscillate around the equilibrium and slowly decay with time to the equilibrium position, this is termed underdamped. If an excessive amount of damping is present, the system will not oscillate but decay directly to the equilibrium position, this is termed the overdamped case. Lastly, there exists a special case that results in the system converging as quickly as possible to the equilibrium position without oscillations; this case is termed the critically damped case. Furthermore, the amount of damping required to obtain a critically damped system is the damping value that the underdamped and overdamped cases for a specific system. To recap, the key types of damping are:
 		
 		\begin{itemize}
 			\item \textbf{Undamped} - Oscillates around the equilibrium and does not decay.
@@ -692,7 +692,7 @@
 			\begin{equation}
 				\lambda_{1,2} = -\zeta\omega_\text{n} \pm \omega_\text{n} \sqrt{\zeta^2-1}
 			\end{equation}
-			From this equation it become clear that $\zeta$ determines whether the roots are complex or real, this in turn determines the nature of the response of the structure. Listing our possible responses we get:
+			From this equation, it becomes clear that $\zeta$ determines whether the roots are complex or real, this, in turn, determines the nature of the response of the structure. Listing the possible responses we get:
 			\begin{table}[h!]
 				\centering
 				\begin{tabular}{lccc}
@@ -870,7 +870,7 @@
 		\end{example}
 
 		\begin{example}
-			Figure~\ref{fig:rubber_mounted_mass_with_spring} shows an industrial device consisting of a mass isolated from its fixtures by two rubber dampers and a offset spring with an angle $\alpha$. Provide an estimate of the system's damped natural frequency in the vertical direction.	Assume the the rubber dampers add damping and only negligible stiffness to the system and that the spring is long enough such that the angles remain constant. 	
+			Figure~\ref{fig:rubber_mounted_mass_with_spring} shows an industrial device consisting of a mass isolated from its fixtures by two rubber dampers and an offset spring with an angle $\alpha$. Provide an estimate of the system's damped natural frequency in the vertical direction.	Assume the rubber dampers add damping and only negligible stiffness to the system and that the spring is long enough such that the angles remain constant. 	
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/rubber_mounted_mass_with_spring.png}
@@ -926,7 +926,11 @@
 				\boxed{\omega_\text{d} = \omega_\text{n}\sqrt{1-\zeta^2}}
 			\end{equation*}
 		\end{example}	
-				
+	
+		\begin{vibration_case_studies}
+			Discuss Noise, vibration, and harshness, maybe an automotive example. Need to take my own picture of a epoxy-based damper on a car panel.
+		\end{vibration_case_studies}
+			
 		\subsubsection{Modeling Overdamped Motion}
 			
 			In the case of overdamped systems, $1<\zeta$, the solutions for $\lambda$ are distinct real roots that are written as:
@@ -996,7 +1000,7 @@
 
 		\begin{example}
 
-		A engine valve assembly depicted is figure \ref{fig:engine_valve} where $J$ is the inertia caused by the right-hand side of the rocker arm. Derive an analytical solution for the natural frequency of the rocker arm. Use the assumptions sin($\theta$) = $\theta$ and cos($\theta$) = 1.
+		An engine valve assembly depicted in figure \ref{fig:engine_valve} where $J$ is the inertia caused by the right-hand side of the rocker arm. Derive an analytical solution for the natural frequency of the rocker arm. Use the assumptions sin($\theta$) = $\theta$ and cos($\theta$) = 1.
 		
 			\begin{figure}[H]
 				\centering
@@ -1038,19 +1042,19 @@
 							
 		\end{example}	
 
-		\begin{practical_example}
-	Discuss the Millennium bridge damping issues, note that 37 energy dissipating dampers were used to control the horizontal movement of the bridge while another 52 inertial dampers were used mitigate vertical movement.
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=4in]{../figures/Under_the_Millennium_Bridge}
-		\caption{The only BAC TSR-2 prototype to fly, picture taken in 1966 at what is now BAE Warton Lancashire. \bl{David Martin / Under the Millennium Bridge / CC BY-SA 2.0}}
-	\end{figure}
-	
-\end{practical_example}
+		\begin{vibration_case_studies}
+			Discuss the Millennium bridge damping issues, note that 37 energy dissipating dampers were used to control the horizontal movement of the bridge while another 52 inertial dampers were used mitigate vertical movement.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=4in]{../figures/Under_the_Millennium_Bridge}
+				\caption{The only BAC TSR-2 prototype to fly, picture taken in 1966 at what is now BAE Warton Lancashire. \bl{David Martin / Under the Millennium Bridge / CC BY-SA 2.0}}
+			\end{figure}
+
+		\end{vibration_case_studies}
 	
 		\subsection{Logarithmic decrement}
 			
-			For a vibrating system, the  mass ($m$) and stiffness ($k$) can be measured using scales and static deflection tests. However, the damping coefficient ($c$) is a more difficult quantity to determine. From $k$ and $m$ we can compute the natural frequency ($\omega_\text{n}$) and the critical damping coefficient ($c_\text{cr}$). Therefore, knowing that the critical damping ratio ($\zeta$) is defined as:
+			For a vibrating system, the mass ($m$) and stiffness ($k$) can be measured using scales and static deflection tests. However, the damping coefficient ($c$) is a more difficult quantity to determine. From $k$ and $m$ we can compute the natural frequency ($\omega_\text{n}$) and the critical damping coefficient ($c_\text{cr}$). Therefore, knowing that the critical damping ratio ($\zeta$) is defined as:
 			\begin{equation}
 				\zeta = \frac{c}{c_{\text{cr}}} = \frac{c}{2\sqrt{km}} = \frac{c}{2m\omega_\text{n}}
 			\end{equation}				
@@ -1142,7 +1146,7 @@
 	
 \begin{example}
 			
-			The free response of a 1000-kg automobile with a stiffness of $k$ = 400,000 N/m is observed to be underdamped. Modeling the automobile as a single-degree-of-freedom oscillation in the vertical direction, as annotated in figure \ref{fig:vehicle_wheel_undamped}, determine the damping coefficient if the displacement at $t_1$ is measured to be 2 cm and 0.22 cm at $t_2$.
+			The free-response of a 1000-kg automobile with stiffness of $k$ = 400,000 N/m is observed to be underdamped. Modeling the automobile as a single-degree-of-freedom oscillation in the vertical direction, as annotated in figure \ref{fig:vehicle_wheel_undamped}, determine the damping coefficient if the displacement at $t_1$ is measured to be 2 cm and 0.22 cm at $t_2$.
 
 			\noindent\textbf{Solution:} 
 						

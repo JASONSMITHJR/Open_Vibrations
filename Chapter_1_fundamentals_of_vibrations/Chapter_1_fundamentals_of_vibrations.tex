@@ -16,10 +16,10 @@
 \numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
 \newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
 
-% defines all practical example enviorment
-\newtheorem{pr}{Practical Example}
-\numberwithin{pr}{section} % allows for the use of numbers that lign up with the section numbers
-\newenvironment{practical_example}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{pr}\normalfont}{\end{pr}\end{mdframed}}
+% defines all vibration case studies
+\newtheorem{vcs}{Vibration Case Studies}
+\numberwithin{vcs}{section} % allows for the use of numbers that lign up with the section numbers
+\newenvironment{vibration_case_studies}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{vcs}\normalfont}{\end{vcs}\end{mdframed}}
 
 % defines the quotation enviorment 
 \usepackage{xcolor}
@@ -113,12 +113,12 @@
 
     The study of vibrations, within the broader field of classical mechanics, is the investigation of oscillations that occur about an equilibrium point. Vibrations, both desired and undesired, are present in all mechanical systems and can be helpful (e.g. a soil sieve, rotary sander) or destructive (e.g. an aircraft frame in resonance). The oscillations that form a vibrating system may be periodic (e.g., pendulum) or random (e.g. turbulence in an airplane), or a combination of the two. 
 
-    Vibrations impact our daily lives in a variety of ways, from the sound made by banjo strings that vibrates between 140 and 400 Hz to the 4-6 Hz vibration felt by a passenger in a car seat. The consideration of the vibrations and their associated mathematical modeling are an important factor in the design of mechanical systems. In the material that follows, the fundamental theories of vibration are presented and modeled using fundamental physical principles such and Newton's three laws of motion. These models and analyzed using the mathematical tools of calculus and differential equations. 
+    Vibrations impact our daily lives in a variety of ways, from the sound made by banjo strings that vibrates between 140 and 400 Hz to the 4-6 Hz vibration felt by a passenger in a car seat. The consideration of vibrations, and their associated mathematical modeling, are important factors in the design of mechanical systems. In the material that follows, the fundamental theories of vibration are presented and modeled using fundamental physical principles such as Newton's three laws of motion. These models and analyzed using the mathematical tools of calculus and differential equations. 
 
 	\begin{review}
 		Newton's three laws of motion:
 		\begin{enumerate}
-			\item In an inertial frame of reference, an object either remains at rest or continues to move at a constant velocity, unless acted upon by a force.
+			\item In an inertial frame of reference, an object either remains at rest or continues to move at a constant velocity unless acted upon by a force.
 			\item In an inertial reference frame, the vector sum of the forces $F$ on an object is equal to the mass m of that object multiplied by the acceleration of the object: $F = ma$. (It is assumed here that the mass m is constant)
 			\item When one body exerts a force on a second body, the second body simultaneously exerts a force equal in magnitude and opposite in direction on the first body.
 		\end{enumerate}
@@ -148,7 +148,7 @@
 
 			\quotebox{\large{All models are wrong, but some are useful}}{George E.P. Box (1919 - 2013)}	
 							
-            Newtonian physics describes the motion of particles in terms of displacement $x$, velocity $\dot{x}$, and acceleration $\ddot{x}$ vectors. Moreover, from Newton's second law of motion says that the change in the velocity of mass in motion is a product of the force acting on the mass. A simple way to express this phenomenon is though a spring-mass model as presented in figure  \ref{fig:spring_mass_model_with_point_mass}. These spring-mass models neglect the mass of the spring and concentrate all the mass of the system into a single point. Note that in this case the force vector and mass-acceleration vectors lie on the same axis and as such are collinear. Therefore, these vectors can be easily treated as scalers simplifying the math used in the modeling of the system.     
+            Newtonian physics describes the motion of particles in terms of displacement $x$, velocity $\dot{x}$, and acceleration $\ddot{x}$ vectors. Moreover, Newton's second law of motion says that the change in the velocity of mass in motion is a product of the force acting on the mass. A simple way to express this phenomenon is through a spring-mass model as presented in figure  \ref{fig:spring_mass_model_with_point_mass}. These spring-mass models neglect the mass of the spring and concentrate all the mass of the system into a single point. Note that in this case the force vector and mass-acceleration vectors lie on the same axis and as such are collinear. Therefore, these vectors can be easily treated as scalers simplifying the math used in the modeling of the system.     
 
 			\begin{figure}[H]
 				\centering
@@ -159,7 +159,7 @@
 		
 		\subsubsection{Linear Springs}
 	
-            Springs are mechanical devices that store energy, moreover, ideal spring is a theoretical representation of this mechanical device that is massless and responds with a linear increase in force for a unit increase in displacement (i.e. $F=kx$). For simplicity, the spring in the spring-mass model considered here is assumed aways ideal linear springs. A graphical representation of the idealized linear spring is presented in figure \ref{fig:linear_spring_deformation} where a unit force $F$ applied to the free end of the spring results in a unite displacement $x$ of the spring.  The resulting mathematical relationships,  $F=kx$, is known as Hooke's Law. Nonlinear springs add considerable complexity to the modeling of spring-mass systems, therefore, these are not considered in this introductory work. 
+            Springs are mechanical devices that store energy, moreover, an ideal spring is a theoretical representation of this mechanical device that is massless and responds with a linear increase in force for a unit increase in displacement (i.e. $F=kx$). For simplicity, the spring in the spring-mass model considered here is assumed always ideal linear springs. A graphical representation of the idealized linear spring is presented in figure \ref{fig:linear_spring_deformation} where a unit force $F$ applied to the free end of the spring results in a unite displacement $x$ of the spring.  The resulting mathematical relationship,  $F=kx$, is known as Hooke's Law. Nonlinear springs add considerable complexity to the modeling of spring-mass systems, therefore, these are not considered in this introductory work. 
 			
 			\begin{figure}[H]
 				\centering
@@ -173,7 +173,7 @@
 		
 		The generalized concept of stiffness can be directly related to mechanical systems and structural components through Hooke's law. 
 		\begin{review}
-			Hooke's Law states that the force ($F$) needed to extend or compress a spring by some distance $x$ scales linearly with respect to that distance. This law can be extend to tensional stress of an uniform and elastic bar where the length, area, and Young's modulus of the bar are represented by $l$, $A$, and $E$, respectively. Knowing the tensile stress in the bar:
+			Hooke's Law states that the force ($F$) needed to extend or compress a spring by some distance $x$ scales linearly with respect to that distance. This law can be extended to tensional stress of a uniform and elastic bar where the length, area, and Young's modulus of the bar are represented by $l$, $A$, and $E$, respectively. Knowing the tensile stress in the bar:
 			\begin{equation}
 			\sigma = \frac{F}{A}
 			\end{equation} 			
@@ -346,7 +346,7 @@
 					
 	\subsection{Equation of Motion for an Oscillating System}			
 			
-        An Equation of Motion (EOM) is an equation that provides a basis for modeling a vibrating system about its equilibrium point and relates the transfer of the potential energy from the spring to the kinetic energy mass. In developing the EOM we assume that any surfaces are frictionless and as such, no energy is extracted from the vibrating system. Referencing the 1-DOF system in figure \ref{fig:EOM_1-DOF-mass_horizontal}(a), and assuming the mass only moves in the $x$ direction, the only force acting on the mass in the $x$ direction is the force that results from the elongation of the spring as annotated in figure \ref{fig:EOM_1-DOF-mass_horizontal}(b). Therefore, the sum of forces in along the $x$ axis must equal the mass ($m$) times the acceleration of the mass ($a\dot{x}$). 
+        An Equation of Motion (EOM) is an equation that provides a basis for modeling a vibrating system about its equilibrium point and relates the transfer of the potential energy from the spring to the kinetic energy mass. In developing the EOM we assume that any surfaces are frictionless and as such, no energy is extracted from the vibrating system. Referencing the 1-DOF system in figure \ref{fig:EOM_1-DOF-mass_horizontal}(a), and assuming the mass only moves in the $x$ direction, the only force acting on the mass in the $x$ direction is the force that results from the elongation of the spring as annotated in figure \ref{fig:EOM_1-DOF-mass_horizontal}(b). Therefore, the sum of forces along the $x$ axis must equal the mass ($m$) times the acceleration of the mass ($a\dot{x}$). 
 
 		\begin{figure}[H]
 			\centering
@@ -359,7 +359,7 @@
 		\begin{equation}
 			s_1 \ddot{x} + s_2 x = 0
 		\end{equation}			
-		where $s_1$ and $s_2$ are constants to be determined for the specific system. A systematic approach to obtaining free-body diagram (FBD) of a system under vibration can be expressed in three steps:
+		where $s_1$ and $s_2$ are constants to be determined for the specific system. A systematic approach to obtaining the free-body diagram (FBD) of a system under vibration can be expressed in three steps:
 		\begin{enumerate}
 			\item Draw a free-body diagram (FBD) at the system's equilibrium and displaced position (without a displacing force).
 			\item Apply Newton's second law to both FBDs ( equilibrium and displaced).
@@ -378,7 +378,7 @@
 			 a \ddot{x} + b \dot{x} + cx = 0
 			\end{equation}
 		
-			\noindent The EOM for a 1-DOF system under a free vibration is a a second-order differential equation due to acceleration ($\ddot{x}$) being the second derivative of displacement ($x$) and homogeneous as the forcing function (right-hand side of the equations) is zero. In EOM's current form, $m=k$, $b=0$,  and $c=k$. In future work, $b$ will account for damping in the vibrating system.     
+			\noindent The EOM for a 1-DOF system under a free vibration is a second-order differential equation due to acceleration ($\ddot{x}$) being the second derivative of displacement ($x$) and homogeneous as the forcing function (right-hand side of the equations) is zero. In EOM's current form, $m=k$, $b=0$,  and $c=k$. In future work, $b$ will account for damping in the vibrating system.     
 		\end{review}
 
 					
@@ -457,22 +457,14 @@
 			\end{equation}			
 		\end{example}		
 
-
-		\begin{practical_example}
+		\begin{vibration_case_studies}
 			Discuss the British Aircraft Corporation TSR-2
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=4in]{../figures/TSR_2}
 				\caption{The only BAC TSR-2 prototype to fly, picture taken in 1966 at what is now BAE Warton Lancashire. \bl{[[File:BAC TSR.2 XR219 Warton 11.06.66 edited-2.jpg|BAC TSR.2 XR219 Warton 11.06.66 edited-2]]}}
 			\end{figure}	
-
-
-
-
-
-		\end{practical_example}
-
-
-		
+		\end{vibration_case_studies}
+	
 \end{document}
 
