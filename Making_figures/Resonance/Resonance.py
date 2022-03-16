@@ -1,45 +1,40 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
+Default plotting code for Open_Vibrations that sets the fonts and format.
 
-This is a temporary script file.
+@author: Austin Downey
 """
 
-# import modules
+#%% import modules and set default fonts and colors
+
 import IPython as IP
 IP.get_ipython().magic('reset -sf')
 
-import warnings     # added to ignore the plotting warings about font types in math mode
-warnings.simplefilter("ignore", UserWarning)
-
-import matplotlib as mpl
-from matplotlib.patches import Rectangle
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-from mpl_toolkits.mplot3d import axes3d
-import os as os
+import matplotlib as mpl
 import numpy as np
+import pandas as PD
 import scipy as sp
-import copy as copy
-from matplotlib import cm
+from scipy import interpolate
+import pickle
 import time
-#import pykrige as pykrige
-import scipy.io as sio
-tt1 = time.time()
+import re
+import json as json
+import pylab
 
 # set default fonts and plot colors
+plt.rcParams.update({'text.usetex': True})
 plt.rcParams.update({'image.cmap': 'viridis'})
-cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
 plt.rcParams.update({'font.serif':['Times New Roman', 'Times', 'DejaVu Serif',
  'Bitstream Vera Serif', 'Computer Modern Roman', 'New Century Schoolbook',
  'Century Schoolbook L',  'Utopia', 'ITC Bookman', 'Bookman', 
  'Nimbus Roman No9 L', 'Palatino', 'Charter', 'serif']})
 plt.rcParams.update({'font.family':'serif'})
 plt.rcParams.update({'font.size': 10})
-plt.rcParams.update({'mathtext.fontset': 'custom'})
 plt.rcParams.update({'mathtext.rm': 'serif'})
-plt.rcParams.update({'mathtext.it': 'serif:italic'})
-plt.rcParams.update({'mathtext.bf': 'serif:bold'})
+plt.rcParams.update({'mathtext.fontset': 'custom'}) # I don't think I need this as its set to 'stixsans' above.
+cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
 plt.close('all')
 
 

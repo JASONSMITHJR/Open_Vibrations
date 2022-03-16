@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu Nov 10 09:30:27 2016
+Default plotting code for Open_Vibrations that sets the fonts and format.
 
-@author: downey
+@author: Austin Downey
 """
 
 #%% import modules and set default fonts and colors
 
 import IPython as IP
 IP.get_ipython().magic('reset -sf')
+
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import numpy as np
