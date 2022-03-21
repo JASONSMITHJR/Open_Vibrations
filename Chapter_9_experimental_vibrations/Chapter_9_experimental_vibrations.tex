@@ -118,27 +118,31 @@ Experimental vibration testing requires the practitioner to understand the basic
     \label{fig:accelerometers}
 \end{figure} 
 
-\begin{itemize}
-\item window
-\item segment length
-\item overlap
-\end{itemize}
+%\begin{itemize}
+%\item window
+%\item segment length
+%\item overlap
+%\end{itemize}
 
-\maketitle
-\section{METHODOLOGY}
+%\maketitle
+%\section{METHODOLOGY}
 %\begin{abstract}
 To experimentally determine the vertical mode shapes for simple beam structures the following process is applicable. 
 
-First, accelerometers are evenly spaced and attached to the beam along its length as shown in Figure~\ref{fig:PhysicalTestBed}. This provides acceleration data for various locations on the beam, for the beam in Figure~\ref{fig:PhysicalTestBed} only 4 accelerometers are used with a DAQ system and data collection software to determine the first few vertical modes. However, to determine higher vertical modes more accelerometers will be needed to measure the increasing number of nodes and anti-nodes.    
 
 %Take a new picture for Figure 1 that has actual acc. on it 
-\begin{figure}[b]
+\begin{figure}[H]
 	\centering 
 	\includegraphics*[width= 1\linewidth]{figures/Testbed/PhysicalTestbed.png}
-	\vspace{0.1cm}
+	%\vspace{0.1cm}
 	\caption{Physical testbed that consists of a cantilever beam with movable support on the right-hand-side and a shaker to represent the structure of interest.}
 	\label{fig:PhysicalTestBed}
 \end{figure}
+
+
+First, accelerometers are evenly spaced and attached to the beam along its length as shown in Figure~\ref{fig:PhysicalTestBed}. This provides acceleration data for various locations on the beam, for the beam in Figure~\ref{fig:PhysicalTestBed} only 4 accelerometers are used with a DAQ system and data collection software to determine the first few vertical modes. However, to determine higher vertical modes more accelerometers will be needed to measure the increasing number of nodes and anti-nodes.    
+
+
 
 
 Second, the test beam is excited with a frequency sweep (chirp signal) using a function generator to create the the input signal, power amplifier to gradually amplify the input signal, and a shaker to apply the frequency sweep to the beam. This provides every frequency as an input that the beam uniquely reacts to. Continuing, while the frequency sweep is active, acceleration data is collected at each accelerometer location for the entire sweep duration and is used to determine each modal frequency of beam by taking an FFT.
@@ -151,7 +155,7 @@ Third, after the frequency sweep and acceleration data collection is completed, 
 \begin{figure}[t]
 	\centering 
 	\includegraphics*[width= 1\linewidth]{figures/FFT/FFT.png}
-	\vspace{0.1cm}
+	%\vspace{0.1cm}
 	\caption{FFT of acceleration data.}
 	\label{fig:FFT}
 \end{figure}
@@ -159,17 +163,16 @@ Third, after the frequency sweep and acceleration data collection is completed, 
 
 
 %Insert an In phase plot labeled correctly 
-\begin{figure}[b]
+\begin{figure}[h]
 	\centering 
 	\includegraphics*[width= 1\linewidth]{figures/InPhase/InPhase.png}
-	\vspace{0.1cm}
+	%\vspace{0.1cm}
 	\caption{In phase accelerometers.}
 	\label{fig:InPhase}
 \end{figure}
 
 
 
-\newpage
 Forth, before specific amplitudes are found nodal locations for each modal frequency need to be determined. Moreover, this is achieved while the beam is excited at a modal frequency, the nodes are found by moving a screw driver along the beam length. This is an easy method since the nodes are locations of zero movement its easy to feel and hear the vibration differences between a node and non-node. Once the nodes are found, the same process is used to find the anti-nodes (locations of maximum displacement). This is also easy since these locations vibrate considerably more than any other location along the beam. Continuing, after each node and anti-node is narrowed to a small location, each accelerometer is moved to each node and anti-node to determine the specific amplitudes. Since the accelerometers only provides an amplitude, there is a need to check whether each anti-node is in or out of phase. Checking the anti-node phase provides the direction (positive or negative)and validates the mode shapes. 
 
 
