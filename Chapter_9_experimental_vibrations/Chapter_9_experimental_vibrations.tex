@@ -124,6 +124,71 @@ Experimental vibration testing requires the practitioner to understand the basic
 \item overlap
 \end{itemize}
 
+\maketitle
+\section{METHODOLOGY}
+%\begin{abstract}
+To experimentally determine the vertical mode shapes for simple beam structures the following process is applicable. 
+
+First, accelerometers are evenly spaced and attached to the beam along its length as shown in Figure~\ref{fig:PhysicalTestBed}. This provides acceleration data for various locations on the beam, for the beam in Figure~\ref{fig:PhysicalTestBed} only 4 accelerometers are used with a DAQ system and data collection software to determine the first few vertical modes. However, to determine higher vertical modes more accelerometers will be needed to measure the increasing number of nodes and anti-nodes.    
+
+%Take a new picture for Figure 1 that has actual acc. on it 
+\begin{figure}[b]
+	\centering 
+	\includegraphics*[width= 1\linewidth]{figures/Testbed/PhysicalTestbed.png}
+	\vspace{0.1cm}
+	\caption{Physical testbed that consists of a cantilever beam with movable support on the right-hand-side and a shaker to represent the structure of interest.}
+	\label{fig:PhysicalTestBed}
+\end{figure}
+
+
+Second, the test beam is excited with a frequency sweep (chirp signal) using a function generator to create the the input signal, power amplifier to gradually amplify the input signal, and a shaker to apply the frequency sweep to the beam. This provides every frequency as an input that the beam uniquely reacts to. Continuing, while the frequency sweep is active, acceleration data is collected at each accelerometer location for the entire sweep duration and is used to determine each modal frequency of beam by taking an FFT.
+
+
+Third, after the frequency sweep and acceleration data collection is completed, a Fast Fourier Transform (FFT) Figure~\ref{fig:FFT}, of the acceleration data is performed to determine the specific modal frequencies. Moreover, the FFT shows the frequencies at which beam deformation occurs, where the lowest frequency that causes deformation is the first mode, the next frequency is the second mode and so on. With the FFTs completed, each modal frequency is now known and the beam can be excited at each individual modal frequency to determine the specific amplitude of deformation each frequency causes. 
+
+
+%Insert an FFT plot labeled correctly 
+\begin{figure}[t]
+	\centering 
+	\includegraphics*[width= 1\linewidth]{figures/FFT/FFT.png}
+	\vspace{0.1cm}
+	\caption{FFT of acceleration data.}
+	\label{fig:FFT}
+\end{figure}
+
+
+
+%Insert an In phase plot labeled correctly 
+\begin{figure}[b]
+	\centering 
+	\includegraphics*[width= 1\linewidth]{figures/InPhase/InPhase.png}
+	\vspace{0.1cm}
+	\caption{In phase accelerometers.}
+	\label{fig:InPhase}
+\end{figure}
+
+
+
+\newpage
+Forth, before specific amplitudes are found nodal locations for each modal frequency need to be determined. Moreover, this is achieved while the beam is excited at a modal frequency, the nodes are found by moving a screw driver along the beam length. This is an easy method since the nodes are locations of zero movement its easy to feel and hear the vibration differences between a node and non-node. Once the nodes are found, the same process is used to find the anti-nodes (locations of maximum displacement). This is also easy since these locations vibrate considerably more than any other location along the beam. Continuing, after each node and anti-node is narrowed to a small location, each accelerometer is moved to each node and anti-node to determine the specific amplitudes. Since the accelerometers only provides an amplitude, there is a need to check whether each anti-node is in or out of phase. Checking the anti-node phase provides the direction (positive or negative)and validates the mode shapes. 
+
+
+
+
+
+Fifth, to determine the phase of each anti-node a phase graph of each anti-nodes' accelerometer data is preformed. If the anti-nodes are in phase, the graph shows overlapping data, Figure~\ref{fig:InPhase} and if they are out of phase the graph shows a 180 degree difference between both anti-node accelerometer data shown in Figure~\ref{fig:OutofPhase}. Moreover, if the anti-nodes are in phase then both anti-nodes have a positive and negative amplitude at the same time. Henceforth, in phase anti-nodes cant hold opposing directions (where 1 is positive and 1 is negative), while out of phase anti-nodes can but will never hold the same direction at the same time. With anti-node direction and specific amplitude determined, the mode shape for each modal frequency can be precisely plotted. 
+
+%Insert an Out of phase plot labeled correctly 
+\begin{figure}[h]
+	\centering 
+	\includegraphics*[width= 1\linewidth]{figures/OutofPhase/OutofPhase.png}
+	\vspace{0.1cm}
+	\caption{Out of phase accelerometers.}
+	\label{fig:OutofPhase}
+\end{figure}
+
+
+
 \end{document}
 
 
